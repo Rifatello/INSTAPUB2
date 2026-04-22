@@ -1,0 +1,27 @@
+/Users/rifatello/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [40910]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56153 - "GET /health HTTP/1.1" 200 OK
+2026-04-21 18:12:06,961 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Documents/Inst-publisher/content-factory/storage/processing/8773c2b6-1369-4af5-8021-3681aeab75a8.mp4 -> bca0aa62.mp4
+2026-04-21 18:12:08,710 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/bca0aa62.mp4
+2026-04-21 18:12:08,712 | INFO | geelark | Publishing to GeeLark endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=c7a176d0-b40f-4487-b83e-23c2563dd74e
+2026-04-21 18:12:08,713 | INFO | geelark | Video URL: https://empathic-spherical-revise.ngrok-free.dev/bca0aa62.mp4
+2026-04-21 18:12:08,713 | INFO | geelark | Publish payload: {'scheduleAt': 1776784358, 'id': '615335260552429723', 'description': 'Stop doing this if you want faster growth.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/bca0aa62.mp4']}
+2026-04-21 18:12:10,583 | INFO | geelark | GeeLark response: {'traceId': 'c7a176d0-b40f-4487-b83e-23c2563dd74e', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-21 18:12:10,585 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-21 18:12:12,678 | INFO | geelark | GeeLark response: {'traceId': '00f49121-04f0-406a-b8a3-010f240654cd', 'code': 0, 'msg': 'success', 'data': {'taskId': '616151197551689793'}}
+2026-04-21 18:12:12,681 | INFO | geelark | GeeLark taskId: 616151197551689793
+2026-04-21 18:12:12,681 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616151197551689793', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/bca0aa62.mp4', 'scheduled_at': 1776784358, 'geelark_response': {'traceId': '00f49121-04f0-406a-b8a3-010f240654cd', 'code': 0, 'msg': 'success', 'data': {'taskId': '616151197551689793'}}}
+2026-04-21 18:13:15,980 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Documents/Inst-publisher/content-factory/storage/processing/3efc2283-8ea0-4dd1-a3a0-036c0258b19b.mp4 -> d7a700cf.mp4
+2026-04-21 18:13:18,732 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/d7a700cf.mp4
+2026-04-21 18:13:18,734 | INFO | geelark | Publishing to GeeLark endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=22e001c2-a3c8-4fe5-8c0d-313fc2883dbf
+2026-04-21 18:13:18,734 | INFO | geelark | Video URL: https://empathic-spherical-revise.ngrok-free.dev/d7a700cf.mp4
+2026-04-21 18:13:18,734 | INFO | geelark | Publish payload: {'scheduleAt': 1776784428, 'id': '615335260552429723', 'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/d7a700cf.mp4']}
+2026-04-21 18:13:20,458 | INFO | geelark | GeeLark response: {'traceId': '22e001c2-a3c8-4fe5-8c0d-313fc2883dbf', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-21 18:13:20,461 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-21 18:13:22,394 | INFO | geelark | GeeLark response: {'traceId': '09b71cdd-3544-41e7-b4c4-18956fe2f22f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616151314522439745'}}
+2026-04-21 18:13:22,396 | INFO | geelark | GeeLark taskId: 616151314522439745
+2026-04-21 18:13:22,397 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616151314522439745', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/d7a700cf.mp4', 'scheduled_at': 1776784428, 'geelark_response': {'traceId': '09b71cdd-3544-41e7-b4c4-18956fe2f22f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616151314522439745'}}}
