@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import random
+import re
 import subprocess
 import textwrap
 import uuid
@@ -19,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = BASE_DIR / "data"
 STORAGE_DIR = BASE_DIR / "storage"
 SUPPORTED_VIDEO_EXTENSIONS = {".mp4", ".mov", ".mkv", ".webm"}
-SUPPORTED_MUSIC_EXTENSIONS = {".mp3", ".wav", ".m4a", ".aac"}
+SUPPORTED_MUSIC_EXTENSIONS = {".mp3", ".wav", ".m4a", ".aac", ".mp4"}
 DEFAULT_CTA = "👉 Ссылка в био"
 FFMPEG_BIN = os.getenv("FFMPEG_BIN", "/opt/homebrew/opt/ffmpeg-full/bin/ffmpeg")
 FFPROBE_BIN = os.getenv(
@@ -261,21 +262,32 @@ def _escape_drawtext_text(text: str) -> str:
     return escaped
 
 
-def _build_drawtext_filter(hook: str) -> str:
-    wrapped = "\n".join(textwrap.wrap(hook.strip(), width=24)) or hook.strip()
-    text_value = _escape_drawtext_text(wrapped)
-    return (
-        "drawtext="
-        f"text='{text_value}':"
-        "fontcolor=white:"
-        "fontsize=56:"
-        "line_spacing=12:"
-        "bordercolor=black:"
-        "borderw=3:"
-        "x=(w-text_w)/2:"
-        "y=(h-text_h)/2:"
-        "fix_bounds=true"
-    )
+def _build_drawtext_filter(lines: list[str]) -> str:
+    filters = []
+    font_path = "/System/Library/Fonts/Supplemental/Arial Bold.ttf"
+    base_y_expr = "h*0.08"
+    font_size = 64
+    line_spacing = 16
+
+    for i, line in enumerate(lines):
+        line_escaped = _escape_drawtext_text(line)
+        # Вычисляем Y для каждой строки отдельно
+        y_expr = f"{base_y_expr}+{i}*({font_size}+{line_spacing})"
+        f = (
+            "drawtext="
+            f"fontfile='{font_path}':"
+            f"text='{line_escaped}':"
+            "fontcolor=white:"
+            f"fontsize={font_size}:"
+            "bordercolor=black:"
+            "borderw=3:"
+            "x=(w-text_w)/2:"
+            f"y={y_expr}:"
+            "fix_bounds=true"
+        )
+        filters.append(f)
+
+    return ",".join(filters)
 
 
 def _has_audio_stream(video_path: Path) -> bool:
@@ -321,29 +333,45 @@ def _rand_signed_abs(min_abs: float, max_abs: float) -> float:
     return value if random.choice([True, False]) else -value
 
 
-def _build_unique_video_filter(duration: float) -> tuple[str, float]:
-    cut_seconds = random.uniform(0.3, 1.0)
-    speed = random.choice([0.95, 1.05])
-    crop_ratio = random.uniform(0.95, 0.98)
-    brightness = _rand_signed_abs(0.05, 0.1)
-    contrast = 1.0 + _rand_signed_abs(0.05, 0.1)
-    saturation = 1.0 + _rand_signed_abs(0.05, 0.15)
-    hue_shift = _rand_signed_abs(2.0, 8.0)
+def _build_unique_video_filter(duration: float, speed: float) -> tuple[str, float, float]:
+    # Целевая длительность на выходе: от 5.0 до 8.0 секунд
+    # final_duration = segment_length / speed
+    # Отсюда segment_length = final_duration * speed
+    target_final = random.uniform(5.5, 7.5)
+    needed_segment = target_final * speed
 
-    cut_start = random.choice([True, False]) and duration > 2.0
-    start_expr = f"{cut_seconds:.3f}" if cut_start else "0"
-    end_expr = f"{max(duration - cut_seconds, 0.1):.3f}" if (not cut_start and duration > 2.0) else f"{duration:.3f}"
+    # Если исходник короче, чем нужно даже с учетом скорости, берем весь исходник
+    if needed_segment > duration:
+        start_val = 0.0
+        end_val = duration
+    else:
+        # Иначе выбираем случайный кусок нужной длины
+        max_start = duration - needed_segment
+        start_val = random.uniform(0, max_start)
+        end_val = start_val + needed_segment
+
+    crop_ratio = random.uniform(0.95, 0.98)
+    brightness = _rand_signed_abs(0.02, 0.05)
+    contrast = 1.0 + _rand_signed_abs(0.02, 0.05)
+    saturation = 1.0 + _rand_signed_abs(0.05, 0.1)
+    hue_shift = _rand_signed_abs(1.0, 5.0)
+    rotation = _rand_signed_abs(0.002, 0.006)
+    fps = random.choice([29.97, 30.05, 30.15])
 
     vf = (
-        f"trim=start={start_expr}:end={end_expr},"
+        f"trim=start={start_val:.3f}:end={end_val:.3f},"
         "setpts=PTS-STARTPTS,"
         f"crop=iw*{crop_ratio:.4f}:ih*{crop_ratio:.4f},"
+        f"rotate=a={rotation:.4f}:ow=iw:oh=ih:c=black,"
         f"eq=brightness={brightness:.4f}:contrast={contrast:.4f}:saturation={saturation:.4f},"
         f"hue=h={hue_shift:.3f},"
+        "noise=alls=1:allf=t+u,"
+        "vignette=PI/100,"
         f"setpts=PTS/{speed:.4f},"
+        f"fps={fps},"
         "scale=trunc(iw/2)*2:trunc(ih/2)*2"
     )
-    return vf, cut_seconds
+    return vf, start_val, end_val
 
 
 def render_unique_preview(preview_video: Path) -> None:
@@ -352,19 +380,29 @@ def render_unique_preview(preview_video: Path) -> None:
         raise HTTPException(status_code=500, detail="Cannot uniqueize: invalid video duration")
 
     has_audio = _has_audio_stream(preview_video)
-    vf, cut_seconds = _build_unique_video_filter(duration)
-    atempo = random.uniform(0.87, 1.13)
+    
+    # Если видео слишком короткое, замедляем его сильнее, чтобы попасть в 5с
+    if duration < 5.0:
+        speed = random.uniform(0.6, 0.8)
+    else:
+        speed = random.uniform(0.9, 1.1)
+
+    vf, start_val, end_val = _build_unique_video_filter(duration, speed)
     volume = random.uniform(0.7, 0.9)
 
     tmp_output = preview_video.with_name(f"{preview_video.stem}.unique.mp4")
     noise_input = "anoisesrc=color=white:amplitude=0.008:sample_rate=44100"
 
     if has_audio:
+        highpass_f = random.randint(100, 250)
+        lowpass_f = random.randint(10000, 15000)
         af = (
-            f"atrim=start=0:end={max(duration - cut_seconds, 0.1):.3f},"
+            f"atrim=start={start_val:.3f}:end={end_val:.3f},"
             "asetpts=PTS-STARTPTS,"
             f"volume={volume:.4f},"
-            f"atempo={atempo:.4f}"
+            f"highpass=f={highpass_f},"
+            f"lowpass=f={lowpass_f},"
+            f"atempo={speed:.4f}"
         )
         filter_complex = (
             f"[0:v]{vf}[vout];"
@@ -375,7 +413,7 @@ def render_unique_preview(preview_video: Path) -> None:
     else:
         filter_complex = (
             f"[0:v]{vf}[vout];"
-            f"[1:a]volume=0.20,atempo={atempo:.4f}[aout]"
+            f"[1:a]volume=0.20,atempo={speed:.4f}[aout]"
         )
 
     command = [
@@ -417,12 +455,32 @@ def render_unique_preview(preview_video: Path) -> None:
 
 
 def render_preview_with_hook(
-    source_video: Path, preview_video: Path, hook: str, music_track: Path | None = None
+    source_video: Path,
+    preview_video: Path,
+    hook: str,
+    music_track: Path | None = None,
+    force_9_16: bool = False,
 ) -> None:
-    drawtext_filter = _build_drawtext_filter(hook)
+    # Агрессивная очистка от спецсимволов и эмодзи
+    clean_hook = re.sub(r'[^a-zA-Zа-яА-ЯёЁ0-9\s.,!?;:()"\-]', '', hook)
+    clean_hook = clean_hook.strip().replace("\r", "")
+    
+    # Разбиваем на строки в Python
+    lines = [line.strip() for line in textwrap.wrap(clean_hook, width=22)]
+    if not lines:
+        lines = [""]
+
+    drawtext_filter = _build_drawtext_filter(lines)
+    
+    # Фильтр для кропа в 9:16 (центровка и приведение к 1080x1920)
+    if force_9_16:
+        v_filters = f"crop='min(iw,ih*9/16):min(ih,iw*16/9)',scale=1080:1920,{drawtext_filter}"
+    else:
+        v_filters = drawtext_filter
+
     has_source_audio = _has_audio_stream(source_video)
     if music_track is not None:
-        filter_complex = f"[0:v]{drawtext_filter}[vout];[1:a]volume=0.5[aout]"
+        filter_complex = f"[0:v]{v_filters}[vout];[1:a]volume=0.5[aout]"
         command = [
             FFMPEG_BIN,
             "-y",
@@ -446,17 +504,13 @@ def render_preview_with_hook(
             str(preview_video),
         ]
     else:
-        command = [
-            FFMPEG_BIN,
-            "-y",
-            "-i",
-            str(source_video),
-            "-vf",
-            drawtext_filter,
-            "-c:a",
-            "copy",
-            str(preview_video),
-        ]
+        command = [FFMPEG_BIN, "-y", "-i", str(source_video), "-vf", v_filters]
+        if has_source_audio:
+            command.extend(["-c:a", "copy"])
+        else:
+            # У источника нет аудио-дорожки: явно отключаем аудио, чтобы ffmpeg не падал.
+            command.append("-an")
+        command.append(str(preview_video))
 
     try:
         print("Using ffmpeg binary:", FFMPEG_BIN)
@@ -607,6 +661,9 @@ def generate_preview(payload: GeneratePreviewRequest) -> GeneratePreviewResponse
         music_track=music_track,
     )
 
+    # Автоматическая уникализация после рендеринга
+    render_unique_preview(preview_video)
+
     _save_preview_state(
         preview_id=preview_id,
         account_id=str(account["account_id"]),
@@ -633,8 +690,11 @@ def generate_preview(payload: GeneratePreviewRequest) -> GeneratePreviewResponse
 @app.post("/regenerate-preview", response_model=GeneratePreviewResponse)
 def regenerate_preview(payload: RegeneratePreviewRequest) -> GeneratePreviewResponse:
     refresh_type = payload.refresh.strip().lower()
-    if refresh_type not in {"hook", "description", "music", "unique"}:
-        raise HTTPException(status_code=400, detail="refresh must be one of: hook, description, music, unique")
+    if refresh_type not in {"hook", "description", "music", "unique", "format_9_16"}:
+        raise HTTPException(
+            status_code=400,
+            detail="refresh must be one of: hook, description, music, unique, format_9_16",
+        )
 
     state, record = _load_pending_preview(payload.preview_id)
     account = _get_account(str(record.get("account_id", "")))
@@ -664,10 +724,21 @@ def regenerate_preview(payload: RegeneratePreviewRequest) -> GeneratePreviewResp
     elif refresh_type == "unique":
         # keep current text/music, only transform media with randomized params
         render_unique_preview(preview_video)
+    elif refresh_type == "format_9_16":
+        record["is_9_16"] = True
 
     caption = _build_caption(hook, description)
-    if refresh_type != "unique":
-        render_preview_with_hook(source_video=source_video, preview_video=preview_video, hook=hook, music_track=music_track)
+    if refresh_type not in {"unique"}:
+        is_9_16 = bool(record.get("is_9_16", False))
+        render_preview_with_hook(
+            source_video=source_video,
+            preview_video=preview_video,
+            hook=hook,
+            music_track=music_track,
+            force_9_16=is_9_16,
+        )
+        # Re-apply uniqueization after re-rendering
+        render_unique_preview(preview_video)
 
     record["hook"] = hook
     record["description"] = description

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import shutil
 import subprocess
 import uuid
 from pathlib import Path
@@ -72,6 +73,14 @@ def _upload_via_ssh(video_path: Path, remote_filename: str) -> None:
     _run_command(scp_command)
 
 
+def _upload_locally(video_path: Path, remote_filename: str) -> None:
+    target_dir = Path(REMOTE_VIDEO_DIR).expanduser().resolve()
+    target_dir.mkdir(parents=True, exist_ok=True)
+    target_path = target_dir / remote_filename
+    logger.info("Copying file locally to: %s", target_path)
+    shutil.copy2(video_path, target_path)
+
+
 def upload_video(video_path: str) -> str:
     path = Path(video_path).expanduser().resolve()
     if not path.exists() or not path.is_file():
@@ -81,10 +90,19 @@ def upload_video(video_path: str) -> str:
         raise RuntimeError("VIDEO_PUBLIC_BASE_URL must be set")
 
     remote_filename = f"{uuid.uuid4().hex[:8]}{path.suffix}"
-    logger.info("Uploading local video to SSH server: %s -> %s", path, remote_filename)
+    
+    is_local = SSH_HOST.lower() in ("local", "localhost", "127.0.0.1")
+
+    if is_local:
+        logger.info("Uploading local video (LOCAL MODE): %s -> %s", path, remote_filename)
+    else:
+        logger.info("Uploading local video to SSH server: %s -> %s", path, remote_filename)
 
     def _do_upload() -> str:
-        _upload_via_ssh(path, remote_filename)
+        if is_local:
+            _upload_locally(path, remote_filename)
+        else:
+            _upload_via_ssh(path, remote_filename)
         return f"{PUBLIC_VIDEO_BASE_URL}/{remote_filename}"
 
     public_url = with_retry(_do_upload, retries=UPLOAD_RETRIES, delay_sec=UPLOAD_RETRY_DELAY_SEC)

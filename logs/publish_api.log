@@ -25,3 +25,1506 @@ INFO:     127.0.0.1:56153 - "GET /health HTTP/1.1" 200 OK
 2026-04-21 18:13:22,394 | INFO | geelark | GeeLark response: {'traceId': '09b71cdd-3544-41e7-b4c4-18956fe2f22f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616151314522439745'}}
 2026-04-21 18:13:22,396 | INFO | geelark | GeeLark taskId: 616151314522439745
 2026-04-21 18:13:22,397 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616151314522439745', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/d7a700cf.mp4', 'scheduled_at': 1776784428, 'geelark_response': {'traceId': '09b71cdd-3544-41e7-b4c4-18956fe2f22f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616151314522439745'}}}
+2026-04-22 19:57:10,444 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/d992a4c2-7ef8-4955-8abe-2dda16a7c317.mp4 -> 899094e6.mp4
+2026-04-22 19:57:14,808 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 32, in publish
+    video_url = upload_video(payload.video_path)
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/uploader.py", line 90, in upload_video
+    public_url = with_retry(_do_upload, retries=UPLOAD_RETRIES, delay_sec=UPLOAD_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/uploader.py", line 87, in _do_upload
+    _upload_via_ssh(path, remote_filename)
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/uploader.py", line 71, in _upload_via_ssh
+    _run_command(mkdir_command)
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/uploader.py", line 31, in _run_command
+    raise RuntimeError(f"Command failed: {' '.join(command)} | stderr={stderr} | stdout={stdout}")
+RuntimeError: Command failed: ssh -p 22 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null renat@192.168.100.83 mkdir -p ~/videos | stderr=ssh: connect to host 192.168.100.83 port 22: No route to host | stdout=
+2026-04-22 20:00:20,298 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/5f129a90-0b2f-45fb-980d-b6f3d1745a0b.mp4 -> d73b6107.mp4
+2026-04-22 20:00:24,598 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/d73b6107.mp4
+2026-04-22 20:00:24,616 | INFO | geelark | Publishing to GeeLark endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=99e58801-3cc6-4b80-9c94-56d3b085ec08
+2026-04-22 20:00:24,616 | INFO | geelark | Video URL: https://empathic-spherical-revise.ngrok-free.dev/d73b6107.mp4
+2026-04-22 20:00:24,616 | INFO | geelark | Publish payload: {'scheduleAt': 1776877254, 'id': '615335260552429723', 'description': 'Most people fail because they skip this one step.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/d73b6107.mp4']}
+2026-04-22 20:00:26,941 | INFO | geelark | GeeLark response: {'traceId': '99e58801-3cc6-4b80-9c94-56d3b085ec08', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-22 20:00:26,943 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-22 20:00:29,596 | INFO | geelark | GeeLark response: {'traceId': 'fa81ced1-e027-4a26-9748-533d7c148645', 'code': 0, 'msg': 'success', 'data': {'taskId': '616307052335071549'}}
+2026-04-22 20:00:29,602 | INFO | geelark | GeeLark taskId: 616307052335071549
+2026-04-22 20:00:29,602 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616307052335071549', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/d73b6107.mp4', 'scheduled_at': 1776877254, 'geelark_response': {'traceId': 'fa81ced1-e027-4a26-9748-533d7c148645', 'code': 0, 'msg': 'success', 'data': {'taskId': '616307052335071549'}}}
+2026-04-22 20:15:25,769 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/4f6e797b-95f8-4354-a611-d32bf324b981.mp4 -> 62ee9e07.mp4
+2026-04-22 20:15:28,843 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/62ee9e07.mp4
+2026-04-22 20:15:28,845 | INFO | geelark | Publishing to GeeLark endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=5b0a76c3-be85-4a5f-85d3-3bf555dca2f7
+2026-04-22 20:15:28,845 | INFO | geelark | Video URL: https://empathic-spherical-revise.ngrok-free.dev/62ee9e07.mp4
+2026-04-22 20:15:28,845 | INFO | geelark | Publish payload: {'scheduleAt': 1776878158, 'id': '615335260552429723', 'description': 'This mindset shift can save you months of frustration.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/62ee9e07.mp4']}
+2026-04-22 20:15:29,903 | INFO | geelark | GeeLark response: {'traceId': '5b0a76c3-be85-4a5f-85d3-3bf555dca2f7', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-22 20:15:29,905 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-22 20:15:31,040 | INFO | geelark | GeeLark response: {'traceId': '4d72f91f-401e-429a-b3c3-0e3bd9fb6d08', 'code': 0, 'msg': 'success', 'data': {'taskId': '616308564968866109'}}
+2026-04-22 20:15:31,042 | INFO | geelark | GeeLark taskId: 616308564968866109
+2026-04-22 20:15:31,042 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616308564968866109', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/62ee9e07.mp4', 'scheduled_at': 1776878158, 'geelark_response': {'traceId': '4d72f91f-401e-429a-b3c3-0e3bd9fb6d08', 'code': 0, 'msg': 'success', 'data': {'taskId': '616308564968866109'}}}
+2026-04-22 20:21:31,213 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/29ae9270-f674-432b-a5fe-e16b4b5b0dc1.mp4 -> d898d4c5.mp4
+2026-04-22 20:21:31,216 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/d898d4c5.mp4
+2026-04-22 20:21:31,220 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/d898d4c5.mp4
+2026-04-22 20:21:31,223 | INFO | geelark | Publishing to GeeLark endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=c7b9af51-0e36-49ef-bc2e-2158afa481ad
+2026-04-22 20:21:31,223 | INFO | geelark | Video URL: https://empathic-spherical-revise.ngrok-free.dev/d898d4c5.mp4
+2026-04-22 20:21:31,223 | INFO | geelark | Publish payload: {'scheduleAt': 1776878521, 'id': '615335260552429723', 'description': 'Most people fail because they skip this one step.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/d898d4c5.mp4']}
+2026-04-22 20:21:32,561 | INFO | geelark | GeeLark response: {'traceId': 'c7b9af51-0e36-49ef-bc2e-2158afa481ad', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-22 20:21:32,563 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-22 20:21:33,962 | INFO | geelark | GeeLark response: {'traceId': '3202d499-5e24-45a7-8e59-c6b347fc6716', 'code': 0, 'msg': 'success', 'data': {'taskId': '616309173881143660'}}
+2026-04-22 20:21:33,963 | INFO | geelark | GeeLark taskId: 616309173881143660
+2026-04-22 20:21:33,963 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616309173881143660', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/d898d4c5.mp4', 'scheduled_at': 1776878521, 'geelark_response': {'traceId': '3202d499-5e24-45a7-8e59-c6b347fc6716', 'code': 0, 'msg': 'success', 'data': {'taskId': '616309173881143660'}}}
+2026-04-23 14:56:45,520 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/61be782b-36e7-478f-b75f-84466cbe34cd.mp4 -> 68ce7c4a.mp4
+2026-04-23 14:56:45,525 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/68ce7c4a.mp4
+2026-04-23 14:56:45,534 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/68ce7c4a.mp4
+2026-04-23 14:56:45,542 | INFO | geelark | Publishing to GeeLark endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=c7c28e9f-a315-4481-9e07-213a6d650b22
+2026-04-23 14:56:45,545 | INFO | geelark | Video URL: https://empathic-spherical-revise.ngrok-free.dev/68ce7c4a.mp4
+2026-04-23 14:56:45,545 | INFO | geelark | Publish payload: {'scheduleAt': 1776945435, 'id': '615335260552429723', 'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/68ce7c4a.mp4']}
+2026-04-23 14:56:47,425 | INFO | geelark | GeeLark response: {'traceId': 'c7c28e9f-a315-4481-9e07-213a6d650b22', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 14:56:47,427 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 14:56:49,922 | INFO | geelark | GeeLark response: {'traceId': '0b0c48f6-1a96-4378-ab6a-80756e291b7f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616421439930630508'}}
+2026-04-23 14:56:49,924 | INFO | geelark | GeeLark taskId: 616421439930630508
+2026-04-23 14:56:49,924 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616421439930630508', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/68ce7c4a.mp4', 'scheduled_at': 1776945435, 'geelark_response': {'traceId': '0b0c48f6-1a96-4378-ab6a-80756e291b7f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616421439930630508'}}}
+2026-04-23 15:33:59,911 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/628c8aba-3483-411d-bf7f-ad2936fb85de.mp4 -> 329c97bd.mp4
+2026-04-23 15:33:59,914 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/329c97bd.mp4
+2026-04-23 15:33:59,920 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/329c97bd.mp4
+2026-04-23 15:33:59,921 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=86a0b54f-5778-4258-8fec-0d14f639a904
+2026-04-23 15:33:59,921 | INFO | geelark | Payload: {'scheduleAt': 1776947669, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/329c97bd.mp4']}}
+2026-04-23 15:34:03,226 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=69183995-55d7-4014-8173-0b0f0caf5684
+2026-04-23 15:34:03,228 | INFO | geelark | Payload: {'scheduleAt': 1776947669, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/329c97bd.mp4']}}
+2026-04-23 15:34:06,110 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=f6670b32-464b-4f44-bd4a-64bc1d771165
+2026-04-23 15:34:06,111 | INFO | geelark | Payload: {'scheduleAt': 1776947669, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/329c97bd.mp4']}}
+2026-04-23 15:34:06,840 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 148, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 127, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 116, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+2026-04-23 15:37:11,005 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/fd92fd6d-e8ed-44f3-a2bd-ca559c69e499.mp4 -> a914efd1.mp4
+2026-04-23 15:37:11,006 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/a914efd1.mp4
+2026-04-23 15:37:11,011 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/a914efd1.mp4
+2026-04-23 15:37:11,011 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=843f8330-b51e-4d4b-aa6c-d2e405a9529b
+2026-04-23 15:37:11,011 | INFO | geelark | Payload: {'scheduleAt': 1776947861, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a914efd1.mp4']}}
+2026-04-23 15:37:14,483 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=6f122149-f8d5-4054-836a-3b0b711fe492
+2026-04-23 15:37:14,483 | INFO | geelark | Payload: {'scheduleAt': 1776947861, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a914efd1.mp4']}}
+2026-04-23 15:37:17,377 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=dce6021c-3115-478f-9ec1-719553727cd2
+2026-04-23 15:37:17,377 | INFO | geelark | Payload: {'scheduleAt': 1776947861, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a914efd1.mp4']}}
+2026-04-23 15:37:18,041 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 135, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 124, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+2026-04-23 15:38:05,833 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/364a95a7-629f-45fb-822c-b130e8196c86.mp4 -> 2d9a429a.mp4
+2026-04-23 15:38:05,833 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/2d9a429a.mp4
+2026-04-23 15:38:05,841 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/2d9a429a.mp4
+2026-04-23 15:38:05,842 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=3d999205-991d-43d0-acd5-7cb58b4d5f5e
+2026-04-23 15:38:05,842 | INFO | geelark | Payload: {'scheduleAt': 1776947915, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/2d9a429a.mp4']}}
+2026-04-23 15:38:08,774 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=350d09ad-e17c-493b-b86f-64e76667e540
+2026-04-23 15:38:08,775 | INFO | geelark | Payload: {'scheduleAt': 1776947915, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/2d9a429a.mp4']}}
+2026-04-23 15:38:12,268 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=bd58042b-2433-4990-a28e-cf7f8fad1361
+2026-04-23 15:38:12,270 | INFO | geelark | Payload: {'scheduleAt': 1776947915, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/2d9a429a.mp4']}}
+2026-04-23 15:38:13,671 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 135, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 124, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+2026-04-23 15:44:46,850 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/03d079c6-f9d4-4d1a-8cba-b640f1fcb9a1.mp4 -> 89b9bfc1.mp4
+2026-04-23 15:44:46,851 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/89b9bfc1.mp4
+2026-04-23 15:44:46,858 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/89b9bfc1.mp4
+2026-04-23 15:44:46,859 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://open.geelark.com/open/v1/rpa/task/execute traceId=871ff07a-eae1-4bbc-bfea-82ac341721fa
+2026-04-23 15:44:46,859 | INFO | geelark | Payload: {'scheduleAt': 1776948316, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'Most people fail because they skip this one step.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/89b9bfc1.mp4']}}
+2026-04-23 15:44:51,667 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://open.geelark.com/open/v1/rpa/task/execute traceId=ef73f395-b880-4983-8422-412047cca6f7
+2026-04-23 15:44:51,668 | INFO | geelark | Payload: {'scheduleAt': 1776948316, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'Most people fail because they skip this one step.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/89b9bfc1.mp4']}}
+2026-04-23 15:44:54,989 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://open.geelark.com/open/v1/rpa/task/execute traceId=a2140ae6-f1d9-4028-9c32-a89d832f6141
+2026-04-23 15:44:54,995 | INFO | geelark | Payload: {'scheduleAt': 1776948316, 'id': '615335260552429723', 'taskPath': '520260423150311', 'params': {'description': 'Most people fail because they skip this one step.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/89b9bfc1.mp4']}}
+2026-04-23 15:44:56,555 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 135, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 124, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/open/v1/rpa/task/execute
+2026-04-23 15:47:06,681 | INFO | geelark | Executing GeeLark task=Прогрев аккаунтов Instagram через ИИ20260423150618 endpoint=https://open.geelark.com/open/v1/rpa/task/execute traceId=d1d42a82-82fb-4a49-b0d1-c0d7cf5dbd8b
+2026-04-23 15:47:06,684 | INFO | geelark | Payload: {'scheduleAt': 1776948606, 'id': '615335260552429723', 'taskPath': 'Прогрев аккаунтов Instagram через ИИ20260423150618', 'params': {'NumberOfVideosViewed': 5, 'SearchKeyword': ''}}
+2026-04-23 15:47:09,826 | INFO | geelark | Executing GeeLark task=Прогрев аккаунтов Instagram через ИИ20260423150618 endpoint=https://open.geelark.com/open/v1/rpa/task/execute traceId=d119dd33-3fa3-4e21-8988-25e544fa7422
+2026-04-23 15:47:09,827 | INFO | geelark | Payload: {'scheduleAt': 1776948606, 'id': '615335260552429723', 'taskPath': 'Прогрев аккаунтов Instagram через ИИ20260423150618', 'params': {'NumberOfVideosViewed': 5, 'SearchKeyword': ''}}
+2026-04-23 15:47:13,520 | INFO | geelark | Executing GeeLark task=Прогрев аккаунтов Instagram через ИИ20260423150618 endpoint=https://open.geelark.com/open/v1/rpa/task/execute traceId=a4772c89-28b9-4deb-aa8c-e51f7d2fec05
+2026-04-23 15:47:13,522 | INFO | geelark | Payload: {'scheduleAt': 1776948606, 'id': '615335260552429723', 'taskPath': 'Прогрев аккаунтов Instagram через ИИ20260423150618', 'params': {'NumberOfVideosViewed': 5, 'SearchKeyword': ''}}
+2026-04-23 15:47:14,575 | ERROR | publish_api | Warmup failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 30, in warmup
+    geelark_response = warmup_geelark_account(payload.cloud_phone_id)
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 48, in warmup_geelark_account
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 135, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 124, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/open/v1/rpa/task/execute
+2026-04-23 15:53:27,435 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/c0ea80a1-d9b6-4064-a00b-c5d6f4385c13.mp4 -> d3a1053d.mp4
+2026-04-23 15:53:35,850 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/d3a1053d.mp4
+2026-04-23 15:53:35,853 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=1645547b-4d35-42c9-8708-069884400edf
+2026-04-23 15:53:35,854 | INFO | geelark | Payload: {'scheduleAt': 1776948845, 'id': '615335260552429723', 'taskId': '520260423150311', 'params': {'description': 'One simple framework to get consistent progress.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/d3a1053d.mp4']}}
+2026-04-23 15:53:39,074 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=7f8a5598-c47d-4d2f-857e-5b0b39b25b09
+2026-04-23 15:53:39,076 | INFO | geelark | Payload: {'scheduleAt': 1776948845, 'id': '615335260552429723', 'taskId': '520260423150311', 'params': {'description': 'One simple framework to get consistent progress.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/d3a1053d.mp4']}}
+2026-04-23 15:53:42,212 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=5c282abb-a777-4134-8cbd-b9ced46abe32
+2026-04-23 15:53:42,213 | INFO | geelark | Payload: {'scheduleAt': 1776948845, 'id': '615335260552429723', 'taskId': '520260423150311', 'params': {'description': 'One simple framework to get consistent progress.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/d3a1053d.mp4']}}
+2026-04-23 15:53:43,355 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 135, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 124, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+2026-04-23 15:53:44,726 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/c0ea80a1-d9b6-4064-a00b-c5d6f4385c13.mp4 -> ea02ec68.mp4
+2026-04-23 15:53:51,808 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/ea02ec68.mp4
+2026-04-23 15:53:51,813 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=fc399fee-faa7-4d0c-a027-4159c7050af5
+2026-04-23 15:53:51,813 | INFO | geelark | Payload: {'scheduleAt': 1776948861, 'id': '615335260552429723', 'taskId': '520260423150311', 'params': {'description': 'One simple framework to get consistent progress.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ea02ec68.mp4']}}
+2026-04-23 15:53:55,236 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=6a257e1e-3ec1-4585-ba4d-2907f11d5ba1
+2026-04-23 15:53:55,238 | INFO | geelark | Payload: {'scheduleAt': 1776948861, 'id': '615335260552429723', 'taskId': '520260423150311', 'params': {'description': 'One simple framework to get consistent progress.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ea02ec68.mp4']}}
+2026-04-23 15:53:58,137 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=7d86a188-7612-47c6-ad8a-6db0bb45cdb2
+2026-04-23 15:53:58,137 | INFO | geelark | Payload: {'scheduleAt': 1776948861, 'id': '615335260552429723', 'taskId': '520260423150311', 'params': {'description': 'One simple framework to get consistent progress.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ea02ec68.mp4']}}
+2026-04-23 15:53:58,859 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 135, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 124, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+2026-04-23 15:58:29,056 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0b20ea0e-f0d0-488c-9caf-4b45610a2a98.mp4 -> 37091bb6.mp4
+2026-04-23 15:58:36,929 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/37091bb6.mp4
+2026-04-23 15:58:36,932 | INFO | geelark | Executing GeeLark task=520260423150311 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=05f9c4bc-32d7-4695-82a9-f31ec484560c
+2026-04-23 15:58:36,933 | INFO | geelark | Payload: {'scheduleAt': 1776949146, 'id': '615335260552429723', 'description': 'If you do this for 7 days, your results will change.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/37091bb6.mp4'], 'taskPath': '520260423150311'}
+2026-04-23 15:58:37,937 | INFO | geelark | GeeLark response: {'traceId': '05f9c4bc-32d7-4695-82a9-f31ec484560c', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 15:58:37,939 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 15:58:40,578 | INFO | geelark | GeeLark response: {'traceId': '3af48744-8c68-4f39-b410-c28865a2d1ab', 'code': 0, 'msg': 'success', 'data': {'taskId': '616427665955488108'}}
+2026-04-23 15:58:40,591 | INFO | geelark | GeeLark taskId: 616427665955488108
+2026-04-23 15:58:40,592 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616427665955488108', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/37091bb6.mp4', 'scheduled_at': 1776949146, 'geelark_response': {'traceId': '3af48744-8c68-4f39-b410-c28865a2d1ab', 'code': 0, 'msg': 'success', 'data': {'taskId': '616427665955488108'}}}
+2026-04-23 16:01:48,676 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/cc55c568-974d-45bf-922a-637a53cc7e2c.mp4 -> ce8b7774.mp4
+2026-04-23 16:01:55,235 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/ce8b7774.mp4
+2026-04-23 16:01:55,239 | INFO | geelark | Executing GeeLark task=520260423155939 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=092e6186-d916-4057-a60e-1d02cbc556ff
+2026-04-23 16:01:55,239 | INFO | geelark | Payload: {'scheduleAt': 1776949345, 'id': '615335260552429723', 'description': 'Stop doing this if you want faster growth.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ce8b7774.mp4'], 'taskPath': '520260423155939'}
+2026-04-23 16:01:56,437 | INFO | geelark | GeeLark response: {'traceId': '092e6186-d916-4057-a60e-1d02cbc556ff', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 16:01:56,438 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 16:01:57,614 | INFO | geelark | GeeLark response: {'traceId': '9d48c191-b6ff-4bc5-b05a-6c6953cc380b', 'code': 0, 'msg': 'success', 'data': {'taskId': '616427996516974909'}}
+2026-04-23 16:01:57,620 | INFO | geelark | GeeLark taskId: 616427996516974909
+2026-04-23 16:01:57,623 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616427996516974909', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/ce8b7774.mp4', 'scheduled_at': 1776949345, 'geelark_response': {'traceId': '9d48c191-b6ff-4bc5-b05a-6c6953cc380b', 'code': 0, 'msg': 'success', 'data': {'taskId': '616427996516974909'}}}
+2026-04-23 16:05:16,350 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/d05eec55-edb4-47af-b592-ed78f10f9388.mp4 -> 01984582.mp4
+2026-04-23 16:05:25,462 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/01984582.mp4
+2026-04-23 16:05:25,468 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=0821fb86-c395-4796-bfcb-28679b83aa25
+2026-04-23 16:05:25,469 | INFO | geelark | Payload: {'scheduleAt': 1776949555, 'id': '615335260552429723', 'description': 'One simple framework to get consistent progress.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/01984582.mp4'], 'taskPath': '616420599023010067'}
+2026-04-23 16:05:26,528 | INFO | geelark | GeeLark response: {'traceId': '0821fb86-c395-4796-bfcb-28679b83aa25', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 16:05:26,528 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 16:05:27,731 | INFO | geelark | GeeLark response: {'traceId': '3a0595bf-93c8-4a68-94e0-5bf538d6502c', 'code': 0, 'msg': 'success', 'data': {'taskId': '616428349090169196'}}
+2026-04-23 16:05:27,737 | INFO | geelark | GeeLark taskId: 616428349090169196
+2026-04-23 16:05:27,737 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616428349090169196', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/01984582.mp4', 'scheduled_at': 1776949555, 'geelark_response': {'traceId': '3a0595bf-93c8-4a68-94e0-5bf538d6502c', 'code': 0, 'msg': 'success', 'data': {'taskId': '616428349090169196'}}}
+2026-04-23 16:11:22,929 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/42814c69-89c6-4d5c-89da-3f4726757107.mp4 -> ba887b6b.mp4
+2026-04-23 16:11:29,127 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/ba887b6b.mp4
+2026-04-23 16:11:29,129 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=52fc7c76-dc34-418b-9295-11f39b6323c9
+2026-04-23 16:11:29,129 | INFO | geelark | Payload: {'scheduleAt': 1776949919, 'id': '615335260552429723', 'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ba887b6b.mp4'], 'taskPath': '616420599023010067'}
+2026-04-23 16:11:30,009 | INFO | geelark | GeeLark response: {'traceId': '52fc7c76-dc34-418b-9295-11f39b6323c9', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 16:11:30,012 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 16:11:31,187 | INFO | geelark | GeeLark response: {'traceId': 'd1e0ec61-d54b-4bd0-82eb-241bdb88cc6f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616428958891639101'}}
+2026-04-23 16:11:31,189 | INFO | geelark | GeeLark taskId: 616428958891639101
+2026-04-23 16:11:31,189 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616428958891639101', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/ba887b6b.mp4', 'scheduled_at': 1776949919, 'geelark_response': {'traceId': 'd1e0ec61-d54b-4bd0-82eb-241bdb88cc6f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616428958891639101'}}}
+2026-04-23 16:14:11,574 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/dfa9a9a0-ec5c-4e85-b982-9dff2e5296ea.mp4 -> 0d453eec.mp4
+2026-04-23 16:14:19,967 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/0d453eec.mp4
+2026-04-23 16:14:19,970 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=19e726d9-38e6-4aa1-8d31-6ff57bb7c3d4
+2026-04-23 16:14:19,970 | INFO | geelark | Payload: {'scheduleAt': 1776950089, 'id': '615335260552429723', 'description': 'This mindset shift can save you months of frustration.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0d453eec.mp4'], 'taskPath': '616420599023010067'}
+2026-04-23 16:14:21,380 | INFO | geelark | GeeLark response: {'traceId': '19e726d9-38e6-4aa1-8d31-6ff57bb7c3d4', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 16:14:21,382 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 16:14:22,594 | INFO | geelark | GeeLark response: {'traceId': 'f0689235-f98c-4513-995a-d1c3d4db5aae', 'code': 0, 'msg': 'success', 'data': {'taskId': '616429246520230205'}}
+2026-04-23 16:14:22,596 | INFO | geelark | GeeLark taskId: 616429246520230205
+2026-04-23 16:14:22,596 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616429246520230205', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/0d453eec.mp4', 'scheduled_at': 1776950089, 'geelark_response': {'traceId': 'f0689235-f98c-4513-995a-d1c3d4db5aae', 'code': 0, 'msg': 'success', 'data': {'taskId': '616429246520230205'}}}
+2026-04-23 16:26:34,861 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/d15a503f-1c74-4534-8cf1-d425d23fad8e.mp4 -> f629db33.mp4
+2026-04-23 16:26:39,453 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/f629db33.mp4
+2026-04-23 16:26:39,456 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=6c284eea-c502-4aa0-8949-b9ed11045b51
+2026-04-23 16:26:39,456 | INFO | geelark | Payload: {'scheduleAt': 1776950829, 'id': '615335260552429723', 'description': 'This mindset shift can save you months of frustration.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/f629db33.mp4'], 'taskPath': '616420599023010067'}
+2026-04-23 16:26:40,778 | INFO | geelark | GeeLark response: {'traceId': '6c284eea-c502-4aa0-8949-b9ed11045b51', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 16:26:40,786 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 16:26:42,386 | INFO | geelark | GeeLark response: {'traceId': '96bcd134-2339-457c-9ba2-14d6f8713088', 'code': 0, 'msg': 'success', 'data': {'taskId': '616430487681892669'}}
+2026-04-23 16:26:42,390 | INFO | geelark | GeeLark taskId: 616430487681892669
+2026-04-23 16:26:42,390 | INFO | publish_api | Publish success: {'success': True, 'task_id': '616430487681892669', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/f629db33.mp4', 'scheduled_at': 1776950829, 'geelark_response': {'traceId': '96bcd134-2339-457c-9ba2-14d6f8713088', 'code': 0, 'msg': 'success', 'data': {'taskId': '616430487681892669'}}}
+2026-04-23 16:32:51,001 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/781bae77-d062-4708-949f-8f682789ebda.mp4 -> cdb1e898.mp4
+2026-04-23 16:32:53,908 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/cdb1e898.mp4
+2026-04-23 16:32:53,910 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=7d20c774-139c-4fb4-a31a-47d66b70d586
+2026-04-23 16:32:53,910 | INFO | geelark | Payload: {'scheduleAt': 1776951203, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cdb1e898.mp4']}}
+2026-04-23 16:32:57,616 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=37581362-86ed-4e22-a2cd-984c6290145b
+2026-04-23 16:32:57,619 | INFO | geelark | Payload: {'scheduleAt': 1776951203, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cdb1e898.mp4']}}
+2026-04-23 16:33:01,069 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=b7d3cb8c-caac-4889-91a0-30addbd68db3
+2026-04-23 16:33:01,069 | INFO | geelark | Payload: {'scheduleAt': 1776951203, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cdb1e898.mp4']}}
+2026-04-23 16:33:01,885 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 157, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 136, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 125, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start
+2026-04-23 16:33:04,944 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/781bae77-d062-4708-949f-8f682789ebda.mp4 -> 578e302a.mp4
+2026-04-23 16:33:07,766 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/578e302a.mp4
+2026-04-23 16:33:07,768 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=d3d34f6f-a85c-4843-bc94-45f0d83767db
+2026-04-23 16:33:07,768 | INFO | geelark | Payload: {'scheduleAt': 1776951217, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/578e302a.mp4']}}
+2026-04-23 16:33:10,658 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=2e49fbf4-7efc-40b0-b646-c73e3c674d66
+2026-04-23 16:33:10,659 | INFO | geelark | Payload: {'scheduleAt': 1776951217, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/578e302a.mp4']}}
+2026-04-23 16:33:13,600 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=598b0db2-97a5-4197-bf22-0c57e85f47b0
+2026-04-23 16:33:13,602 | INFO | geelark | Payload: {'scheduleAt': 1776951217, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/578e302a.mp4']}}
+2026-04-23 16:33:14,511 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 157, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 136, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 125, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start
+2026-04-23 16:36:27,915 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/37228ecc-1908-4c12-9a12-cce4e9d0e786.mp4 -> 7b71bb99.mp4
+2026-04-23 16:36:31,526 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/7b71bb99.mp4
+2026-04-23 16:36:31,529 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=631b9aa4-c771-468d-a1f5-fa36edc85e42
+2026-04-23 16:36:31,529 | INFO | geelark | Payload: {'scheduleAt': 1776951421, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'One simple framework to get consistent progress.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7b71bb99.mp4']}}
+2026-04-23 16:36:35,258 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=fcfed706-361e-45ae-933d-28d201393959
+2026-04-23 16:36:35,259 | INFO | geelark | Payload: {'scheduleAt': 1776951421, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'One simple framework to get consistent progress.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7b71bb99.mp4']}}
+2026-04-23 16:36:39,156 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=a5ec6b28-8d57-4fee-84af-4aa7d12257eb
+2026-04-23 16:36:39,157 | INFO | geelark | Payload: {'scheduleAt': 1776951421, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'One simple framework to get consistent progress.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7b71bb99.mp4']}}
+2026-04-23 16:36:40,738 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 157, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 136, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 125, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start
+2026-04-23 16:38:57,252 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/256e5cc8-52ba-479e-8613-a5c99d9092bd.mp4 -> a0859628.mp4
+2026-04-23 16:39:01,241 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/a0859628.mp4
+2026-04-23 16:39:01,242 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=51ef989b-5eec-4168-a2d0-3c49e37766ad
+2026-04-23 16:39:01,243 | INFO | geelark | Payload: {'scheduleAt': 1776951571, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a0859628.mp4']}}
+2026-04-23 16:39:04,877 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=74d62516-1fad-495f-9b22-4de01993d258
+2026-04-23 16:39:04,879 | INFO | geelark | Payload: {'scheduleAt': 1776951571, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a0859628.mp4']}}
+2026-04-23 16:39:08,765 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=4ce9f934-5e78-40a3-bdbf-4279662f5277
+2026-04-23 16:39:08,766 | INFO | geelark | Payload: {'scheduleAt': 1776951571, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a0859628.mp4']}}
+2026-04-23 16:39:11,409 | ERROR | publish_api | Publish failed
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 60, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 157, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 136, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 125, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start
+2026-04-23 16:42:24,513 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/08c12fc9-39ca-493d-a1d5-1df3cccf0938.mp4, phone_id=615335260552429723
+2026-04-23 16:42:24,514 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 16:42:24,518 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/08c12fc9-39ca-493d-a1d5-1df3cccf0938.mp4 -> 88cabd67.mp4
+2026-04-23 16:42:27,377 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/88cabd67.mp4
+2026-04-23 16:42:27,379 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/88cabd67.mp4
+2026-04-23 16:42:27,379 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 16:42:27,379 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=c12c8da3-f6da-477c-828a-a8532c71c16c
+2026-04-23 16:42:27,379 | INFO | geelark | Payload: {'scheduleAt': 1776951777, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Most people fail because they skip this one step.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/88cabd67.mp4']}}
+2026-04-23 16:42:27,382 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776951777, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Most people fail because they skip this one step.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/88cabd67.mp4']}}
+2026-04-23 16:42:30,030 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 16:42:30,031 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 16:42:30,031 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 16:42:32,033 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=09af537b-bcea-4771-852b-9f22dac43c24
+2026-04-23 16:42:32,034 | INFO | geelark | Payload: {'scheduleAt': 1776951777, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Most people fail because they skip this one step.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/88cabd67.mp4']}}
+2026-04-23 16:42:32,034 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776951777, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Most people fail because they skip this one step.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/88cabd67.mp4']}}
+2026-04-23 16:42:33,916 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 16:42:33,916 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 16:42:33,917 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 16:42:35,922 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=ec2fa09a-a58a-4e40-bed1-9fb317bb878d
+2026-04-23 16:42:35,923 | INFO | geelark | Payload: {'scheduleAt': 1776951777, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Most people fail because they skip this one step.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/88cabd67.mp4']}}
+2026-04-23 16:42:35,923 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776951777, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Most people fail because they skip this one step.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/88cabd67.mp4']}}
+2026-04-23 16:42:38,020 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 16:42:38,020 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 16:42:38,020 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 16:42:38,021 | ERROR | publish_api | Publish failed at some step: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 139, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 175, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 154, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 143, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 16:49:42,612 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/456bd789-3e66-4dea-8fae-64c228966e22.mp4, phone_id=615335260552429723
+2026-04-23 16:49:42,612 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 16:49:42,613 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/456bd789-3e66-4dea-8fae-64c228966e22.mp4 -> ebea7c9d.mp4
+2026-04-23 16:49:48,642 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/ebea7c9d.mp4
+2026-04-23 16:49:48,644 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/ebea7c9d.mp4
+2026-04-23 16:49:48,644 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 16:49:48,645 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=a72dbb31-683b-41bd-b49d-0ad6fd115926
+2026-04-23 16:49:48,645 | INFO | geelark | Payload: {'scheduleAt': 1776952218, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ebea7c9d.mp4']}}
+2026-04-23 16:49:48,649 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952218, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ebea7c9d.mp4']}}
+2026-04-23 16:49:50,983 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:49:50,983 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:49:50,984 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:49:52,989 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=62d32576-02d5-499a-9cdf-eaa8fa179e43
+2026-04-23 16:49:52,990 | INFO | geelark | Payload: {'scheduleAt': 1776952218, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ebea7c9d.mp4']}}
+2026-04-23 16:49:52,991 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952218, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ebea7c9d.mp4']}}
+2026-04-23 16:49:53,745 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:49:53,745 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:49:53,746 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:49:55,750 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=9845784f-ff71-49aa-86e4-35f540272541
+2026-04-23 16:49:55,752 | INFO | geelark | Payload: {'scheduleAt': 1776952218, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ebea7c9d.mp4']}}
+2026-04-23 16:49:55,753 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952218, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ebea7c9d.mp4']}}
+2026-04-23 16:49:56,813 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:49:56,814 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:49:56,814 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:49:56,820 | ERROR | publish_api | Publish failed at some step: Geelark API error: 404 - 404 page not found
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 177, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 145, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 404 - 404 page not found
+2026-04-23 16:49:58,685 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/456bd789-3e66-4dea-8fae-64c228966e22.mp4, phone_id=615335260552429723
+2026-04-23 16:49:58,686 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 16:49:58,687 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/456bd789-3e66-4dea-8fae-64c228966e22.mp4 -> 21e10d9a.mp4
+2026-04-23 16:50:06,080 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/21e10d9a.mp4
+2026-04-23 16:50:06,082 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/21e10d9a.mp4
+2026-04-23 16:50:06,082 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 16:50:06,083 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=d7ee5517-bd72-4d38-abf2-baa88a84cabd
+2026-04-23 16:50:06,084 | INFO | geelark | Payload: {'scheduleAt': 1776952236, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/21e10d9a.mp4']}}
+2026-04-23 16:50:06,084 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952236, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/21e10d9a.mp4']}}
+2026-04-23 16:50:07,032 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:50:07,032 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:50:07,032 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:50:09,037 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=e7c32517-1dad-4080-a472-c9dfab31d362
+2026-04-23 16:50:09,038 | INFO | geelark | Payload: {'scheduleAt': 1776952236, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/21e10d9a.mp4']}}
+2026-04-23 16:50:09,038 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952236, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/21e10d9a.mp4']}}
+2026-04-23 16:50:11,104 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:50:11,104 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:50:11,105 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:50:13,112 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=762cd4c9-84a1-4fec-809c-5746dcc35136
+2026-04-23 16:50:13,118 | INFO | geelark | Payload: {'scheduleAt': 1776952236, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/21e10d9a.mp4']}}
+2026-04-23 16:50:13,119 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952236, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/21e10d9a.mp4']}}
+2026-04-23 16:50:13,926 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:50:13,926 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:50:13,927 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:50:13,928 | ERROR | publish_api | Publish failed at some step: Geelark API error: 404 - 404 page not found
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 177, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 145, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 404 - 404 page not found
+2026-04-23 16:51:12,052 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/442d95de-57c7-4323-8b06-45bb37e507dc.mp4, phone_id=615335260552429723
+2026-04-23 16:51:12,052 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 16:51:12,053 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/442d95de-57c7-4323-8b06-45bb37e507dc.mp4 -> b2cce0c5.mp4
+2026-04-23 16:51:16,356 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/b2cce0c5.mp4
+2026-04-23 16:51:16,357 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/b2cce0c5.mp4
+2026-04-23 16:51:16,357 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 16:51:16,358 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=b326efb2-4af5-42bc-9181-367b16735906
+2026-04-23 16:51:16,359 | INFO | geelark | Payload: {'scheduleAt': 1776952306, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b2cce0c5.mp4']}}
+2026-04-23 16:51:16,361 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952306, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b2cce0c5.mp4']}}
+2026-04-23 16:51:17,231 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:51:17,231 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:51:17,231 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:51:19,236 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=92510b77-2d01-4121-9266-28944d7b2e3b
+2026-04-23 16:51:19,237 | INFO | geelark | Payload: {'scheduleAt': 1776952306, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b2cce0c5.mp4']}}
+2026-04-23 16:51:19,237 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952306, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b2cce0c5.mp4']}}
+2026-04-23 16:51:20,263 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:51:20,263 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:51:20,263 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:51:22,272 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=107d495a-aa0f-414a-9721-a306949ed3bb
+2026-04-23 16:51:22,272 | INFO | geelark | Payload: {'scheduleAt': 1776952306, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b2cce0c5.mp4']}}
+2026-04-23 16:51:22,272 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952306, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b2cce0c5.mp4']}}
+2026-04-23 16:51:22,977 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:51:22,977 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:51:22,977 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:51:22,980 | ERROR | publish_api | Publish failed at some step: Geelark API error: 404 - 404 page not found
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 177, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 145, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 404 - 404 page not found
+2026-04-23 16:51:25,107 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/01bc3530-aa70-4612-82f1-e74a6fa7e8df.mp4, phone_id=615335260552429723
+2026-04-23 16:51:25,107 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 16:51:25,109 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/01bc3530-aa70-4612-82f1-e74a6fa7e8df.mp4 -> cac3bef7.mp4
+2026-04-23 16:51:29,383 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/cac3bef7.mp4
+2026-04-23 16:51:29,384 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/cac3bef7.mp4
+2026-04-23 16:51:29,384 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 16:51:29,385 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=af549e78-2092-46a3-9066-bbcd2072efa9
+2026-04-23 16:51:29,386 | INFO | geelark | Payload: {'scheduleAt': 1776952319, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cac3bef7.mp4']}}
+2026-04-23 16:51:29,386 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952319, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cac3bef7.mp4']}}
+2026-04-23 16:51:30,556 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:51:30,557 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:51:30,557 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:51:32,563 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=89d074ad-99d0-4fa7-949a-4f817ae6536d
+2026-04-23 16:51:32,564 | INFO | geelark | Payload: {'scheduleAt': 1776952319, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cac3bef7.mp4']}}
+2026-04-23 16:51:32,565 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952319, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cac3bef7.mp4']}}
+2026-04-23 16:51:34,145 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:51:34,145 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:51:34,146 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:51:36,157 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/execute traceId=208764bc-a2c8-4163-bd01-b03c1b753ae1
+2026-04-23 16:51:36,157 | INFO | geelark | Payload: {'scheduleAt': 1776952319, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cac3bef7.mp4']}}
+2026-04-23 16:51:36,157 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/execute, Payload={'scheduleAt': 1776952319, 'id': '615335260552429723', 'taskId': '616420673648066993', 'templateId': '616420673648066993', 'taskPath': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/cac3bef7.mp4']}}
+2026-04-23 16:51:37,048 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:51:37,049 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:51:37,049 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute, Response: 404 page not found
+2026-04-23 16:51:37,052 | ERROR | publish_api | Publish failed at some step: Geelark API error: 404 - 404 page not found
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/open/v1/rpa/task/execute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 177, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 156, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 145, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 404 - 404 page not found
+2026-04-23 16:58:16,164 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/8c81103f-862c-4dd0-858b-5c36b112a87d.mp4, phone_id=615335260552429723
+2026-04-23 16:58:16,165 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 16:58:16,165 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/8c81103f-862c-4dd0-858b-5c36b112a87d.mp4 -> a7c6df61.mp4
+2026-04-23 16:58:19,394 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/a7c6df61.mp4
+2026-04-23 16:58:19,398 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/a7c6df61.mp4
+2026-04-23 16:58:19,398 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 16:58:19,399 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=56575b08-09d8-43ed-9a7a-d8a57e4f5cbd
+2026-04-23 16:58:19,399 | INFO | geelark | Payload: {'scheduleAt': 1776952729, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a7c6df61.mp4']}}
+2026-04-23 16:58:19,400 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776952729, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a7c6df61.mp4']}}
+2026-04-23 16:58:22,115 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:58:22,117 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:58:22,117 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 16:58:24,122 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=cb0bd3cc-3a9b-4dd1-8a0d-efb62cab50fe
+2026-04-23 16:58:24,123 | INFO | geelark | Payload: {'scheduleAt': 1776952729, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a7c6df61.mp4']}}
+2026-04-23 16:58:24,124 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776952729, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a7c6df61.mp4']}}
+2026-04-23 16:58:26,777 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:58:26,778 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:58:26,778 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 16:58:28,786 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=d7d5b8a9-28fd-4b6f-9d31-776f128e5b09
+2026-04-23 16:58:28,798 | INFO | geelark | Payload: {'scheduleAt': 1776952729, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a7c6df61.mp4']}}
+2026-04-23 16:58:28,799 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776952729, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a7c6df61.mp4']}}
+2026-04-23 16:58:29,682 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:58:29,683 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:58:29,683 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 16:58:29,685 | ERROR | publish_api | Publish failed at some step: Geelark API error: 404 - 404 page not found
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 136, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 172, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 151, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 140, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 404 - 404 page not found
+2026-04-23 16:58:31,674 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/8c81103f-862c-4dd0-858b-5c36b112a87d.mp4, phone_id=615335260552429723
+2026-04-23 16:58:31,675 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 16:58:31,675 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/8c81103f-862c-4dd0-858b-5c36b112a87d.mp4 -> 0b4584fc.mp4
+2026-04-23 16:58:35,893 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/0b4584fc.mp4
+2026-04-23 16:58:35,894 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/0b4584fc.mp4
+2026-04-23 16:58:35,894 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 16:58:35,895 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=7f4cef7b-311e-4aec-ab20-2ab780907fa6
+2026-04-23 16:58:35,896 | INFO | geelark | Payload: {'scheduleAt': 1776952745, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0b4584fc.mp4']}}
+2026-04-23 16:58:35,896 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776952745, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0b4584fc.mp4']}}
+2026-04-23 16:58:37,110 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:58:37,112 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:58:37,112 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 16:58:39,114 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=ead8f457-4149-416f-968c-a92b4a53199a
+2026-04-23 16:58:39,114 | INFO | geelark | Payload: {'scheduleAt': 1776952745, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0b4584fc.mp4']}}
+2026-04-23 16:58:39,115 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776952745, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0b4584fc.mp4']}}
+2026-04-23 16:58:39,935 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:58:39,935 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:58:39,935 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 16:58:41,943 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=aea1a993-a917-4afa-a00a-b410a2349eba
+2026-04-23 16:58:41,943 | INFO | geelark | Payload: {'scheduleAt': 1776952745, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0b4584fc.mp4']}}
+2026-04-23 16:58:41,943 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776952745, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0b4584fc.mp4']}}
+2026-04-23 16:58:42,939 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 16:58:42,939 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 16:58:42,939 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 16:58:42,942 | ERROR | publish_api | Publish failed at some step: Geelark API error: 404 - 404 page not found
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 136, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 172, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 151, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 140, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 404 - 404 page not found
+2026-04-23 17:08:29,480 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/6ecb1f79-3cab-48ef-a524-ac07bb175f11.mp4, phone_id=615335260552429723
+2026-04-23 17:08:29,483 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:08:29,488 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/6ecb1f79-3cab-48ef-a524-ac07bb175f11.mp4 -> 318e1b88.mp4
+2026-04-23 17:08:31,999 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/318e1b88.mp4
+2026-04-23 17:08:32,001 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/318e1b88.mp4
+2026-04-23 17:08:32,001 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 17:08:32,005 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=a7dd88dc-fa1f-4e93-86e2-8c13047d4d12
+2026-04-23 17:08:32,006 | INFO | geelark | Payload: {'scheduleAt': 1776953342, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/318e1b88.mp4']}}
+2026-04-23 17:08:32,007 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953342, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/318e1b88.mp4']}}
+2026-04-23 17:08:35,439 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 17:08:35,441 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 17:08:35,441 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 17:08:37,445 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=990d1687-9030-4d9e-8058-d00a403a42e7
+2026-04-23 17:08:37,447 | INFO | geelark | Payload: {'scheduleAt': 1776953342, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/318e1b88.mp4']}}
+2026-04-23 17:08:37,447 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953342, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/318e1b88.mp4']}}
+2026-04-23 17:08:38,541 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 17:08:38,541 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 17:08:38,541 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 17:08:40,549 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=ff4b7c96-f5b0-4d71-a491-bb6067dba34a
+2026-04-23 17:08:40,551 | INFO | geelark | Payload: {'scheduleAt': 1776953342, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/318e1b88.mp4']}}
+2026-04-23 17:08:40,552 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953342, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/318e1b88.mp4']}}
+2026-04-23 17:08:41,480 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 17:08:41,480 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 17:08:41,480 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 17:08:41,481 | ERROR | publish_api | Publish failed at some step: Geelark API error: 404 - 404 page not found
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 136, in _send_once
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 172, in execute_geelark_task
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 151, in _send
+    if GEELARK_BEARER_TOKEN:
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 140, in _send_once
+    logger.error("HTTP error from Geelark: %s, Response: %s", e, response.text)
+RuntimeError: Geelark API error: 404 - 404 page not found
+2026-04-23 17:08:43,404 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/6ecb1f79-3cab-48ef-a524-ac07bb175f11.mp4, phone_id=615335260552429723
+2026-04-23 17:08:43,405 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:08:43,411 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/6ecb1f79-3cab-48ef-a524-ac07bb175f11.mp4 -> 948d7329.mp4
+2026-04-23 17:08:48,865 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/948d7329.mp4
+2026-04-23 17:08:48,866 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/948d7329.mp4
+2026-04-23 17:08:48,866 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 17:08:48,867 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=cf36411d-8bc8-428c-ab8d-d11c447e452b
+2026-04-23 17:08:48,867 | INFO | geelark | Payload: {'scheduleAt': 1776953358, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/948d7329.mp4']}}
+2026-04-23 17:08:48,867 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953358, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/948d7329.mp4']}}
+2026-04-23 17:08:50,124 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 17:08:50,125 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 17:08:50,125 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 17:08:52,128 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=91fa67d9-b254-4f7f-ac60-ffaf73fd049c
+2026-04-23 17:08:52,129 | INFO | geelark | Payload: {'scheduleAt': 1776953358, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/948d7329.mp4']}}
+2026-04-23 17:08:52,129 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953358, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/948d7329.mp4']}}
+2026-04-23 17:08:52,822 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 17:08:52,823 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 17:08:52,823 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 17:08:54,830 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/v1/rpa/start traceId=562dc591-fbac-4f5d-9bbc-abecd88319c0
+2026-04-23 17:08:54,831 | INFO | geelark | Payload: {'scheduleAt': 1776953358, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/948d7329.mp4']}}
+2026-04-23 17:08:54,831 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953358, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/948d7329.mp4']}}
+2026-04-23 17:08:56,333 | INFO | geelark | GeeLark response status=404: {'raw_content': '404 page not found'}
+2026-04-23 17:08:56,334 | ERROR | geelark | GeeLark error response: 404 page not found
+2026-04-23 17:08:56,334 | ERROR | geelark | HTTP error from Geelark: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start, Response: 404 page not found
+2026-04-23 17:08:56,337 | ERROR | publish_api | Publish failed at some step: Geelark API error: 404 - 404 page not found
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 136, in _send_once
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://openapi.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 172, in execute_geelark_task
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 151, in _send
+    if GEELARK_BEARER_TOKEN:
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 140, in _send_once
+    logger.error("HTTP error from Geelark: %s, Response: %s", e, response.text)
+RuntimeError: Geelark API error: 404 - 404 page not found
+2026-04-23 17:10:14,813 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/0733bbdb-0c98-4904-9839-818d38bf86ff.mp4, phone_id=615335260552429723
+2026-04-23 17:10:14,813 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:10:14,813 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0733bbdb-0c98-4904-9839-818d38bf86ff.mp4 -> 3acc5f69.mp4
+2026-04-23 17:10:17,956 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/3acc5f69.mp4
+2026-04-23 17:10:17,957 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/3acc5f69.mp4
+2026-04-23 17:10:17,957 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 17:10:17,958 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=6c2bebb9-22ef-44a0-b67e-498ce4933872
+2026-04-23 17:10:17,958 | INFO | geelark | Payload: {'scheduleAt': 1776953447, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/3acc5f69.mp4']}}
+2026-04-23 17:10:17,959 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953447, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/3acc5f69.mp4']}}
+2026-04-23 17:10:22,615 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:10:22,616 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:22,616 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:24,621 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=50bf9200-0183-48cc-83d9-c4d29f973424
+2026-04-23 17:10:24,622 | INFO | geelark | Payload: {'scheduleAt': 1776953447, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/3acc5f69.mp4']}}
+2026-04-23 17:10:24,622 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953447, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/3acc5f69.mp4']}}
+2026-04-23 17:10:26,237 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:10:26,238 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:26,238 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:28,246 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=e830693d-138e-451f-90c8-e0c9b2025bd7
+2026-04-23 17:10:28,246 | INFO | geelark | Payload: {'scheduleAt': 1776953447, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/3acc5f69.mp4']}}
+2026-04-23 17:10:28,246 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953447, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/3acc5f69.mp4']}}
+2026-04-23 17:10:29,808 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:10:29,809 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:29,809 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:29,812 | ERROR | publish_api | Publish failed at some step: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 137, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 173, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 152, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:31,479 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/0733bbdb-0c98-4904-9839-818d38bf86ff.mp4, phone_id=615335260552429723
+2026-04-23 17:10:31,480 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:10:31,480 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0733bbdb-0c98-4904-9839-818d38bf86ff.mp4 -> ab1a2c08.mp4
+2026-04-23 17:10:37,122 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/ab1a2c08.mp4
+2026-04-23 17:10:37,122 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/ab1a2c08.mp4
+2026-04-23 17:10:37,122 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 17:10:37,122 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=c0969b8e-e18f-4995-8687-78d31cbe4f14
+2026-04-23 17:10:37,122 | INFO | geelark | Payload: {'scheduleAt': 1776953467, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ab1a2c08.mp4']}}
+2026-04-23 17:10:37,122 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953467, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ab1a2c08.mp4']}}
+2026-04-23 17:10:38,646 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:10:38,649 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:38,649 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:40,654 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=b5a21a93-2a9c-468f-8afa-2e6a45930af2
+2026-04-23 17:10:40,655 | INFO | geelark | Payload: {'scheduleAt': 1776953467, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ab1a2c08.mp4']}}
+2026-04-23 17:10:40,656 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953467, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ab1a2c08.mp4']}}
+2026-04-23 17:10:42,087 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:10:42,087 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:42,087 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:44,094 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=afa0892c-6352-49c8-a004-bb4967aafb66
+2026-04-23 17:10:44,097 | INFO | geelark | Payload: {'scheduleAt': 1776953467, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ab1a2c08.mp4']}}
+2026-04-23 17:10:44,097 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776953467, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/ab1a2c08.mp4']}}
+2026-04-23 17:10:45,904 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:10:45,906 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:45,906 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:10:45,911 | ERROR | publish_api | Publish failed at some step: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 137, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 173, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 152, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:19,779 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/706bacf6-3419-489a-a723-76e284f9a12d.mp4, phone_id=615335260552429723
+2026-04-23 17:51:19,783 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:51:19,796 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/706bacf6-3419-489a-a723-76e284f9a12d.mp4 -> 37442810.mp4
+2026-04-23 17:51:23,775 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/37442810.mp4
+2026-04-23 17:51:23,777 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/37442810.mp4
+2026-04-23 17:51:23,778 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 17:51:23,782 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=be6e422f-9d06-4a91-b4c8-fa58bad9fc0a
+2026-04-23 17:51:23,783 | INFO | geelark | Payload: {'scheduleAt': 1776955913, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/37442810.mp4']}}
+2026-04-23 17:51:23,785 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776955913, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/37442810.mp4']}}
+2026-04-23 17:51:28,189 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:51:28,190 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:28,190 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:30,191 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=74055c8a-19db-47b3-a695-a9fb468a97b1
+2026-04-23 17:51:30,191 | INFO | geelark | Payload: {'scheduleAt': 1776955913, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/37442810.mp4']}}
+2026-04-23 17:51:30,192 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776955913, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/37442810.mp4']}}
+2026-04-23 17:51:31,715 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:51:31,715 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:31,716 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:33,724 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=12d8f413-5fae-4653-be17-05fbbaaa8bd0
+2026-04-23 17:51:33,725 | INFO | geelark | Payload: {'scheduleAt': 1776955913, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/37442810.mp4']}}
+2026-04-23 17:51:33,725 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776955913, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/37442810.mp4']}}
+2026-04-23 17:51:34,761 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:51:34,761 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:34,762 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:34,764 | ERROR | publish_api | Publish failed at some step: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 137, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 173, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 152, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:35,582 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/706bacf6-3419-489a-a723-76e284f9a12d.mp4, phone_id=615335260552429723
+2026-04-23 17:51:35,583 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:51:35,583 | INFO | uploader | Uploading local video to SSH server: /Users/rifatello/Desktop/content-factory copy 2/storage/processing/706bacf6-3419-489a-a723-76e284f9a12d.mp4 -> b1e0963e.mp4
+2026-04-23 17:51:38,952 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/b1e0963e.mp4
+2026-04-23 17:51:38,956 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/b1e0963e.mp4
+2026-04-23 17:51:38,956 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 17:51:38,957 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=959be9c4-faeb-4bb4-8033-9d247c296b41
+2026-04-23 17:51:38,957 | INFO | geelark | Payload: {'scheduleAt': 1776955928, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b1e0963e.mp4']}}
+2026-04-23 17:51:38,957 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776955928, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b1e0963e.mp4']}}
+2026-04-23 17:51:40,588 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:51:40,589 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:40,589 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:42,592 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=04b14ebc-0979-4dd6-b8a7-29f454c84422
+2026-04-23 17:51:42,593 | INFO | geelark | Payload: {'scheduleAt': 1776955928, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b1e0963e.mp4']}}
+2026-04-23 17:51:42,594 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776955928, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b1e0963e.mp4']}}
+2026-04-23 17:51:44,270 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:51:44,270 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:44,271 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:46,275 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://open.geelark.com/v1/rpa/start traceId=94b4da81-e83a-4cd4-9106-99fc75ad9a76
+2026-04-23 17:51:46,276 | INFO | geelark | Payload: {'scheduleAt': 1776955928, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b1e0963e.mp4']}}
+2026-04-23 17:51:46,276 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776955928, 'id': '615335260552429723', 'taskId': '616420673648066993', 'params': {'description': 'Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/b1e0963e.mp4']}}
+2026-04-23 17:51:47,792 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 17:51:47,793 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:47,793 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:51:47,797 | ERROR | publish_api | Publish failed at some step: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 137, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 173, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 152, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 17:52:11,389 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/706bacf6-3419-489a-a723-76e284f9a12d.mp4, phone_id=615335260552429723
+2026-04-23 17:52:11,389 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:52:11,390 | ERROR | publish_api | Publish failed at some step: VIDEO_PUBLIC_BASE_URL must be set
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 63, in publish
+    video_url = upload_video(payload.video_path)
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/uploader.py", line 90, in upload_video
+    raise RuntimeError("VIDEO_PUBLIC_BASE_URL must be set")
+RuntimeError: VIDEO_PUBLIC_BASE_URL must be set
+2026-04-23 17:53:37,238 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/70e0aa44-11e0-45bb-bcb4-4e4710da4799.mp4, phone_id=615335260552429723
+2026-04-23 17:53:37,239 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:53:37,240 | ERROR | publish_api | Publish failed at some step: VIDEO_PUBLIC_BASE_URL must be set
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 63, in publish
+    video_url = upload_video(payload.video_path)
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/uploader.py", line 90, in upload_video
+    raise RuntimeError("VIDEO_PUBLIC_BASE_URL must be set")
+RuntimeError: VIDEO_PUBLIC_BASE_URL must be set
+2026-04-23 17:55:22,578 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/706bacf6-3419-489a-a723-76e284f9a12d.mp4, phone_id=615335260552429723
+2026-04-23 17:55:22,578 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:55:22,578 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/706bacf6-3419-489a-a723-76e284f9a12d.mp4 -> 00df4b07.mp4
+2026-04-23 17:55:22,578 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/00df4b07.mp4
+2026-04-23 17:55:22,582 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/00df4b07.mp4
+2026-04-23 17:55:22,582 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/00df4b07.mp4
+2026-04-23 17:55:22,582 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 17:55:22,582 | ERROR | publish_api | Publish failed at some step: Set GEELARK_BEARER_TOKEN or GEELARK_APP_ID+GEELARK_API_KEY
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 63, in execute_geelark_task
+    raise RuntimeError("Set GEELARK_BEARER_TOKEN or GEELARK_APP_ID+GEELARK_API_KEY")
+RuntimeError: Set GEELARK_BEARER_TOKEN or GEELARK_APP_ID+GEELARK_API_KEY
+2026-04-23 17:59:31,688 | INFO | publish_api | Publish request received: video_path=storage/processing/70e0aa44-11e0-45bb-bcb4-4e4710da4799.mp4, phone_id=615335260552429723
+2026-04-23 17:59:31,689 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 17:59:31,689 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/70e0aa44-11e0-45bb-bcb4-4e4710da4799.mp4 -> 4e4a5331.mp4
+2026-04-23 17:59:31,690 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/4e4a5331.mp4
+2026-04-23 17:59:31,696 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/4e4a5331.mp4
+2026-04-23 17:59:31,696 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/4e4a5331.mp4
+2026-04-23 17:59:31,696 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 17:59:31,696 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=2999b3c0-39cf-4980-8579-7e62dca444ee
+2026-04-23 17:59:31,696 | INFO | geelark | Payload: {'scheduleAt': 1776956401, 'id': '615335260552429723', 'description': 'test', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/4e4a5331.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 17:59:31,696 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956401, 'id': '615335260552429723', 'description': 'test', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/4e4a5331.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 17:59:33,406 | INFO | geelark | GeeLark response status=200: {'traceId': '2999b3c0-39cf-4980-8579-7e62dca444ee', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 17:59:35,425 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=117cc2fc-1ebd-422a-83eb-8fe04aef98a3
+2026-04-23 17:59:35,426 | INFO | geelark | Payload: {'scheduleAt': 1776956401, 'id': '615335260552429723', 'description': 'test', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/4e4a5331.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 17:59:35,426 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956401, 'id': '615335260552429723', 'description': 'test', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/4e4a5331.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 17:59:36,267 | INFO | geelark | GeeLark response status=200: {'traceId': '117cc2fc-1ebd-422a-83eb-8fe04aef98a3', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 17:59:38,272 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=8c6330f9-b1a4-4f82-ac1d-568426228e2f
+2026-04-23 17:59:38,272 | INFO | geelark | Payload: {'scheduleAt': 1776956401, 'id': '615335260552429723', 'description': 'test', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/4e4a5331.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 17:59:38,273 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956401, 'id': '615335260552429723', 'description': 'test', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/4e4a5331.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 17:59:39,810 | INFO | geelark | GeeLark response status=200: {'traceId': '8c6330f9-b1a4-4f82-ac1d-568426228e2f', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 17:59:39,813 | ERROR | publish_api | Publish failed at some step: GeeLark API error code=40003, msg=signature verification failure
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 173, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 166, in _send
+    raise RuntimeError(f"GeeLark API error code={code}, msg={data.get('msg')}")
+RuntimeError: GeeLark API error code=40003, msg=signature verification failure
+2026-04-23 18:00:07,364 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=ca463565-940d-4b3e-a60f-ab4882af6716
+2026-04-23 18:00:07,364 | INFO | geelark | Payload: {'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:07,364 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:08,157 | INFO | geelark | GeeLark response status=200: {'traceId': 'ca463565-940d-4b3e-a60f-ab4882af6716', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:08,159 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 18:00:08,159 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:09,709 | INFO | geelark | GeeLark response status=200: {'traceId': '354d56fc-71e8-4968-8f57-8643a495c35e', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:11,711 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=6325285f-929f-42ad-9283-5c220dd4e0a7
+2026-04-23 18:00:11,711 | INFO | geelark | Payload: {'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:11,711 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:13,447 | INFO | geelark | GeeLark response status=200: {'traceId': '6325285f-929f-42ad-9283-5c220dd4e0a7', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:13,450 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 18:00:13,450 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:15,532 | INFO | geelark | GeeLark response status=200: {'traceId': 'b1f4588f-68ea-4431-a9b5-e8c6f7ef51ad', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:17,535 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=beec03c3-6ae7-42d6-b1d6-8c3b860014ba
+2026-04-23 18:00:17,535 | INFO | geelark | Payload: {'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:17,535 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:19,784 | INFO | geelark | GeeLark response status=200: {'traceId': 'beec03c3-6ae7-42d6-b1d6-8c3b860014ba', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:19,785 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 18:00:19,785 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956437, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:20,599 | INFO | geelark | GeeLark response status=200: {'traceId': 'e645ba52-d1bf-43d2-98b7-e7a1202c9599', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:20,777 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=e4f91694-306c-44ad-8772-2e071cf007e8
+2026-04-23 18:00:20,777 | INFO | geelark | Payload: {'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:20,777 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:21,659 | INFO | geelark | GeeLark response status=200: {'traceId': 'e4f91694-306c-44ad-8772-2e071cf007e8', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:21,660 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 18:00:21,660 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:23,505 | INFO | geelark | GeeLark response status=200: {'traceId': '0794300a-6078-40a1-8bcd-92a17caf6db3', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:25,508 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=a5e8f16e-325c-44f6-b118-c020fe133811
+2026-04-23 18:00:25,508 | INFO | geelark | Payload: {'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:25,508 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:26,487 | INFO | geelark | GeeLark response status=200: {'traceId': 'a5e8f16e-325c-44f6-b118-c020fe133811', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:26,489 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 18:00:26,489 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:27,264 | INFO | geelark | GeeLark response status=200: {'traceId': '63e57d44-368d-46f9-8053-21fa581a4284', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:29,272 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=5f66396d-d50f-4c80-908d-7a40ca57bf6c
+2026-04-23 18:00:29,273 | INFO | geelark | Payload: {'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:29,273 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:30,102 | INFO | geelark | GeeLark response status=200: {'traceId': '5f66396d-d50f-4c80-908d-7a40ca57bf6c', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:30,105 | INFO | geelark | Token verification failed, retrying with key-sign auth
+2026-04-23 18:00:30,105 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956450, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:31,410 | INFO | geelark | GeeLark response status=200: {'traceId': '78ba14d6-ccbe-455d-912c-f1ff44b9f642', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:31,579 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=5d7c6a74-efd9-414f-b85f-7a4bb2c16376
+2026-04-23 18:00:31,579 | INFO | geelark | Payload: {'scheduleAt': 1776956461, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:31,579 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956461, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:32,607 | INFO | geelark | GeeLark response status=200: {'traceId': '5d7c6a74-efd9-414f-b85f-7a4bb2c16376', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:34,609 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=721f5bc5-d421-48c9-ba67-b777dc11fa9c
+2026-04-23 18:00:34,610 | INFO | geelark | Payload: {'scheduleAt': 1776956461, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:34,610 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956461, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:35,399 | INFO | geelark | GeeLark response status=200: {'traceId': '721f5bc5-d421-48c9-ba67-b777dc11fa9c', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:00:37,402 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=8b60b039-299c-4eb8-81f3-f37da1209280
+2026-04-23 18:00:37,402 | INFO | geelark | Payload: {'scheduleAt': 1776956461, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:37,403 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956461, 'id': '615335260552429723', 'description': 'test', 'video': ['https://example.com/test.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:00:38,367 | INFO | geelark | GeeLark response status=200: {'traceId': '8b60b039-299c-4eb8-81f3-f37da1209280', 'code': 40003, 'msg': 'signature verification failure', 'data': ''}
+2026-04-23 18:02:22,551 | INFO | publish_api | Publish request received: video_path=storage/processing/70e0aa44-11e0-45bb-bcb4-4e4710da4799.mp4, phone_id=615335260552429723
+2026-04-23 18:02:22,551 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 18:02:22,552 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/70e0aa44-11e0-45bb-bcb4-4e4710da4799.mp4 -> 901c0ca9.mp4
+2026-04-23 18:02:22,552 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/901c0ca9.mp4
+2026-04-23 18:02:22,555 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/901c0ca9.mp4
+2026-04-23 18:02:22,555 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/901c0ca9.mp4
+2026-04-23 18:02:22,555 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 18:02:22,556 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=e0e7f7fa-b2e6-47e7-a97b-86e81b432eed
+2026-04-23 18:02:22,556 | INFO | geelark | Payload: {'scheduleAt': 1776956572, 'id': '615335260552429723', 'description': 'test', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/901c0ca9.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:02:22,556 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956572, 'id': '615335260552429723', 'description': 'test', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/901c0ca9.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:02:24,638 | INFO | geelark | GeeLark response status=200: {'traceId': 'e0e7f7fa-b2e6-47e7-a97b-86e81b432eed', 'code': 0, 'msg': 'success', 'data': {'taskId': '616440121243205996'}}
+2026-04-23 18:02:24,641 | INFO | geelark | GeeLark taskId: 616440121243205996
+2026-04-23 18:02:24,641 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616440121243205996', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/901c0ca9.mp4', 'scheduled_at': 1776956572, 'geelark_response': {'traceId': 'e0e7f7fa-b2e6-47e7-a97b-86e81b432eed', 'code': 0, 'msg': 'success', 'data': {'taskId': '616440121243205996'}}}
+2026-04-23 18:07:04,863 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/910f2e56-1cf4-4a83-8994-8d5db8a8d83f.mp4, phone_id=615335260552429723
+2026-04-23 18:07:04,867 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 18:07:04,881 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/910f2e56-1cf4-4a83-8994-8d5db8a8d83f.mp4 -> 24829ee4.mp4
+2026-04-23 18:07:04,885 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/24829ee4.mp4
+2026-04-23 18:07:04,902 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/24829ee4.mp4
+2026-04-23 18:07:04,902 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/24829ee4.mp4
+2026-04-23 18:07:04,902 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 18:07:04,903 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=6f504a81-54a8-4e4a-8862-373f0646ddd1
+2026-04-23 18:07:04,903 | INFO | geelark | Payload: {'scheduleAt': 1776956854, 'id': '615335260552429723', 'description': 'Stop doing this if you want faster growth.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/24829ee4.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:07:04,903 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776956854, 'id': '615335260552429723', 'description': 'Stop doing this if you want faster growth.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/24829ee4.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:07:07,038 | INFO | geelark | GeeLark response status=200: {'traceId': '6f504a81-54a8-4e4a-8862-373f0646ddd1', 'code': 0, 'msg': 'success', 'data': {'taskId': '616440595199557949'}}
+2026-04-23 18:07:07,040 | INFO | geelark | GeeLark taskId: 616440595199557949
+2026-04-23 18:07:07,040 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616440595199557949', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/24829ee4.mp4', 'scheduled_at': 1776956854, 'geelark_response': {'traceId': '6f504a81-54a8-4e4a-8862-373f0646ddd1', 'code': 0, 'msg': 'success', 'data': {'taskId': '616440595199557949'}}}
+2026-04-23 18:13:30,325 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/d8b672e1-eeff-43c8-b5c0-5cb8cc74e3fd.mp4, phone_id=615335260552429723
+2026-04-23 18:13:30,326 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 18:13:30,329 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/d8b672e1-eeff-43c8-b5c0-5cb8cc74e3fd.mp4 -> 27d0af2e.mp4
+2026-04-23 18:13:30,330 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/27d0af2e.mp4
+2026-04-23 18:13:30,341 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/27d0af2e.mp4
+2026-04-23 18:13:30,341 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/27d0af2e.mp4
+2026-04-23 18:13:30,341 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 18:13:30,342 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=e0ca092d-685c-444f-865c-fabf92b4afe9
+2026-04-23 18:13:30,343 | INFO | geelark | Payload: {'scheduleAt': 1776957240, 'id': '615335260552429723', 'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/27d0af2e.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:13:30,344 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776957240, 'id': '615335260552429723', 'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/27d0af2e.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:13:33,146 | INFO | geelark | GeeLark response status=200: {'traceId': 'e0ca092d-685c-444f-865c-fabf92b4afe9', 'code': 0, 'msg': 'success', 'data': {'taskId': '616441243102085437'}}
+2026-04-23 18:13:33,147 | INFO | geelark | GeeLark taskId: 616441243102085437
+2026-04-23 18:13:33,147 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616441243102085437', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/27d0af2e.mp4', 'scheduled_at': 1776957240, 'geelark_response': {'traceId': 'e0ca092d-685c-444f-865c-fabf92b4afe9', 'code': 0, 'msg': 'success', 'data': {'taskId': '616441243102085437'}}}
+2026-04-23 18:14:39,362 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/d8b672e1-eeff-43c8-b5c0-5cb8cc74e3fd.mp4 -> 0a70ef8f.mp4
+2026-04-23 18:14:39,362 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/0a70ef8f.mp4
+2026-04-23 18:14:39,366 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/0a70ef8f.mp4
+2026-04-23 18:14:39,367 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=cc449e32-4d16-4339-8250-73218aa3f48d
+2026-04-23 18:14:39,367 | INFO | geelark | Payload: {'scheduleAt': 1776957309, 'id': '615335260552429723', 'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0a70ef8f.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:14:39,367 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776957309, 'id': '615335260552429723', 'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0a70ef8f.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:14:41,731 | INFO | geelark | GeeLark response status=200: {'traceId': 'cc449e32-4d16-4339-8250-73218aa3f48d', 'code': 0, 'msg': 'success', 'data': {'taskId': '616441357489144172'}}
+2026-04-23 18:14:41,734 | INFO | geelark | GeeLark taskId: 616441357489144172

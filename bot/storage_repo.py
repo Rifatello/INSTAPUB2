@@ -54,6 +54,20 @@ def get_account(account_id: str) -> Optional[dict[str, Any]]:
     return None
 
 
+def toggle_account_schedule(account_id: str) -> bool:
+    path = accounts_path()
+    accounts = read_json(path, default=[])
+    new_status = False
+    for acc in accounts:
+        if str(acc.get("account_id", "")).strip() == account_id:
+            current = acc.get("schedule_enabled", False)
+            acc["schedule_enabled"] = not current
+            new_status = acc["schedule_enabled"]
+            break
+    write_json(path, accounts)
+    return new_status
+
+
 def load_state() -> dict[str, Any]:
     data = read_json(state_path(), default={})
     if not isinstance(data, dict):
@@ -75,11 +89,23 @@ def save_queue(data: list[dict[str, Any]]) -> None:
     write_json(queue_path(), data)
 
 
-def load_approved_videos(limit: int = 20) -> list[dict[str, Any]]:
+def load_approved_videos(limit: int = 20, account_id: Optional[str] = None) -> list[dict[str, Any]]:
     queue = load_queue()
-    approved_statuses = {"queued", "publish_now", "ready_for_publish", "published"}
+    approved_statuses = {"queued", "publish_now", "ready_for_publish", "published", "publish_requested"}
     items = [x for x in queue if isinstance(x, dict) and x.get("status") in approved_statuses]
+    if account_id:
+        items = [x for x in items if str(x.get("account_id", "")) == account_id]
     return items[-limit:][::-1]
+
+
+def delete_approved_preview(preview_id: str) -> bool:
+    queue = load_queue()
+    original_len = len(queue)
+    new_queue = [x for x in queue if str(x.get("preview_id", "")) != preview_id]
+    if len(new_queue) < original_len:
+        save_queue(new_queue)
+        return True
+    return False
 
 
 def load_rejected() -> list[dict[str, Any]]:

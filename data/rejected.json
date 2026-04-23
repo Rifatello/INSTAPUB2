@@ -46,5 +46,59 @@
     "status": "rejected",
     "created_at": "2026-04-21T09:20:00.462936+00:00",
     "rejected_at": "2026-04-21T09:20:48.181013+00:00"
+  },
+  {
+    "preview_id": "9bbfe535-8c79-4c7f-88ac-69290c169571",
+    "account_id": "account_01",
+    "source_video": "/Users/rifatello/Desktop/content-factory copy 2/storage/source/account_01/0add1cda9af2f68b40135848ee84f2b6_ee67bd63-a53a-459e-8aca-857b7b63c56b.mp4",
+    "preview_video": "/Users/rifatello/Desktop/content-factory copy 2/storage/processing/9bbfe535-8c79-4c7f-88ac-69290c169571.mp4",
+    "hook": "If you do this for 7 days, your results will change.",
+    "description": "When you remove distractions and define one KPI, execution becomes easier.",
+    "caption": "If you do this for 7 days, your results will change.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био",
+    "music_track": "/Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/1314148409638065 (1).mp4",
+    "status": "rejected",
+    "created_at": "2026-04-22T17:08:57.185893+00:00",
+    "rejected_at": "2026-04-22T17:09:12.074484+00:00"
+  },
+  {
+    "preview_id": "ae7ef89a-3870-48a3-8005-46a4dae03095",
+    "account_id": "account_01",
+    "source_video": "/Users/rifatello/Desktop/content-factory copy 2/storage/source/account_01/0add1cda9af2f68b40135848ee84f2b6_ee67bd63-a53a-459e-8aca-857b7b63c56b.mp4",
+    "preview_video": "/Users/rifatello/Desktop/content-factory copy 2/storage/processing/ae7ef89a-3870-48a3-8005-46a4dae03095.mp4",
+    "hook": "Most people fail because they skip this one step.",
+    "description": "Build a repeatable routine and keep friction low so habits survive busy days.",
+    "caption": "Most people fail because they skip this one step.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био",
+    "music_track": "/Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/Memphis Top Phonk - Click (Fonk Мелодия На Звонок) (zaycev.net).mp3",
+    "status": "rejected",
+    "created_at": "2026-04-22T17:09:20.502807+00:00",
+    "rejected_at": "2026-04-22T17:09:22.729785+00:00"
+  },
+  {
+    "preview_id": "691830cd-040e-44c5-b84e-d06961a56d9b",
+    "account_id": "account_01",
+    "source_video": "/Users/rifatello/Desktop/content-factory copy 2/storage/source/account_01/0422.mov",
+    "preview_video": "/Users/rifatello/Desktop/content-factory copy 2/storage/processing/691830cd-040e-44c5-b84e-d06961a56d9b.mp4",
+    "hook": "Stop doing this if you want faster growth.",
+    "description": "Use one focused action block daily and measure progress by output, not effort.",
+    "caption": "Stop doing this if you want faster growth.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био",
+    "music_track": "/Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/Memphis Top Phonk - Click (Fonk Мелодия На Звонок) (zaycev.net).mp3",
+    "status": "rejected",
+    "created_at": "2026-04-23T10:05:09.254472+00:00",
+    "is_9_16": true,
+    "updated_at": "2026-04-23T10:07:38.633152+00:00",
+    "rejected_at": "2026-04-23T10:10:07.663370+00:00"
+  },
+  {
+    "preview_id": "22d2dbaf-f016-4918-8db2-613a7ff664d9",
+    "account_id": "account_01",
+    "source_video": "/Users/rifatello/Desktop/content-factory copy 2/storage/source/account_01/0422.mov",
+    "preview_video": "/Users/rifatello/Desktop/content-factory copy 2/storage/processing/22d2dbaf-f016-4918-8db2-613a7ff664d9.mp4",
+    "hook": "Most people fail because they skip this one step.",
+    "description": "Clarity plus consistency beats intensity without direction.",
+    "caption": "Most people fail because they skip this one step.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био",
+    "music_track": "/Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPvOKkFpo-8FN_jPdTzH7rJYkfr0vX1ntzxJ4NCd8pCj3n0lr-yHZ3At82RNGURp2AKkufy0MhZqM9ezioYUKkb.mp4",
+    "status": "rejected",
+    "created_at": "2026-04-23T10:32:08.568168+00:00",
+    "rejected_at": "2026-04-23T10:32:30.263260+00:00"
   }
 ]
