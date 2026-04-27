@@ -1,0 +1,444 @@
+INFO:     Started server process [77224]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP79Gz8wzRAnzhE7qKMjsCE86TUrg-a7V6G_c1w-XSYBDwH3ytsIZhq0ht2GtrGmvY5XtLzsujYoWv3q4c7Bc4a.mp4
+INFO:     127.0.0.1:56308 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+INFO:     127.0.0.1:64536 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+INFO:     127.0.0.1:64740 - "POST /regenerate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPvOKkFpo-8FN_jPdTzH7rJYkfr0vX1ntzxJ4NCd8pCj3n0lr-yHZ3At82RNGURp2AKkufy0MhZqM9ezioYUKkb.mp4
+INFO:     127.0.0.1:64966 - "POST /regenerate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPitC36Gl-Zb-RZq1rs8ePTfBZ86zszQoxqoiODtlIbB1GfBKz1P35jqQRUaUPrXlp4FcEUQhFaeZXbbSN3hQvi.mp4
+INFO:     127.0.0.1:65146 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOO6grxkv5-6Ah9Aj3hFUAKhfPfdq1bW3uGRZk9l-I2p2x6RPujd6sJECHyLa_M0ZU1JXHfxT07QfX80h-L2TtY.mp4
+INFO:     127.0.0.1:50095 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOO6grxkv5-6Ah9Aj3hFUAKhfPfdq1bW3uGRZk9l-I2p2x6RPujd6sJECHyLa_M0ZU1JXHfxT07QfX80h-L2TtY.mp4
+INFO:     127.0.0.1:50238 - "POST /regenerate-preview HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [77224]
+INFO:     Started server process [78327]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53987 - "GET /health HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+INFO:     127.0.0.1:54648 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+INFO:     127.0.0.1:56262 - "POST /regenerate-preview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57843 - "GET /health HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPitC36Gl-Zb-RZq1rs8ePTfBZ86zszQoxqoiODtlIbB1GfBKz1P35jqQRUaUPrXlp4FcEUQhFaeZXbbSN3hQvi.mp4
+INFO:     127.0.0.1:58009 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMBuR4pHBW4NREZlScRB0nmC2Pp5-Acv0yY3yrW9NrlYcE5Xld29W_VgB49b8tEzxUC6DD2DDkXy8dyPksIHCdZ.mp4
+INFO:     127.0.0.1:55605 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMBuR4pHBW4NREZlScRB0nmC2Pp5-Acv0yY3yrW9NrlYcE5Xld29W_VgB49b8tEzxUC6DD2DDkXy8dyPksIHCdZ.mp4
+INFO:     127.0.0.1:55871 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMRRfMRCBPj-YO-3Dti0YBVdNhIkqtHXEFwf1hD86B38cH5RNPwCPip0pA1PHKEw1MrcZKCFL6zrhM-n1cgYP7b copy.mp4
+INFO:     127.0.0.1:56063 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+INFO:     127.0.0.1:56316 - "POST /regenerate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+INFO:     127.0.0.1:56487 - "POST /regenerate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMRRfMRCBPj-YO-3Dti0YBVdNhIkqtHXEFwf1hD86B38cH5RNPwCPip0pA1PHKEw1MrcZKCFL6zrhM-n1cgYP7b copy.mp4
+INFO:     127.0.0.1:56628 - "POST /regenerate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOABe5HElyBIo4CWwigMNa2vLRGjvp1VeDoBkfY84txI02Vi0TmhYV1YCiOki9dZyf3qDULWrImyNM2M8JDsfVM.mp4
+INFO:     127.0.0.1:56714 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+INFO:     127.0.0.1:57202 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+INFO:     127.0.0.1:57333 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/cf5f5f62f7296bf5ce7b8118f7f072a0_b541317c-c0ab-48fe-9705-6edc34271636.mp3
+INFO:     127.0.0.1:57729 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/1314148409638065 (1).mp4
+INFO:     127.0.0.1:57837 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/cf5f5f62f7296bf5ce7b8118f7f072a0_b541317c-c0ab-48fe-9705-6edc34271636.mp3
+INFO:     127.0.0.1:58017 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOABe5HElyBIo4CWwigMNa2vLRGjvp1VeDoBkfY84txI02Vi0TmhYV1YCiOki9dZyf3qDULWrImyNM2M8JDsfVM.mp4
+INFO:     127.0.0.1:58172 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOABe5HElyBIo4CWwigMNa2vLRGjvp1VeDoBkfY84txI02Vi0TmhYV1YCiOki9dZyf3qDULWrImyNM2M8JDsfVM.mp4
+INFO:     127.0.0.1:58300 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOABe5HElyBIo4CWwigMNa2vLRGjvp1VeDoBkfY84txI02Vi0TmhYV1YCiOki9dZyf3qDULWrImyNM2M8JDsfVM.mp4
+INFO:     127.0.0.1:58632 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPvOKkFpo-8FN_jPdTzH7rJYkfr0vX1ntzxJ4NCd8pCj3n0lr-yHZ3At82RNGURp2AKkufy0MhZqM9ezioYUKkb.mp4
+INFO:     127.0.0.1:58764 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOABe5HElyBIo4CWwigMNa2vLRGjvp1VeDoBkfY84txI02Vi0TmhYV1YCiOki9dZyf3qDULWrImyNM2M8JDsfVM.mp4
+INFO:     127.0.0.1:58871 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPOceD_UQD72UM-9fFLfAmvU5Qu1xhRkgyjtrjS2VorDoE-LE3VX3ThLD0OqNfKBlDjtsCpK8pL0BGNTiI4CZXE.mp4
+INFO:     127.0.0.1:59874 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMRRfMRCBPj-YO-3Dti0YBVdNhIkqtHXEFwf1hD86B38cH5RNPwCPip0pA1PHKEw1MrcZKCFL6zrhM-n1cgYP7b copy.mp4
+INFO:     127.0.0.1:60072 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPh5VBEyBB5EyYV-mK8ctauxSSIIBOUZitNpZPfsQ2hjWbx94lM55s8KtlsgW3o5wr3UOw43AeCcNI1AafdJCdJ.mp4
+INFO:     127.0.0.1:60220 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPh5VBEyBB5EyYV-mK8ctauxSSIIBOUZitNpZPfsQ2hjWbx94lM55s8KtlsgW3o5wr3UOw43AeCcNI1AafdJCdJ.mp4
+INFO:     127.0.0.1:60337 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPOceD_UQD72UM-9fFLfAmvU5Qu1xhRkgyjtrjS2VorDoE-LE3VX3ThLD0OqNfKBlDjtsCpK8pL0BGNTiI4CZXE.mp4
+INFO:     127.0.0.1:60517 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/cf5f5f62f7296bf5ce7b8118f7f072a0_b541317c-c0ab-48fe-9705-6edc34271636.mp3
+INFO:     127.0.0.1:60658 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/cf5f5f62f7296bf5ce7b8118f7f072a0_b541317c-c0ab-48fe-9705-6edc34271636.mp3
+INFO:     127.0.0.1:60769 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOO6grxkv5-6Ah9Aj3hFUAKhfPfdq1bW3uGRZk9l-I2p2x6RPujd6sJECHyLa_M0ZU1JXHfxT07QfX80h-L2TtY.mp4
+INFO:     127.0.0.1:62927 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOO6grxkv5-6Ah9Aj3hFUAKhfPfdq1bW3uGRZk9l-I2p2x6RPujd6sJECHyLa_M0ZU1JXHfxT07QfX80h-L2TtY.mp4
+INFO:     127.0.0.1:63064 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMRRfMRCBPj-YO-3Dti0YBVdNhIkqtHXEFwf1hD86B38cH5RNPwCPip0pA1PHKEw1MrcZKCFL6zrhM-n1cgYP7b copy.mp4
+INFO:     127.0.0.1:63347 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP79Gz8wzRAnzhE7qKMjsCE86TUrg-a7V6G_c1w-XSYBDwH3ytsIZhq0ht2GtrGmvY5XtLzsujYoWv3q4c7Bc4a.mp4
+INFO:     127.0.0.1:63461 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP79Gz8wzRAnzhE7qKMjsCE86TUrg-a7V6G_c1w-XSYBDwH3ytsIZhq0ht2GtrGmvY5XtLzsujYoWv3q4c7Bc4a.mp4
+INFO:     127.0.0.1:63578 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/cf5f5f62f7296bf5ce7b8118f7f072a0_b541317c-c0ab-48fe-9705-6edc34271636.mp3
+INFO:     127.0.0.1:65522 - "POST /generate-preview HTTP/1.1" 200 OK
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/cf5f5f62f7296bf5ce7b8118f7f072a0_b541317c-c0ab-48fe-9705-6edc34271636.mp3
+INFO:     127.0.0.1:49449 - "POST /regenerate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Calling LLM for viral hooks using model: deepseek-chat
+LLM call failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Calling LLM for full content using model: deepseek-chat
+LLM content generation failed: Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****3b10 is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}. Using fallback logic.
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/cf5f5f62f7296bf5ce7b8118f7f072a0_b541317c-c0ab-48fe-9705-6edc34271636.mp3
+INFO:     127.0.0.1:49625 - "POST /generate-preview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49754 - "POST /regenerate-preview HTTP/1.1" 404 Not Found
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPh5VBEyBB5EyYV-mK8ctauxSSIIBOUZitNpZPfsQ2hjWbx94lM55s8KtlsgW3o5wr3UOw43AeCcNI1AafdJCdJ.mp4
+INFO:     127.0.0.1:49815 - "POST /generate-preview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50012 - "POST /regenerate-preview HTTP/1.1" 404 Not Found
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/Memphis Top Phonk - Click (Fonk Мелодия На Звонок) (zaycev.net).mp3
+INFO:     127.0.0.1:50058 - "POST /generate-preview HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [78327]
+INFO:     Started server process [82506]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOO6grxkv5-6Ah9Aj3hFUAKhfPfdq1bW3uGRZk9l-I2p2x6RPujd6sJECHyLa_M0ZU1JXHfxT07QfX80h-L2TtY.mp4
+INFO:     127.0.0.1:51576 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOO6grxkv5-6Ah9Aj3hFUAKhfPfdq1bW3uGRZk9l-I2p2x6RPujd6sJECHyLa_M0ZU1JXHfxT07QfX80h-L2TtY.mp4
+INFO:     127.0.0.1:52387 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQPOceD_UQD72UM-9fFLfAmvU5Qu1xhRkgyjtrjS2VorDoE-LE3VX3ThLD0OqNfKBlDjtsCpK8pL0BGNTiI4CZXE.mp4
+INFO:     127.0.0.1:53267 - "POST /generate-preview HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82506]
+INFO:     Started server process [83350]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8002 (Press CTRL+C to quit)
+INFO:     127.0.0.1:53864 - "GET /health HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/1314148409638065 (1).mp4
+INFO:     127.0.0.1:55123 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMBuR4pHBW4NREZlScRB0nmC2Pp5-Acv0yY3yrW9NrlYcE5Xld29W_VgB49b8tEzxUC6DD2DDkXy8dyPksIHCdZ.mp4
+INFO:     127.0.0.1:57405 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/Memphis Top Phonk - Click (Fonk Мелодия На Звонок) (zaycev.net).mp3
+INFO:     127.0.0.1:57671 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOABe5HElyBIo4CWwigMNa2vLRGjvp1VeDoBkfY84txI02Vi0TmhYV1YCiOki9dZyf3qDULWrImyNM2M8JDsfVM.mp4
+INFO:     127.0.0.1:58968 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: False
+INFO:     127.0.0.1:59205 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/Memphis Top Phonk - Click (Fonk Мелодия На Звонок) (zaycev.net).mp3
+INFO:     127.0.0.1:59523 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP-DKie6vXiWiFX7aYduSyVFpUMVPirPJvygPlMrsUXHvyCglcNMrgZC5djnrhT4o65CuC8EdnHZJOyrSTKHau4.mp4
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOO6grxkv5-6Ah9Aj3hFUAKhfPfdq1bW3uGRZk9l-I2p2x6RPujd6sJECHyLa_M0ZU1JXHfxT07QfX80h-L2TtY.mp4
+INFO:     127.0.0.1:62270 - "POST /generate-preview HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62269 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQOO6grxkv5-6Ah9Aj3hFUAKhfPfdq1bW3uGRZk9l-I2p2x6RPujd6sJECHyLa_M0ZU1JXHfxT07QfX80h-L2TtY.mp4
+INFO:     127.0.0.1:65413 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMBuR4pHBW4NREZlScRB0nmC2Pp5-Acv0yY3yrW9NrlYcE5Xld29W_VgB49b8tEzxUC6DD2DDkXy8dyPksIHCdZ.mp4
+INFO:     127.0.0.1:52393 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/cf5f5f62f7296bf5ce7b8118f7f072a0_b541317c-c0ab-48fe-9705-6edc34271636.mp3
+INFO:     127.0.0.1:53222 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMRRfMRCBPj-YO-3Dti0YBVdNhIkqtHXEFwf1hD86B38cH5RNPwCPip0pA1PHKEw1MrcZKCFL6zrhM-n1cgYP7b copy.mp4
+INFO:     127.0.0.1:62886 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP79Gz8wzRAnzhE7qKMjsCE86TUrg-a7V6G_c1w-XSYBDwH3ytsIZhq0ht2GtrGmvY5XtLzsujYoWv3q4c7Bc4a.mp4
+INFO:     127.0.0.1:65343 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQP79Gz8wzRAnzhE7qKMjsCE86TUrg-a7V6G_c1w-XSYBDwH3ytsIZhq0ht2GtrGmvY5XtLzsujYoWv3q4c7Bc4a.mp4
+INFO:     127.0.0.1:64492 - "POST /generate-preview HTTP/1.1" 200 OK
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+DEBUG: Selected random description prompt: Legacy (total available: 1)
+Using ffmpeg binary: /opt/homebrew/opt/ffmpeg-full/bin/ffmpeg
+Source has audio: True
+Using music track: /Users/rifatello/Desktop/content-factory copy 2/storage/music/account_01/AQMRRfMRCBPj-YO-3Dti0YBVdNhIkqtHXEFwf1hD86B38cH5RNPwCPip0pA1PHKEw1MrcZKCFL6zrhM-n1cgYP7b copy.mp4
+INFO:     127.0.0.1:64543 - "POST /generate-preview HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [83350]

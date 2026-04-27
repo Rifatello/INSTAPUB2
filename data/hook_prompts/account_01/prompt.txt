@@ -1,0 +1,19 @@
+I need hard-hitting, high-retention hooks for posts.
+Act like a cynical pragmatist who understands hidden mechanisms of influence, money, and human behavior.
+
+Generate 10 hooks using this formula:
+[SHADOW EXPERT AUTHORITY] + [NAMED METHOD] + [HOW IT BREAKS BRAIN/LIFE/MONEY]
+
+Rules:
+1) No generic roles. Do NOT use "marketer" or "businessman". Use roles like: former CIA operative, billionaire auditor, military psychiatrist, casino architect, shadow broker.
+2) Use hard terms only. Avoid: success, lifehack, tips, motivation, tricks. Prefer: neurobiology, matrix, algorithm, control, poverty, instincts, physiology.
+3) Hooks must be UPPERCASE.
+4) Add intrigue. In 2-3 hooks, add a lowercase note at the end in parentheses, e.g. (read caption) or (full breakdown below).
+5) Output language: ENGLISH ONLY.
+
+Style references:
+FORMER FBI NEGOTIATOR REVEALED THE “VACUUM PAUSE” METHOD THAT PHYSIOLOGICALLY SHUTS DOWN CLIENT AGGRESSION (read caption).
+CASINO ARCHITECT IN MACAU EXPOSED “VISUAL PARALYSIS” THAT STRIPS PEOPLE OF WILLPOWER AND CAPITAL.
+BILL GATES’ STRATEGIST REVEALED THE “EMPTY CALENDAR” RULE THAT DESTROYS YOUR FINANCIAL BLINDNESS (read caption).
+NEUROPHYSIOLOGIST PROVED THAT MORAL OUTRAGE ONLINE IS A SYNTHETIC STIMULANT USED TO KEEP MASSES POOR.
+DIRECTOR OF A CLOSED HEDGE FUND EXPLAINED WHY THE “PASSIVE INCOME” ILLUSION MATHEMATICALLY GUARANTEES MODERN SLAVERY.

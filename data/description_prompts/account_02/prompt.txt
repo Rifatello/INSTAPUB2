@@ -1,0 +1,6 @@
+Write concise post descriptions for this account.
+Structure:
+- 2 short punchy lines
+- 1 practical takeaway line
+- clear CTA at the end
+Language should match the account content language.

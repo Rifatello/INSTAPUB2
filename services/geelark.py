@@ -10,6 +10,7 @@ from typing import Optional
 
 import requests
 
+from config import settings as _settings  # noqa: F401  # ensure .env is loaded before os.getenv reads
 from utils.logger import get_logger
 from utils.retry import with_retry
 
@@ -23,6 +24,9 @@ GEELARK_BEARER_TOKEN = os.getenv("GEELARK_BEARER_TOKEN", "").strip()
 GEELARK_APP_ID = os.getenv("GEELARK_APP_ID", "").strip()
 GEELARK_API_KEY = os.getenv("GEELARK_API_KEY", "").strip()
 GEELARK_CLOUD_PHONE_ID = os.getenv("GEELARK_CLOUD_PHONE_ID", "").strip()
+GEELARK_CUSTOM_TASK_CREATE_URL = "https://openapi.geelark.com/open/v1/task/rpa/add"
+GEELARK_TASK_FLOW_LIST_URL = "https://openapi.geelark.com/open/v1/task/flow/list"
+GEELARK_TASK_FLOW_PAGE_SIZE = int(os.getenv("GEELARK_TASK_FLOW_PAGE_SIZE", "100"))
 PUBLISH_RETRIES = int(os.getenv("PUBLISH_RETRIES", "3"))
 PUBLISH_RETRY_DELAY_SEC = float(os.getenv("PUBLISH_RETRY_DELAY_SEC", "2"))
 
@@ -66,36 +70,7 @@ def execute_geelark_task(
     if not phone_id:
         raise RuntimeError("cloud phone id is empty")
 
-    # Для стандартных Reels используем проверенный endpoint openapi.
-    if task_path == GEELARK_PUBLISH_PATH:
-        endpoint = "https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels"
-    elif task_path.isdigit():
-        # Для кастомных задач по ID используем хост open.geelark.com (где путь /v1/rpa/start существует)
-        endpoint = "https://open.geelark.com/v1/rpa/start"
-    elif task_path.startswith("/"):
-        endpoint = f"{GEELARK_BASE_URL}{task_path}"
-    else:
-        endpoint = "https://open.geelark.com/v1/rpa/start"
-
     schedule_at = int((datetime.now(timezone.utc) + timedelta(seconds=delay_seconds)).timestamp())
-    
-    # Формируем payload
-    if "/v1/rpa/start" in endpoint:
-        payload = {
-            "scheduleAt": schedule_at,
-            "id": phone_id,
-            "taskId": task_path,
-            "params": params
-        }
-    else:
-        # Старый формат для instagramPubReels
-        payload = {
-            "scheduleAt": schedule_at,
-            "id": phone_id,
-            "description": params.get("description", ""),
-            "video": params.get("video", []),
-            "taskPath": task_path if task_path.isdigit() else None
-        }
 
     def _headers_token(trace_id: str) -> dict[str, str]:
         return {
@@ -117,6 +92,97 @@ def execute_geelark_task(
             "nonce": nonce,
             "sign": sign,
         }
+
+    def _auth_headers(trace_id: str) -> dict[str, str]:
+        if GEELARK_BEARER_TOKEN:
+            return _headers_token(trace_id)
+        return _headers_key(trace_id)
+
+    def _load_flow_params(flow_id: str) -> list[str]:
+        page = 1
+        while True:
+            trace_id = str(uuid.uuid4())
+            headers = _auth_headers(trace_id)
+            response = requests.post(
+                GEELARK_TASK_FLOW_LIST_URL,
+                json={"page": page, "pageSize": GEELARK_TASK_FLOW_PAGE_SIZE},
+                headers=headers,
+                timeout=60,
+            )
+            response.raise_for_status()
+            data = response.json()
+            code = data.get("code")
+            if code not in (0, "0", None):
+                raise RuntimeError(f"GeeLark flow list error code={code}, msg={data.get('msg')}")
+
+            data_block = data.get("data", {}) if isinstance(data.get("data"), dict) else {}
+            items = data_block.get("items", []) if isinstance(data_block.get("items"), list) else []
+            for item in items:
+                if str(item.get("id", "")).strip() == flow_id:
+                    raw_params = item.get("params", [])
+                    if not isinstance(raw_params, list):
+                        return []
+                    return [str(x).strip() for x in raw_params if str(x).strip()]
+
+            total = int(data_block.get("total") or 0)
+            if page * GEELARK_TASK_FLOW_PAGE_SIZE >= total or not items:
+                break
+            page += 1
+
+        raise RuntimeError(f"GeeLark flowId not found: {flow_id}")
+
+    def _build_param_map(flow_params: list[str]) -> dict[str, Any]:
+        caption = str(params.get("description", "")).strip()
+        raw_video = params.get("video", [])
+        video_url = ""
+        if isinstance(raw_video, list) and raw_video:
+            video_url = str(raw_video[0]).strip()
+        elif isinstance(raw_video, str):
+            video_url = raw_video.strip()
+
+        param_map: dict[str, Any] = {}
+        for key in flow_params:
+            low = key.lower()
+            if "video" in low:
+                param_map[key] = [video_url] if video_url else []
+            elif "sameurl" in low:
+                param_map[key] = ""
+            elif any(token in low for token in ("caption", "desc", "description", "title", "text", "content")):
+                param_map[key] = caption
+            elif "url" in low:
+                param_map[key] = video_url
+            else:
+                param_map[key] = caption
+        return param_map
+
+    # Для числового ID запускаем кастомный flow по официальному endpoint /open/v1/task/rpa/add.
+    if task_path.isdigit():
+        endpoint = GEELARK_CUSTOM_TASK_CREATE_URL
+        flow_params = _load_flow_params(task_path)
+        payload = {
+            "scheduleAt": schedule_at,
+            "id": phone_id,
+            "flowId": task_path,
+            "paramMap": _build_param_map(flow_params),
+        }
+    elif task_path == GEELARK_PUBLISH_PATH or task_path == "/open/v1/rpa/task/instagramPubReels":
+        endpoint = "https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels"
+        payload = {
+            "scheduleAt": schedule_at,
+            "id": phone_id,
+            "description": params.get("description", ""),
+            "video": params.get("video", []),
+        }
+    elif task_path.startswith("/"):
+        endpoint = f"{GEELARK_BASE_URL}{task_path}"
+        payload = {
+            "scheduleAt": schedule_at,
+            "id": phone_id,
+            "description": params.get("description", ""),
+            "video": params.get("video", []),
+        }
+    else:
+        raise RuntimeError(f"Unsupported GeeLark task path: {task_path}")
 
     def _send_once(headers: dict[str, str]) -> dict[str, Any]:
         try:
@@ -148,10 +214,7 @@ def execute_geelark_task(
         logger.info("Executing GeeLark task=%s endpoint=%s traceId=%s", task_path, endpoint, trace_id)
         logger.info("Payload: %s", payload)
         data: dict[str, Any]
-        if GEELARK_BEARER_TOKEN:
-            data = _send_once(_headers_token(trace_id))
-        else:
-            data = _send_once(_headers_key(trace_id))
+        data = _send_once(_auth_headers(trace_id))
 
         code = data.get("code")
         if code in (40003, "40003") and GEELARK_APP_ID and GEELARK_API_KEY:

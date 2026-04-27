@@ -1528,3 +1528,1005 @@ RuntimeError: GeeLark API error code=40003, msg=signature verification failure
 2026-04-23 18:14:39,367 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776957309, 'id': '615335260552429723', 'description': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/0a70ef8f.mp4'], 'taskPath': '616420673648066993'}
 2026-04-23 18:14:41,731 | INFO | geelark | GeeLark response status=200: {'traceId': 'cc449e32-4d16-4339-8250-73218aa3f48d', 'code': 0, 'msg': 'success', 'data': {'taskId': '616441357489144172'}}
 2026-04-23 18:14:41,734 | INFO | geelark | GeeLark taskId: 616441357489144172
+2026-04-23 18:36:15,027 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/eb31c96c-a636-4961-b04d-6969a1d20fc1.mp4, phone_id=615335260552429723
+2026-04-23 18:36:15,029 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 18:36:15,031 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/eb31c96c-a636-4961-b04d-6969a1d20fc1.mp4 -> 071e5648.mp4
+2026-04-23 18:36:15,032 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/071e5648.mp4
+2026-04-23 18:36:15,037 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/071e5648.mp4
+2026-04-23 18:36:15,037 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/071e5648.mp4
+2026-04-23 18:36:15,037 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 18:36:15,038 | INFO | geelark | Executing GeeLark task=616420673648066993 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=6b81bb60-7b66-40a3-a343-b3f73f6c2015
+2026-04-23 18:36:15,038 | INFO | geelark | Payload: {'scheduleAt': 1776958605, 'id': '615335260552429723', 'description': 'One simple framework to get consistent progress.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/071e5648.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:36:15,038 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776958605, 'id': '615335260552429723', 'description': 'One simple framework to get consistent progress.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/071e5648.mp4'], 'taskPath': '616420673648066993'}
+2026-04-23 18:36:17,861 | INFO | geelark | GeeLark response status=200: {'traceId': '6b81bb60-7b66-40a3-a343-b3f73f6c2015', 'code': 0, 'msg': 'success', 'data': {'taskId': '616443532084773181'}}
+2026-04-23 18:36:17,864 | INFO | geelark | GeeLark taskId: 616443532084773181
+2026-04-23 18:36:17,864 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616443532084773181', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/071e5648.mp4', 'scheduled_at': 1776958605, 'geelark_response': {'traceId': '6b81bb60-7b66-40a3-a343-b3f73f6c2015', 'code': 0, 'msg': 'success', 'data': {'taskId': '616443532084773181'}}}
+2026-04-23 18:42:44,403 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/a201b745-71c8-46d3-968f-64e338c82c96.mp4, phone_id=615335260552429723
+2026-04-23 18:42:44,404 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 18:42:44,405 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/a201b745-71c8-46d3-968f-64e338c82c96.mp4 -> a1cc1153.mp4
+2026-04-23 18:42:44,405 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/a1cc1153.mp4
+2026-04-23 18:42:44,410 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/a1cc1153.mp4
+2026-04-23 18:42:44,410 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/a1cc1153.mp4
+2026-04-23 18:42:44,410 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 18:42:44,410 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=caffabd3-ca05-4017-8930-205208e231c2
+2026-04-23 18:42:44,411 | INFO | geelark | Payload: {'scheduleAt': 1776958994, 'id': '615335260552429723', 'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a1cc1153.mp4'], 'taskPath': '616420599023010067'}
+2026-04-23 18:42:44,411 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776958994, 'id': '615335260552429723', 'description': 'This mindset shift can save you months of frustration.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/a1cc1153.mp4'], 'taskPath': '616420599023010067'}
+2026-04-23 18:42:45,970 | INFO | geelark | GeeLark response status=200: {'traceId': 'caffabd3-ca05-4017-8930-205208e231c2', 'code': 0, 'msg': 'success', 'data': {'taskId': '616444183627956541'}}
+2026-04-23 18:42:45,972 | INFO | geelark | GeeLark taskId: 616444183627956541
+2026-04-23 18:42:45,973 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616444183627956541', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/a1cc1153.mp4', 'scheduled_at': 1776958994, 'geelark_response': {'traceId': 'caffabd3-ca05-4017-8930-205208e231c2', 'code': 0, 'msg': 'success', 'data': {'taskId': '616444183627956541'}}}
+2026-04-23 18:46:13,344 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/54dca794-d167-4888-b1f1-e0583b97bb30.mp4, phone_id=615335260552429723
+2026-04-23 18:46:13,344 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 18:46:13,345 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/54dca794-d167-4888-b1f1-e0583b97bb30.mp4 -> 6438cac7.mp4
+2026-04-23 18:46:13,345 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/6438cac7.mp4
+2026-04-23 18:46:13,348 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/6438cac7.mp4
+2026-04-23 18:46:13,348 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/6438cac7.mp4
+2026-04-23 18:46:13,348 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 18:46:13,348 | INFO | geelark | Executing GeeLark task=520260423184328 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=8be075d3-5adc-4af9-8142-ff575ac66556
+2026-04-23 18:46:13,348 | INFO | geelark | Payload: {'scheduleAt': 1776959203, 'id': '615335260552429723', 'description': 'One simple framework to get consistent progress.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/6438cac7.mp4'], 'taskPath': '520260423184328'}
+2026-04-23 18:46:13,364 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776959203, 'id': '615335260552429723', 'description': 'One simple framework to get consistent progress.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/6438cac7.mp4'], 'taskPath': '520260423184328'}
+2026-04-23 18:46:14,851 | INFO | geelark | GeeLark response status=200: {'traceId': '8be075d3-5adc-4af9-8142-ff575ac66556', 'code': 0, 'msg': 'success', 'data': {'taskId': '616444534070444349'}}
+2026-04-23 18:46:14,855 | INFO | geelark | GeeLark taskId: 616444534070444349
+2026-04-23 18:46:14,855 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616444534070444349', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/6438cac7.mp4', 'scheduled_at': 1776959203, 'geelark_response': {'traceId': '8be075d3-5adc-4af9-8142-ff575ac66556', 'code': 0, 'msg': 'success', 'data': {'taskId': '616444534070444349'}}}
+2026-04-23 18:55:07,881 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/59af7d59-ad1c-45aa-aa71-8d6c27011401.mp4, phone_id=615335260552429723
+2026-04-23 18:55:07,882 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 18:55:07,883 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/59af7d59-ad1c-45aa-aa71-8d6c27011401.mp4 -> 6a029d89.mp4
+2026-04-23 18:55:07,883 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/6a029d89.mp4
+2026-04-23 18:55:07,887 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/6a029d89.mp4
+2026-04-23 18:55:07,887 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/6a029d89.mp4
+2026-04-23 18:55:07,887 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 18:55:07,887 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=14a58ad6-d1a8-4956-abfc-9df9d6297d6e
+2026-04-23 18:55:07,887 | INFO | geelark | Payload: {'scheduleAt': 1776959737, 'id': '615335260552429723', 'description': 'Most people fail because they skip this one step.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/6a029d89.mp4'], 'taskPath': '616420599023010067'}
+2026-04-23 18:55:07,887 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776959737, 'id': '615335260552429723', 'description': 'Most people fail because they skip this one step.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/6a029d89.mp4'], 'taskPath': '616420599023010067'}
+2026-04-23 18:55:09,342 | INFO | geelark | GeeLark response status=200: {'traceId': '14a58ad6-d1a8-4956-abfc-9df9d6297d6e', 'code': 0, 'msg': 'success', 'data': {'taskId': '616445430594535741'}}
+2026-04-23 18:55:09,344 | INFO | geelark | GeeLark taskId: 616445430594535741
+2026-04-23 18:55:09,344 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616445430594535741', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/6a029d89.mp4', 'scheduled_at': 1776959737, 'geelark_response': {'traceId': '14a58ad6-d1a8-4956-abfc-9df9d6297d6e', 'code': 0, 'msg': 'success', 'data': {'taskId': '616445430594535741'}}}
+2026-04-23 18:59:55,239 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/1ab6364d-3ee6-4416-8c3f-60fdebf00003.mp4, phone_id=615335260552429723
+2026-04-23 18:59:55,239 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 18:59:55,240 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/1ab6364d-3ee6-4416-8c3f-60fdebf00003.mp4 -> 31fbfa61.mp4
+2026-04-23 18:59:55,240 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/31fbfa61.mp4
+2026-04-23 18:59:55,243 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/31fbfa61.mp4
+2026-04-23 18:59:55,243 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/31fbfa61.mp4
+2026-04-23 18:59:55,243 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 18:59:55,243 | INFO | geelark | Executing GeeLark task=616419936373309873 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=371b0ac4-664a-40be-83ca-686b639d71c5
+2026-04-23 18:59:55,243 | INFO | geelark | Payload: {'scheduleAt': 1776960025, 'id': '615335260552429723', 'description': 'Most people fail because they skip this one step.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/31fbfa61.mp4'], 'taskPath': '616419936373309873'}
+2026-04-23 18:59:55,244 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776960025, 'id': '615335260552429723', 'description': 'Most people fail because they skip this one step.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/31fbfa61.mp4'], 'taskPath': '616419936373309873'}
+2026-04-23 18:59:56,557 | INFO | geelark | GeeLark response status=200: {'traceId': '371b0ac4-664a-40be-83ca-686b639d71c5', 'code': 0, 'msg': 'success', 'data': {'taskId': '616445912587174205'}}
+2026-04-23 18:59:56,559 | INFO | geelark | GeeLark taskId: 616445912587174205
+2026-04-23 18:59:56,560 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616445912587174205', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/31fbfa61.mp4', 'scheduled_at': 1776960025, 'geelark_response': {'traceId': '371b0ac4-664a-40be-83ca-686b639d71c5', 'code': 0, 'msg': 'success', 'data': {'taskId': '616445912587174205'}}}
+2026-04-23 19:04:21,777 | INFO | publish_api | Publish request received: video_path=storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4, phone_id=615335260552429723
+2026-04-23 19:04:21,778 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:04:21,778 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4 -> 7740193d.mp4
+2026-04-23 19:04:21,779 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/7740193d.mp4
+2026-04-23 19:04:21,785 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/7740193d.mp4
+2026-04-23 19:04:21,785 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/7740193d.mp4
+2026-04-23 19:04:21,785 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:04:21,785 | INFO | geelark | Executing GeeLark task=616419936373309873 endpoint=https://open.geelark.com/v1/rpa/start traceId=9de7949f-c858-48e9-ad22-767d39b74d3f
+2026-04-23 19:04:21,785 | INFO | geelark | Payload: {'scheduleAt': 1776960291, 'id': '615335260552429723', 'taskId': '616419936373309873', 'params': {'description': 'test task id switch', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7740193d.mp4']}}
+2026-04-23 19:04:21,785 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776960291, 'id': '615335260552429723', 'taskId': '616419936373309873', 'params': {'description': 'test task id switch', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7740193d.mp4']}}
+2026-04-23 19:04:24,985 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 19:04:24,986 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 19:04:24,986 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 19:04:26,991 | INFO | geelark | Executing GeeLark task=616419936373309873 endpoint=https://open.geelark.com/v1/rpa/start traceId=22b5b1b4-8e52-41cf-bb7f-daf6a8bd7902
+2026-04-23 19:04:26,991 | INFO | geelark | Payload: {'scheduleAt': 1776960291, 'id': '615335260552429723', 'taskId': '616419936373309873', 'params': {'description': 'test task id switch', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7740193d.mp4']}}
+2026-04-23 19:04:26,991 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776960291, 'id': '615335260552429723', 'taskId': '616419936373309873', 'params': {'description': 'test task id switch', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7740193d.mp4']}}
+2026-04-23 19:04:28,582 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 19:04:28,582 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 19:04:28,582 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 19:04:30,589 | INFO | geelark | Executing GeeLark task=616419936373309873 endpoint=https://open.geelark.com/v1/rpa/start traceId=bd35414a-a502-46b6-9cba-a2028c9392e1
+2026-04-23 19:04:30,591 | INFO | geelark | Payload: {'scheduleAt': 1776960291, 'id': '615335260552429723', 'taskId': '616419936373309873', 'params': {'description': 'test task id switch', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7740193d.mp4']}}
+2026-04-23 19:04:30,602 | INFO | geelark | Sending request to Geelark: URL=https://open.geelark.com/v1/rpa/start, Payload={'scheduleAt': 1776960291, 'id': '615335260552429723', 'taskId': '616419936373309873', 'params': {'description': 'test task id switch', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/7740193d.mp4']}}
+2026-04-23 19:04:33,867 | INFO | geelark | GeeLark response status=405: {'raw_content': '<html>\r\n<head><title>405 Not Allowed</title></head>\r\n<body>\r\n<center><h1>405 Not Allowed</h1></center>\r\n<hr><center>nginx/1.24.0</center>\r\n</body>\r\n</html>\r\n'}
+2026-04-23 19:04:33,867 | ERROR | geelark | GeeLark error response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 19:04:33,868 | ERROR | geelark | HTTP error from Geelark: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start, Response: <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 19:04:33,870 | ERROR | publish_api | Publish failed at some step: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 137, in _send_once
+    response.raise_for_status()
+  File "/Users/rifatello/Library/Python/3.9/lib/python/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 405 Client Error: Not Allowed for url: https://open.geelark.com/v1/rpa/start
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 68, in publish
+    geelark_response = publish_to_geelark(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 35, in publish_to_geelark
+    return execute_geelark_task(
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 173, in execute_geelark_task
+    return with_retry(_send, retries=PUBLISH_RETRIES, delay_sec=PUBLISH_RETRY_DELAY_SEC)
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 23, in with_retry
+    raise last_error
+  File "/Users/rifatello/Desktop/content-factory copy 2/utils/retry.py", line 16, in with_retry
+    return fn()
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 152, in _send
+    data = _send_once(_headers_token(trace_id))
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/geelark.py", line 141, in _send_once
+    raise RuntimeError(f"Geelark API error: {response.status_code} - {response.text}")
+RuntimeError: Geelark API error: 405 - <html>
+<head><title>405 Not Allowed</title></head>
+<body>
+<center><h1>405 Not Allowed</h1></center>
+<hr><center>nginx/1.24.0</center>
+</body>
+</html>
+
+2026-04-23 19:05:00,749 | INFO | publish_api | Publish request received: video_path=storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4, phone_id=615335260552429723
+2026-04-23 19:05:00,749 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:05:00,749 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4 -> 44798e1c.mp4
+2026-04-23 19:05:00,749 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/44798e1c.mp4
+2026-04-23 19:05:00,754 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/44798e1c.mp4
+2026-04-23 19:05:00,754 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/44798e1c.mp4
+2026-04-23 19:05:00,754 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:05:00,754 | INFO | geelark | Executing GeeLark task=616419936373309873 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=88734354-b474-42e3-9331-cf26981418a8
+2026-04-23 19:05:00,754 | INFO | geelark | Payload: {'scheduleAt': 1776960330, 'id': '615335260552429723', 'description': 'test id confirm', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/44798e1c.mp4'], 'taskPath': '616419936373309873'}
+2026-04-23 19:05:00,754 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776960330, 'id': '615335260552429723', 'description': 'test id confirm', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/44798e1c.mp4'], 'taskPath': '616419936373309873'}
+2026-04-23 19:05:02,188 | INFO | geelark | GeeLark response status=200: {'traceId': '88734354-b474-42e3-9331-cf26981418a8', 'code': 0, 'msg': 'success', 'data': {'taskId': '616446425382781292'}}
+2026-04-23 19:05:02,190 | INFO | geelark | GeeLark taskId: 616446425382781292
+2026-04-23 19:05:02,190 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616446425382781292', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/44798e1c.mp4', 'scheduled_at': 1776960330, 'geelark_response': {'traceId': '88734354-b474-42e3-9331-cf26981418a8', 'code': 0, 'msg': 'success', 'data': {'taskId': '616446425382781292'}}}
+2026-04-23 19:05:45,570 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/df321e10-7024-4bfd-95f8-5062d6ffc978.mp4, phone_id=615335260552429723
+2026-04-23 19:05:45,571 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:05:45,572 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/df321e10-7024-4bfd-95f8-5062d6ffc978.mp4 -> c3964b12.mp4
+2026-04-23 19:05:45,572 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/c3964b12.mp4
+2026-04-23 19:05:45,575 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/c3964b12.mp4
+2026-04-23 19:05:45,575 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/c3964b12.mp4
+2026-04-23 19:05:45,575 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:05:45,575 | INFO | geelark | Executing GeeLark task=616419936373309873 endpoint=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels traceId=4a6d0b82-45cc-4e63-96e2-990db69a93c4
+2026-04-23 19:05:45,575 | INFO | geelark | Payload: {'scheduleAt': 1776960375, 'id': '615335260552429723', 'description': 'Stop doing this if you want faster growth.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/c3964b12.mp4'], 'taskPath': '616419936373309873'}
+2026-04-23 19:05:45,597 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/rpa/task/instagramPubReels, Payload={'scheduleAt': 1776960375, 'id': '615335260552429723', 'description': 'Stop doing this if you want faster growth.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'video': ['https://empathic-spherical-revise.ngrok-free.dev/c3964b12.mp4'], 'taskPath': '616419936373309873'}
+2026-04-23 19:05:46,922 | INFO | geelark | GeeLark response status=200: {'traceId': '4a6d0b82-45cc-4e63-96e2-990db69a93c4', 'code': 0, 'msg': 'success', 'data': {'taskId': '616446500444045676'}}
+2026-04-23 19:05:46,926 | INFO | geelark | GeeLark taskId: 616446500444045676
+2026-04-23 19:05:46,927 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616446500444045676', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/c3964b12.mp4', 'scheduled_at': 1776960375, 'geelark_response': {'traceId': '4a6d0b82-45cc-4e63-96e2-990db69a93c4', 'code': 0, 'msg': 'success', 'data': {'taskId': '616446500444045676'}}}
+2026-04-23 19:13:21,564 | INFO | publish_api | Publish request received: video_path=storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4, phone_id=615335260552429723
+2026-04-23 19:13:21,564 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:13:21,564 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4 -> 4a19e4b8.mp4
+2026-04-23 19:13:21,565 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/4a19e4b8.mp4
+2026-04-23 19:13:21,570 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/4a19e4b8.mp4
+2026-04-23 19:13:21,570 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/4a19e4b8.mp4
+2026-04-23 19:13:21,570 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:13:23,757 | INFO | geelark | Executing GeeLark task=616419936373309873 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=7e9acbc7-5ee5-4600-b8a5-e3da7972c202
+2026-04-23 19:13:23,757 | INFO | geelark | Payload: {'scheduleAt': 1776960831, 'id': '615335260552429723', 'flowId': '616419936373309873', 'paramMap': {'Caption': 'custom flow test', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/4a19e4b8.mp4'], 'SameURL': ''}}
+2026-04-23 19:13:23,757 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776960831, 'id': '615335260552429723', 'flowId': '616419936373309873', 'paramMap': {'Caption': 'custom flow test', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/4a19e4b8.mp4'], 'SameURL': ''}}
+2026-04-23 19:13:24,742 | INFO | geelark | GeeLark response status=200: {'traceId': '7e9acbc7-5ee5-4600-b8a5-e3da7972c202', 'code': 0, 'msg': 'success', 'data': {'taskId': '616447268303667517'}}
+2026-04-23 19:13:24,748 | INFO | geelark | GeeLark taskId: 616447268303667517
+2026-04-23 19:13:24,748 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616447268303667517', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/4a19e4b8.mp4', 'scheduled_at': 1776960831, 'geelark_response': {'traceId': '7e9acbc7-5ee5-4600-b8a5-e3da7972c202', 'code': 0, 'msg': 'success', 'data': {'taskId': '616447268303667517'}}}
+2026-04-23 19:14:22,227 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/a04f5dc3-701a-478e-97fc-7d5f6e75cf21.mp4, phone_id=615335260552429723
+2026-04-23 19:14:22,228 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:14:22,234 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/a04f5dc3-701a-478e-97fc-7d5f6e75cf21.mp4 -> 35398b24.mp4
+2026-04-23 19:14:22,236 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/35398b24.mp4
+2026-04-23 19:14:22,247 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/35398b24.mp4
+2026-04-23 19:14:22,247 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/35398b24.mp4
+2026-04-23 19:14:22,247 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:14:23,407 | INFO | geelark | Executing GeeLark task=616419936373309873 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=6805199a-efde-44a6-9d22-5dd3260fe174
+2026-04-23 19:14:23,407 | INFO | geelark | Payload: {'scheduleAt': 1776960892, 'id': '615335260552429723', 'flowId': '616419936373309873', 'paramMap': {'Caption': 'If you do this for 7 days, your results will change.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/35398b24.mp4'], 'SameURL': ''}}
+2026-04-23 19:14:23,408 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776960892, 'id': '615335260552429723', 'flowId': '616419936373309873', 'paramMap': {'Caption': 'If you do this for 7 days, your results will change.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/35398b24.mp4'], 'SameURL': ''}}
+2026-04-23 19:14:24,320 | INFO | geelark | GeeLark response status=200: {'traceId': '6805199a-efde-44a6-9d22-5dd3260fe174', 'code': 0, 'msg': 'success', 'data': {'taskId': '616447368430092652'}}
+2026-04-23 19:14:24,322 | INFO | geelark | GeeLark taskId: 616447368430092652
+2026-04-23 19:14:24,322 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616447368430092652', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/35398b24.mp4', 'scheduled_at': 1776960892, 'geelark_response': {'traceId': '6805199a-efde-44a6-9d22-5dd3260fe174', 'code': 0, 'msg': 'success', 'data': {'taskId': '616447368430092652'}}}
+2026-04-23 19:17:10,766 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/7531b88c-0036-4995-bd15-fbdc6b349f84.mp4, phone_id=615335260552429723
+2026-04-23 19:17:10,767 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:17:10,768 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/7531b88c-0036-4995-bd15-fbdc6b349f84.mp4 -> dbc7fed2.mp4
+2026-04-23 19:17:10,768 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/dbc7fed2.mp4
+2026-04-23 19:17:10,771 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/dbc7fed2.mp4
+2026-04-23 19:17:10,771 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/dbc7fed2.mp4
+2026-04-23 19:17:10,771 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:17:12,749 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=9378bdc6-8f9c-454c-9852-dbbd51cf50f6
+2026-04-23 19:17:12,749 | INFO | geelark | Payload: {'scheduleAt': 1776961060, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'Most people fail because they skip this one step.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/dbc7fed2.mp4'], 'SameURL': ''}}
+2026-04-23 19:17:12,749 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776961060, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'Most people fail because they skip this one step.\n\nClarity plus consistency beats intensity without direction.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/dbc7fed2.mp4'], 'SameURL': ''}}
+2026-04-23 19:17:13,600 | INFO | geelark | GeeLark response status=200: {'traceId': '9378bdc6-8f9c-454c-9852-dbbd51cf50f6', 'code': 0, 'msg': 'success', 'data': {'taskId': '616447652501913964'}}
+2026-04-23 19:17:13,602 | INFO | geelark | GeeLark taskId: 616447652501913964
+2026-04-23 19:17:13,602 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616447652501913964', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/dbc7fed2.mp4', 'scheduled_at': 1776961060, 'geelark_response': {'traceId': '9378bdc6-8f9c-454c-9852-dbbd51cf50f6', 'code': 0, 'msg': 'success', 'data': {'taskId': '616447652501913964'}}}
+2026-04-23 19:22:27,957 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/b057aeca-43f0-4d80-8b6e-8c39809e2f17.mp4, phone_id=615335260552429723
+2026-04-23 19:22:27,961 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:22:27,983 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/b057aeca-43f0-4d80-8b6e-8c39809e2f17.mp4 -> c150e113.mp4
+2026-04-23 19:22:27,986 | INFO | uploader | Copying file locally to: /Users/rifatello/Desktop/my_videos/c150e113.mp4
+2026-04-23 19:22:28,009 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/c150e113.mp4
+2026-04-23 19:22:28,010 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/c150e113.mp4
+2026-04-23 19:22:28,010 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:22:29,836 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=722548c9-b8b9-4034-ba4f-fb896ce4cb2f
+2026-04-23 19:22:29,836 | INFO | geelark | Payload: {'scheduleAt': 1776961378, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'One simple framework to get consistent progress.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/c150e113.mp4'], 'SameURL': ''}}
+2026-04-23 19:22:29,842 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776961378, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'One simple framework to get consistent progress.\n\nBuild a repeatable routine and keep friction low so habits survive busy days.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/c150e113.mp4'], 'SameURL': ''}}
+2026-04-23 19:22:32,033 | INFO | geelark | GeeLark response status=200: {'traceId': '722548c9-b8b9-4034-ba4f-fb896ce4cb2f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616448186705248573'}}
+2026-04-23 19:22:32,039 | INFO | geelark | GeeLark taskId: 616448186705248573
+2026-04-23 19:22:32,040 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616448186705248573', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/c150e113.mp4', 'scheduled_at': 1776961378, 'geelark_response': {'traceId': '722548c9-b8b9-4034-ba4f-fb896ce4cb2f', 'code': 0, 'msg': 'success', 'data': {'taskId': '616448186705248573'}}}
+2026-04-23 19:39:35,410 | INFO | publish_api | Publish request received: video_path=storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4, phone_id=615335260552429723
+2026-04-23 19:39:35,410 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:39:35,411 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4 -> e042d80b.mp4
+2026-04-23 19:39:35,411 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/e042d80b.mp4
+2026-04-23 19:39:35,415 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/e042d80b.mp4
+2026-04-23 19:39:35,415 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/e042d80b.mp4
+2026-04-23 19:39:35,415 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:39:36,926 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=16cd1ca1-85e1-4de4-aa10-846e312ebf26
+2026-04-23 19:39:36,927 | INFO | geelark | Payload: {'scheduleAt': 1776962405, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'ngrok persistence check', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/e042d80b.mp4'], 'SameURL': ''}}
+2026-04-23 19:39:36,927 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776962405, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'ngrok persistence check', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/e042d80b.mp4'], 'SameURL': ''}}
+2026-04-23 19:39:37,829 | INFO | geelark | GeeLark response status=200: {'traceId': '16cd1ca1-85e1-4de4-aa10-846e312ebf26', 'code': 0, 'msg': 'success', 'data': {'taskId': '616449907728843116'}}
+2026-04-23 19:39:37,830 | INFO | geelark | GeeLark taskId: 616449907728843116
+2026-04-23 19:39:37,830 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616449907728843116', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/e042d80b.mp4', 'scheduled_at': 1776962405, 'geelark_response': {'traceId': '16cd1ca1-85e1-4de4-aa10-846e312ebf26', 'code': 0, 'msg': 'success', 'data': {'taskId': '616449907728843116'}}}
+2026-04-23 19:41:03,563 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/1cf14a80-ae34-4908-beb5-6521756b646f.mp4, phone_id=615335260552429723
+2026-04-23 19:41:03,564 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 19:41:03,569 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/1cf14a80-ae34-4908-beb5-6521756b646f.mp4 -> 3314d42b.mp4
+2026-04-23 19:41:03,570 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/3314d42b.mp4
+2026-04-23 19:41:03,575 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/3314d42b.mp4
+2026-04-23 19:41:03,575 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/3314d42b.mp4
+2026-04-23 19:41:03,575 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 19:41:04,853 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=68281b25-962f-4bed-8d00-ff6f82f9f9f3
+2026-04-23 19:41:04,853 | INFO | geelark | Payload: {'scheduleAt': 1776962493, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'One simple framework to get consistent progress.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/3314d42b.mp4'], 'SameURL': ''}}
+2026-04-23 19:41:04,854 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776962493, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'One simple framework to get consistent progress.\n\nUse one focused action block daily and measure progress by output, not effort.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/3314d42b.mp4'], 'SameURL': ''}}
+2026-04-23 19:41:07,084 | INFO | geelark | GeeLark response status=200: {'traceId': '68281b25-962f-4bed-8d00-ff6f82f9f9f3', 'code': 0, 'msg': 'success', 'data': {'taskId': '616450057364832620'}}
+2026-04-23 19:41:07,086 | INFO | geelark | GeeLark taskId: 616450057364832620
+2026-04-23 19:41:07,086 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616450057364832620', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/3314d42b.mp4', 'scheduled_at': 1776962493, 'geelark_response': {'traceId': '68281b25-962f-4bed-8d00-ff6f82f9f9f3', 'code': 0, 'msg': 'success', 'data': {'taskId': '616450057364832620'}}}
+2026-04-23 20:04:16,830 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/8535a79e-ea8e-4bcf-a7eb-5d0db0aad4ce.mp4, phone_id=615335260552429723
+2026-04-23 20:04:16,834 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 20:04:16,845 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/8535a79e-ea8e-4bcf-a7eb-5d0db0aad4ce.mp4 -> 9a6dd1b8.mp4
+2026-04-23 20:04:16,850 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/9a6dd1b8.mp4
+2026-04-23 20:04:16,870 | INFO | uploader | Upload success. Public URL: https://empathic-spherical-revise.ngrok-free.dev/9a6dd1b8.mp4
+2026-04-23 20:04:16,870 | INFO | publish_api | Step 1/2 Success: Video URL is https://empathic-spherical-revise.ngrok-free.dev/9a6dd1b8.mp4
+2026-04-23 20:04:16,871 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 20:04:18,081 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=acedf56c-7769-483e-9bdb-58c5faf6977d
+2026-04-23 20:04:18,082 | INFO | geelark | Payload: {'scheduleAt': 1776963886, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/9a6dd1b8.mp4'], 'SameURL': ''}}
+2026-04-23 20:04:18,083 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776963886, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'If you do this for 7 days, your results will change.\n\nTest small changes quickly, keep what works, and delete what does not.\n\n👉 Ссылка в био', 'Video': ['https://empathic-spherical-revise.ngrok-free.dev/9a6dd1b8.mp4'], 'SameURL': ''}}
+2026-04-23 20:04:18,865 | INFO | geelark | GeeLark response status=200: {'traceId': 'acedf56c-7769-483e-9bdb-58c5faf6977d', 'code': 0, 'msg': 'success', 'data': {'taskId': '616452392535196012'}}
+2026-04-23 20:04:18,870 | INFO | geelark | GeeLark taskId: 616452392535196012
+2026-04-23 20:04:18,870 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616452392535196012', 'video_url': 'https://empathic-spherical-revise.ngrok-free.dev/9a6dd1b8.mp4', 'scheduled_at': 1776963886, 'geelark_response': {'traceId': 'acedf56c-7769-483e-9bdb-58c5faf6977d', 'code': 0, 'msg': 'success', 'data': {'taskId': '616452392535196012'}}}
+2026-04-23 20:10:10,799 | INFO | publish_api | Publish request received: video_path=storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4, phone_id=615335260552429723
+2026-04-23 20:10:10,799 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 20:10:10,799 | ERROR | publish_api | Publish failed at some step: VIDEO_PUBLIC_BASE_URL must be set (or provide VIDEO_PUBLIC_BASE_URL_FILE)
+Traceback (most recent call last):
+  File "/Users/rifatello/Desktop/content-factory copy 2/app/main.py", line 63, in publish
+    video_url = upload_video(payload.video_path)
+  File "/Users/rifatello/Desktop/content-factory copy 2/services/uploader.py", line 102, in upload_video
+    raise RuntimeError("VIDEO_PUBLIC_BASE_URL must be set (or provide VIDEO_PUBLIC_BASE_URL_FILE)")
+RuntimeError: VIDEO_PUBLIC_BASE_URL must be set (or provide VIDEO_PUBLIC_BASE_URL_FILE)
+2026-04-23 20:10:53,308 | INFO | publish_api | Publish request received: video_path=storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4, phone_id=615335260552429723
+2026-04-23 20:10:53,309 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 20:10:53,309 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0065fb99-5059-4b4d-a091-79eea896bde8.mp4 -> 679464d5.mp4
+2026-04-23 20:10:53,310 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/679464d5.mp4
+2026-04-23 20:10:53,316 | INFO | uploader | Upload success. Public URL: https://943d07a4ce7b6e.lhr.life/679464d5.mp4
+2026-04-23 20:10:53,316 | INFO | publish_api | Step 1/2 Success: Video URL is https://943d07a4ce7b6e.lhr.life/679464d5.mp4
+2026-04-23 20:10:53,316 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 20:11:00,647 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=2ddb6c00-a9fa-4720-9c83-2c19a5311dd6
+2026-04-23 20:11:00,648 | INFO | geelark | Payload: {'scheduleAt': 1776964283, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'tunnel no-interstitial check', 'Video': ['https://943d07a4ce7b6e.lhr.life/679464d5.mp4'], 'SameURL': ''}}
+2026-04-23 20:11:00,648 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776964283, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'tunnel no-interstitial check', 'Video': ['https://943d07a4ce7b6e.lhr.life/679464d5.mp4'], 'SameURL': ''}}
+2026-04-23 20:11:03,610 | INFO | geelark | GeeLark response status=200: {'traceId': '2ddb6c00-a9fa-4720-9c83-2c19a5311dd6', 'code': 0, 'msg': 'success', 'data': {'taskId': '616453071425241452'}}
+2026-04-23 20:11:03,617 | INFO | geelark | GeeLark taskId: 616453071425241452
+2026-04-23 20:11:03,617 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616453071425241452', 'video_url': 'https://943d07a4ce7b6e.lhr.life/679464d5.mp4', 'scheduled_at': 1776964283, 'geelark_response': {'traceId': '2ddb6c00-a9fa-4720-9c83-2c19a5311dd6', 'code': 0, 'msg': 'success', 'data': {'taskId': '616453071425241452'}}}
+2026-04-23 20:27:32,343 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/53bc6a3d-9d27-487b-a5e5-a75cc224486e.mp4, phone_id=615335260552429723
+2026-04-23 20:27:32,345 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-23 20:27:32,360 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/53bc6a3d-9d27-487b-a5e5-a75cc224486e.mp4 -> cc3de638.mp4
+2026-04-23 20:27:32,362 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/cc3de638.mp4
+2026-04-23 20:27:32,382 | INFO | uploader | Upload success. Public URL: https://1a2d190102da0e.lhr.life/cc3de638.mp4
+2026-04-23 20:27:32,383 | INFO | publish_api | Step 1/2 Success: Video URL is https://1a2d190102da0e.lhr.life/cc3de638.mp4
+2026-04-23 20:27:32,383 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-23 20:27:33,706 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=8acf1c17-d4f5-4a11-b175-b57c127f6462
+2026-04-23 20:27:33,706 | INFO | geelark | Payload: {'scheduleAt': 1776965282, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'One simple framework to get consistent progress.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'Video': ['https://1a2d190102da0e.lhr.life/cc3de638.mp4'], 'SameURL': ''}}
+2026-04-23 20:27:33,708 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1776965282, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'One simple framework to get consistent progress.\n\nWhen you remove distractions and define one KPI, execution becomes easier.\n\n👉 Ссылка в био', 'Video': ['https://1a2d190102da0e.lhr.life/cc3de638.mp4'], 'SameURL': ''}}
+2026-04-23 20:27:34,527 | INFO | geelark | GeeLark response status=200: {'traceId': '8acf1c17-d4f5-4a11-b175-b57c127f6462', 'code': 0, 'msg': 'success', 'data': {'taskId': '616454733997015404'}}
+2026-04-23 20:27:34,532 | INFO | geelark | GeeLark taskId: 616454733997015404
+2026-04-23 20:27:34,534 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616454733997015404', 'video_url': 'https://1a2d190102da0e.lhr.life/cc3de638.mp4', 'scheduled_at': 1776965282, 'geelark_response': {'traceId': '8acf1c17-d4f5-4a11-b175-b57c127f6462', 'code': 0, 'msg': 'success', 'data': {'taskId': '616454733997015404'}}}
+2026-04-24 12:06:05,253 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/3c12e5e1-8bc7-4da2-b223-eb59a6e23109.mp4, phone_id=615335260552429723
+2026-04-24 12:06:05,264 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 12:06:05,267 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/3c12e5e1-8bc7-4da2-b223-eb59a6e23109.mp4 -> 030d2095.mp4
+2026-04-24 12:06:05,269 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/030d2095.mp4
+2026-04-24 12:06:05,273 | INFO | uploader | Upload success. Public URL: https://a22635991a88d0.lhr.life/030d2095.mp4
+2026-04-24 12:06:05,274 | INFO | publish_api | Step 1/2 Success: Video URL is https://a22635991a88d0.lhr.life/030d2095.mp4
+2026-04-24 12:06:05,274 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 12:06:07,745 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=3b597448-fb9a-4ce6-abd6-74587ba9fc5c
+2026-04-24 12:06:07,745 | INFO | geelark | Payload: {'scheduleAt': 1777021595, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'A FORMER HEDGE FUND MANAGER TOLD ME THE ONE QUESTION THAT EXPOSES FAKE CERTAINTY FAST.\n\nHe worked in rooms where money, status, and pressure met before anyone said a word.\n\nAfter enough nights, he stopped reading outfits and started reading frame, pace, and silence.\n\nThat is why this hook matters: fast is not a slogan, it is a live mechanism.\n\n2. Most people think outcomes are decided by arguments.\n\nHe said outcomes are usually decided earlier, when one side controls tempo and the other side starts explaining too much.\n\nThe hidden pattern is simple: when tension rises, amateurs speed up, professionals reduce motion.\n\n3. In one meeting, two founders answered the same pushback in opposite ways.\n\nThe first filled every pause, added extra context, and kept signaling that he wanted approval.\n\nThe second slowed his ending, kept one clean sentence, and let silence hold for one beat.\n\nPeople interrupted the first one; people listened to the second one.\n\n4. Once the frame shifts, the room changes behavior without announcing it.\n\nQuestions become shorter, resistance becomes softer, and weak attacks start self-correcting.\n\nHe said the center is a trap for men who want to feel significant fast.\n\n5. The cold rule is not to speak more, but to leak less.\n\nPick your ground, answer only what was asked, finish the sentence, and do not rescue every silence.\n\nComment AURA and I will send the full breakdown.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\n👉 Ссылка в био', 'Video': ['https://a22635991a88d0.lhr.life/030d2095.mp4'], 'SameURL': ''}}
+2026-04-24 12:06:07,745 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777021595, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'A FORMER HEDGE FUND MANAGER TOLD ME THE ONE QUESTION THAT EXPOSES FAKE CERTAINTY FAST.\n\nHe worked in rooms where money, status, and pressure met before anyone said a word.\n\nAfter enough nights, he stopped reading outfits and started reading frame, pace, and silence.\n\nThat is why this hook matters: fast is not a slogan, it is a live mechanism.\n\n2. Most people think outcomes are decided by arguments.\n\nHe said outcomes are usually decided earlier, when one side controls tempo and the other side starts explaining too much.\n\nThe hidden pattern is simple: when tension rises, amateurs speed up, professionals reduce motion.\n\n3. In one meeting, two founders answered the same pushback in opposite ways.\n\nThe first filled every pause, added extra context, and kept signaling that he wanted approval.\n\nThe second slowed his ending, kept one clean sentence, and let silence hold for one beat.\n\nPeople interrupted the first one; people listened to the second one.\n\n4. Once the frame shifts, the room changes behavior without announcing it.\n\nQuestions become shorter, resistance becomes softer, and weak attacks start self-correcting.\n\nHe said the center is a trap for men who want to feel significant fast.\n\n5. The cold rule is not to speak more, but to leak less.\n\nPick your ground, answer only what was asked, finish the sentence, and do not rescue every silence.\n\nComment AURA and I will send the full breakdown.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\n👉 Ссылка в био', 'Video': ['https://a22635991a88d0.lhr.life/030d2095.mp4'], 'SameURL': ''}}
+2026-04-24 12:06:08,639 | INFO | geelark | GeeLark response status=200: {'traceId': '3b597448-fb9a-4ce6-abd6-74587ba9fc5c', 'code': 0, 'msg': 'success', 'data': {'taskId': '616549213362192701'}}
+2026-04-24 12:06:08,641 | INFO | geelark | GeeLark taskId: 616549213362192701
+2026-04-24 12:06:08,643 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616549213362192701', 'video_url': 'https://a22635991a88d0.lhr.life/030d2095.mp4', 'scheduled_at': 1777021595, 'geelark_response': {'traceId': '3b597448-fb9a-4ce6-abd6-74587ba9fc5c', 'code': 0, 'msg': 'success', 'data': {'taskId': '616549213362192701'}}}
+2026-04-24 12:17:06,783 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/f8037e39-f234-4388-9f64-255f17dbc330.mp4, phone_id=615335260552429723
+2026-04-24 12:17:06,783 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 12:17:06,795 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/f8037e39-f234-4388-9f64-255f17dbc330.mp4 -> c7a04064.mp4
+2026-04-24 12:17:06,796 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/c7a04064.mp4
+2026-04-24 12:17:06,814 | INFO | uploader | Upload success. Public URL: https://a22635991a88d0.lhr.life/c7a04064.mp4
+2026-04-24 12:17:06,814 | INFO | publish_api | Step 1/2 Success: Video URL is https://a22635991a88d0.lhr.life/c7a04064.mp4
+2026-04-24 12:17:06,814 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 12:17:08,020 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=dce2fb5a-568a-4d92-80f6-e7bfa14866fb
+2026-04-24 12:17:08,021 | INFO | geelark | Payload: {'scheduleAt': 1777022256, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'AN EX-PRISON PSYCHOLOGIST SHOWED ME WHY MOST PEOPLE LOSE BEFORE THEY MAKE THE BIG DECISION.\n\nHe worked in rooms where money, status, and pressure met before anyone said a word.\n\nAfter enough nights, he stopped reading outfits and started reading frame, pace, and silence.\n\nThat is why this hook matters: decision is not a slogan, it is a live mechanism.\n\n2. Most people think outcomes are decided by arguments.\n\nHe said outcomes are usually decided earlier, when one side controls tempo and the other side starts explaining too much.\n\nThe hidden pattern is simple: when tension rises, amateurs speed up, professionals reduce motion.\n\n3. In one meeting, two founders answered the same pushback in opposite ways.\n\nThe first filled every pause, added extra context, and kept signaling that he wanted approval.\n\nThe second slowed his ending, kept one clean sentence, and let silence hold for one beat.\n\nPeople interrupted the first one; people listened to the second one.\n\n4. Once the frame shifts, the room changes behavior without announcing it.\n\nQuestions become shorter, resistance becomes softer, and weak attacks start self-correcting.\n\nBy the fourth second the investor was already revising his own attack.\n\n5. The cold rule is not to speak more, but to leak less.\n\nPick your ground, answer only what was asked, finish the sentence, and do not rescue every silence.\n\nComment AURA and I will send the full breakdown.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\n👉 Ссылка в био', 'Video': ['https://a22635991a88d0.lhr.life/c7a04064.mp4'], 'SameURL': ''}}
+2026-04-24 12:17:08,021 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777022256, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'AN EX-PRISON PSYCHOLOGIST SHOWED ME WHY MOST PEOPLE LOSE BEFORE THEY MAKE THE BIG DECISION.\n\nHe worked in rooms where money, status, and pressure met before anyone said a word.\n\nAfter enough nights, he stopped reading outfits and started reading frame, pace, and silence.\n\nThat is why this hook matters: decision is not a slogan, it is a live mechanism.\n\n2. Most people think outcomes are decided by arguments.\n\nHe said outcomes are usually decided earlier, when one side controls tempo and the other side starts explaining too much.\n\nThe hidden pattern is simple: when tension rises, amateurs speed up, professionals reduce motion.\n\n3. In one meeting, two founders answered the same pushback in opposite ways.\n\nThe first filled every pause, added extra context, and kept signaling that he wanted approval.\n\nThe second slowed his ending, kept one clean sentence, and let silence hold for one beat.\n\nPeople interrupted the first one; people listened to the second one.\n\n4. Once the frame shifts, the room changes behavior without announcing it.\n\nQuestions become shorter, resistance becomes softer, and weak attacks start self-correcting.\n\nBy the fourth second the investor was already revising his own attack.\n\n5. The cold rule is not to speak more, but to leak less.\n\nPick your ground, answer only what was asked, finish the sentence, and do not rescue every silence.\n\nComment AURA and I will send the full breakdown.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\n👉 Ссылка в био', 'Video': ['https://a22635991a88d0.lhr.life/c7a04064.mp4'], 'SameURL': ''}}
+2026-04-24 12:17:08,766 | INFO | geelark | GeeLark response status=200: {'traceId': 'dce2fb5a-568a-4d92-80f6-e7bfa14866fb', 'code': 0, 'msg': 'success', 'data': {'taskId': '616550320926884204'}}
+2026-04-24 12:17:08,769 | INFO | geelark | GeeLark taskId: 616550320926884204
+2026-04-24 12:17:08,769 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616550320926884204', 'video_url': 'https://a22635991a88d0.lhr.life/c7a04064.mp4', 'scheduled_at': 1777022256, 'geelark_response': {'traceId': 'dce2fb5a-568a-4d92-80f6-e7bfa14866fb', 'code': 0, 'msg': 'success', 'data': {'taskId': '616550320926884204'}}}
+2026-04-24 12:24:00,898 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/1709f8fb-36f4-4e45-b91e-ef085cd6977b.mp4, phone_id=615335260552429723
+2026-04-24 12:24:00,900 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 12:24:00,907 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/1709f8fb-36f4-4e45-b91e-ef085cd6977b.mp4 -> 2a974fd5.mp4
+2026-04-24 12:24:00,909 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/2a974fd5.mp4
+2026-04-24 12:24:00,926 | INFO | uploader | Upload success. Public URL: https://dc379cb65fc30b.lhr.life/2a974fd5.mp4
+2026-04-24 12:24:00,926 | INFO | publish_api | Step 1/2 Success: Video URL is https://dc379cb65fc30b.lhr.life/2a974fd5.mp4
+2026-04-24 12:24:00,926 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 12:24:02,357 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=0164b74c-b9a3-4e24-8eb4-e4a2572ec654
+2026-04-24 12:24:02,357 | INFO | geelark | Payload: {'scheduleAt': 1777022670, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'A FORMER FBI NEGOTIATOR SAID EVERY COLLAPSE STARTS WITH ONE SMALL SIGNAL PEOPLE IGNORE.\n\nHe worked in rooms where money, status, and pressure met before anyone said a word.\n\nAfter enough nights, he stopped reading outfits and started reading frame, pace, and silence.\n\nThat is why this hook matters: ignore is not a slogan, it is a live mechanism.\n\n2. Most people think outcomes are decided by arguments.\n\nHe said outcomes are usually decided earlier, when one side controls tempo and the other side starts explaining too much.\n\nThe hidden pattern is simple: when tension rises, amateurs speed up, professionals reduce motion.\n\n3. In one meeting, two founders answered the same pushback in opposite ways.\n\nThe first filled every pause, added extra context, and kept signaling that he wanted approval.\n\nThe second slowed his ending, kept one clean sentence, and let silence hold for one beat.\n\nPeople interrupted the first one; people listened to the second one.\n\n4. Once the frame shifts, the room changes behavior without announcing it.\n\nQuestions become shorter, resistance becomes softer, and weak attacks start self-correcting.\n\nSome are loud because they need confirmation.\n\n5. The cold rule is not to speak more, but to leak less.\n\nPick your ground, answer only what was asked, finish the sentence, and do not rescue every silence.\n\nComment AURA and I will send the full breakdown.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\n👉 Ссылка в био', 'Video': ['https://dc379cb65fc30b.lhr.life/2a974fd5.mp4'], 'SameURL': ''}}
+2026-04-24 12:24:02,358 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777022670, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'A FORMER FBI NEGOTIATOR SAID EVERY COLLAPSE STARTS WITH ONE SMALL SIGNAL PEOPLE IGNORE.\n\nHe worked in rooms where money, status, and pressure met before anyone said a word.\n\nAfter enough nights, he stopped reading outfits and started reading frame, pace, and silence.\n\nThat is why this hook matters: ignore is not a slogan, it is a live mechanism.\n\n2. Most people think outcomes are decided by arguments.\n\nHe said outcomes are usually decided earlier, when one side controls tempo and the other side starts explaining too much.\n\nThe hidden pattern is simple: when tension rises, amateurs speed up, professionals reduce motion.\n\n3. In one meeting, two founders answered the same pushback in opposite ways.\n\nThe first filled every pause, added extra context, and kept signaling that he wanted approval.\n\nThe second slowed his ending, kept one clean sentence, and let silence hold for one beat.\n\nPeople interrupted the first one; people listened to the second one.\n\n4. Once the frame shifts, the room changes behavior without announcing it.\n\nQuestions become shorter, resistance becomes softer, and weak attacks start self-correcting.\n\nSome are loud because they need confirmation.\n\n5. The cold rule is not to speak more, but to leak less.\n\nPick your ground, answer only what was asked, finish the sentence, and do not rescue every silence.\n\nComment AURA and I will send the full breakdown.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\n👉 Ссылка в био', 'Video': ['https://dc379cb65fc30b.lhr.life/2a974fd5.mp4'], 'SameURL': ''}}
+2026-04-24 12:24:03,544 | INFO | geelark | GeeLark response status=200: {'traceId': '0164b74c-b9a3-4e24-8eb4-e4a2572ec654', 'code': 0, 'msg': 'success', 'data': {'taskId': '616551016795472236'}}
+2026-04-24 12:24:03,551 | INFO | geelark | GeeLark taskId: 616551016795472236
+2026-04-24 12:24:03,551 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616551016795472236', 'video_url': 'https://dc379cb65fc30b.lhr.life/2a974fd5.mp4', 'scheduled_at': 1777022670, 'geelark_response': {'traceId': '0164b74c-b9a3-4e24-8eb4-e4a2572ec654', 'code': 0, 'msg': 'success', 'data': {'taskId': '616551016795472236'}}}
+2026-04-24 14:04:25,237 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/0ee16550-d3b7-4cae-8726-b22d3d00bf82.mp4, phone_id=615335260552429723
+2026-04-24 14:04:25,240 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 14:04:25,250 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/0ee16550-d3b7-4cae-8726-b22d3d00bf82.mp4 -> 07adeae9.mp4
+2026-04-24 14:04:25,252 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/07adeae9.mp4
+2026-04-24 14:04:25,267 | INFO | uploader | Upload success. Public URL: https://5e881da1349019.lhr.life/07adeae9.mp4
+2026-04-24 14:04:25,267 | INFO | publish_api | Step 1/2 Success: Video URL is https://5e881da1349019.lhr.life/07adeae9.mp4
+2026-04-24 14:04:25,267 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 14:04:27,036 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=941420ee-1cbb-4569-84f6-51e2c6f69bfc
+2026-04-24 14:04:27,037 | INFO | geelark | Payload: {'scheduleAt': 1777028695, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'He worked nights at a Mayfair club where founders, athletes, and old family money used the same staircase.\n\nAfter enough shifts he stopped watching clothes and started watching entrances.\n\nThat is where men give the game away, and fail becomes the only thing that matters.\n\n2. Some people are loud because they like noise. Some are loud because they need confirmation.\n\nThe ones trying to own the room checked everything at once: who noticed them, which table had the best angle.\n\nIt felt less like confidence and more like somebody scanning for proof.\n\n3. You can tell who wants authority and who assumes it within ten steps.\n\nHe remembers a retired investor who chose the side wall, sat down, and talked to one person at a time.\n\nBy midnight people were lining up to reach the quieter man.\n\n4. The center is a trap for men who want to feel significant fast.\n\nIf you have to plant yourself in the brightest part of the room, everybody feels the hunger before they feel the charm.\n\n5. Men with presence let attention come find them.\n\nStop entering spaces like you need to win them in the first thirty seconds. That need leaks out.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://5e881da1349019.lhr.life/07adeae9.mp4'], 'SameURL': ''}}
+2026-04-24 14:04:27,037 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777028695, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'He worked nights at a Mayfair club where founders, athletes, and old family money used the same staircase.\n\nAfter enough shifts he stopped watching clothes and started watching entrances.\n\nThat is where men give the game away, and fail becomes the only thing that matters.\n\n2. Some people are loud because they like noise. Some are loud because they need confirmation.\n\nThe ones trying to own the room checked everything at once: who noticed them, which table had the best angle.\n\nIt felt less like confidence and more like somebody scanning for proof.\n\n3. You can tell who wants authority and who assumes it within ten steps.\n\nHe remembers a retired investor who chose the side wall, sat down, and talked to one person at a time.\n\nBy midnight people were lining up to reach the quieter man.\n\n4. The center is a trap for men who want to feel significant fast.\n\nIf you have to plant yourself in the brightest part of the room, everybody feels the hunger before they feel the charm.\n\n5. Men with presence let attention come find them.\n\nStop entering spaces like you need to win them in the first thirty seconds. That need leaks out.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://5e881da1349019.lhr.life/07adeae9.mp4'], 'SameURL': ''}}
+2026-04-24 14:04:28,217 | INFO | geelark | GeeLark response status=200: {'traceId': '941420ee-1cbb-4569-84f6-51e2c6f69bfc', 'code': 0, 'msg': 'success', 'data': {'taskId': '616561124598350141'}}
+2026-04-24 14:04:28,218 | INFO | geelark | GeeLark taskId: 616561124598350141
+2026-04-24 14:04:28,218 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616561124598350141', 'video_url': 'https://5e881da1349019.lhr.life/07adeae9.mp4', 'scheduled_at': 1777028695, 'geelark_response': {'traceId': '941420ee-1cbb-4569-84f6-51e2c6f69bfc', 'code': 0, 'msg': 'success', 'data': {'taskId': '616561124598350141'}}}
+2026-04-24 15:29:23,297 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/418ea418-f18c-4fea-83bf-1456c781e165.mp4, phone_id=615335260552429723
+2026-04-24 15:29:23,303 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 15:29:23,320 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/418ea418-f18c-4fea-83bf-1456c781e165.mp4 -> 4a09c8ab.mp4
+2026-04-24 15:29:23,322 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/4a09c8ab.mp4
+2026-04-24 15:29:23,340 | INFO | uploader | Upload success. Public URL: https://3e3469b27eb03b.lhr.life/4a09c8ab.mp4
+2026-04-24 15:29:23,340 | INFO | publish_api | Step 1/2 Success: Video URL is https://3e3469b27eb03b.lhr.life/4a09c8ab.mp4
+2026-04-24 15:29:23,340 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 15:29:24,942 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=e3e95806-d15c-48e2-82ae-4226b8467ccd
+2026-04-24 15:29:24,943 | INFO | geelark | Payload: {'scheduleAt': 1777033793, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'He spent 22 years in financial compliance monitoring accounts for suspicious activity.\n\nThe threshold most people know is $10,000. Но он говорит, что это всего лишь прикрытие.\n\nThe real triggers are pattern-based, specifically how misunderstands deviates from the norm.\n\n2. Multiple deposits of $9,500. Round number transfers on repeating schedules.\n\nHis team flagged 340 accounts per month in one branch alone because they missed the hidden rule.\n\nThe algorithm compares your behavior to your own history, not to a fixed limit.\n\n3. Your bank files a Suspicious Activity Report without telling you.\n\nNo notification. No appeal. It sits in a federal database and changes how the system treats you.\n\nOnce filed, your account gets elevated monitoring for 18 months minimum.\n\n4. Anything that looks different from your last 90 days is a flag.\n\nIf you normally deposit $3,000 and suddenly deposit $12,000, you are on the list.\n\n5. The people who understand the system build businesses inside it.\n\nThe rest get watched by it. Presence in the digital age is about staying inside your own frame.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://3e3469b27eb03b.lhr.life/4a09c8ab.mp4'], 'SameURL': ''}}
+2026-04-24 15:29:24,944 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777033793, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': 'He spent 22 years in financial compliance monitoring accounts for suspicious activity.\n\nThe threshold most people know is $10,000. Но он говорит, что это всего лишь прикрытие.\n\nThe real triggers are pattern-based, specifically how misunderstands deviates from the norm.\n\n2. Multiple deposits of $9,500. Round number transfers on repeating schedules.\n\nHis team flagged 340 accounts per month in one branch alone because they missed the hidden rule.\n\nThe algorithm compares your behavior to your own history, not to a fixed limit.\n\n3. Your bank files a Suspicious Activity Report without telling you.\n\nNo notification. No appeal. It sits in a federal database and changes how the system treats you.\n\nOnce filed, your account gets elevated monitoring for 18 months minimum.\n\n4. Anything that looks different from your last 90 days is a flag.\n\nIf you normally deposit $3,000 and suddenly deposit $12,000, you are on the list.\n\n5. The people who understand the system build businesses inside it.\n\nThe rest get watched by it. Presence in the digital age is about staying inside your own frame.\n\nUnder pressure, people reveal whether they control tension or are controlled by it.\n\nThe room rarely rewards noise; it rewards stable pace and clean endings.\n\nWhen someone stops performing for approval, negotiations become more factual and less emotional.\n\nPresence is often just disciplined timing repeated across uncomfortable moments.\n\nSilence exposes deviation faster than aggressive words ever can.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://3e3469b27eb03b.lhr.life/4a09c8ab.mp4'], 'SameURL': ''}}
+2026-04-24 15:29:26,062 | INFO | geelark | GeeLark response status=200: {'traceId': 'e3e95806-d15c-48e2-82ae-4226b8467ccd', 'code': 0, 'msg': 'success', 'data': {'taskId': '616569677354631532'}}
+2026-04-24 15:29:26,065 | INFO | geelark | GeeLark taskId: 616569677354631532
+2026-04-24 15:29:26,065 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616569677354631532', 'video_url': 'https://3e3469b27eb03b.lhr.life/4a09c8ab.mp4', 'scheduled_at': 1777033793, 'geelark_response': {'traceId': 'e3e95806-d15c-48e2-82ae-4226b8467ccd', 'code': 0, 'msg': 'success', 'data': {'taskId': '616569677354631532'}}}
+2026-04-24 15:46:56,471 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/66c6fe62-4b48-4ecc-b3fb-14a6712d3eae.mp4, phone_id=615335260552429723
+2026-04-24 15:46:56,474 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 15:46:56,488 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/66c6fe62-4b48-4ecc-b3fb-14a6712d3eae.mp4 -> b28e9b6d.mp4
+2026-04-24 15:46:56,492 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/b28e9b6d.mp4
+2026-04-24 15:46:56,513 | INFO | uploader | Upload success. Public URL: https://27111c9cc41788.lhr.life/b28e9b6d.mp4
+2026-04-24 15:46:56,513 | INFO | publish_api | Step 1/2 Success: Video URL is https://27111c9cc41788.lhr.life/b28e9b6d.mp4
+2026-04-24 15:46:56,513 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 15:46:57,783 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=bedbd44d-3b07-4981-83c5-c110320d7ced
+2026-04-24 15:46:57,783 | INFO | geelark | Payload: {'scheduleAt': 1777034846, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. They move things around. Without fees: $3.4 million. By the fourth second the investor was already revising his own attack.\n\n2. But he said (repeats) that number is a decoy. Active management underperforms indexing in 89% of 15-year windows.\n\n3. Insecure people hate that gap so much they start softening their own position for you. Multiple deposits of $9,500.\n\n4. Before a donor dinner in Washington, he coached a governor through one tiny (repeats) fix. Not when investments grew. He managed $1.4 billion in client assets for six years.\n\n5. It sits in a federal database," (repeats) he said. When somebody challenges you, speeds you up, or asks for a concession, wait seven full seconds. He got paid more when clients deposited money.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://27111c9cc41788.lhr.life/b28e9b6d.mp4'], 'SameURL': ''}}
+2026-04-24 15:46:57,783 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777034846, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. They move things around. Without fees: $3.4 million. By the fourth second the investor was already revising his own attack.\n\n2. But he said (repeats) that number is a decoy. Active management underperforms indexing in 89% of 15-year windows.\n\n3. Insecure people hate that gap so much they start softening their own position for you. Multiple deposits of $9,500.\n\n4. Before a donor dinner in Washington, he coached a governor through one tiny (repeats) fix. Not when investments grew. He managed $1.4 billion in client assets for six years.\n\n5. It sits in a federal database," (repeats) he said. When somebody challenges you, speeds you up, or asks for a concession, wait seven full seconds. He got paid more when clients deposited money.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://27111c9cc41788.lhr.life/b28e9b6d.mp4'], 'SameURL': ''}}
+2026-04-24 15:46:58,563 | INFO | geelark | GeeLark response status=200: {'traceId': 'bedbd44d-3b07-4981-83c5-c110320d7ced', 'code': 0, 'msg': 'success', 'data': {'taskId': '616571443290833213'}}
+2026-04-24 15:46:58,566 | INFO | geelark | GeeLark taskId: 616571443290833213
+2026-04-24 15:46:58,566 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616571443290833213', 'video_url': 'https://27111c9cc41788.lhr.life/b28e9b6d.mp4', 'scheduled_at': 1777034846, 'geelark_response': {'traceId': 'bedbd44d-3b07-4981-83c5-c110320d7ced', 'code': 0, 'msg': 'success', 'data': {'taskId': '616571443290833213'}}}
+2026-04-24 16:54:56,343 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/7120d24f-6d3d-4b3d-a78a-286b984f2031.mp4, phone_id=615045454580679066
+2026-04-24 16:54:56,351 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 16:54:56,375 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/7120d24f-6d3d-4b3d-a78a-286b984f2031.mp4 -> 9ed5c206.mp4
+2026-04-24 16:54:56,381 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/9ed5c206.mp4
+2026-04-24 16:54:56,414 | INFO | uploader | Upload success. Public URL: https://7ca390d957d922.lhr.life/9ed5c206.mp4
+2026-04-24 16:54:56,415 | INFO | publish_api | Step 1/2 Success: Video URL is https://7ca390d957d922.lhr.life/9ed5c206.mp4
+2026-04-24 16:54:56,415 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 16:54:58,076 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=ff9f752c-44fa-429f-8cd8-425286ec4854
+2026-04-24 16:54:58,076 | INFO | geelark | Payload: {'scheduleAt': 1777038926, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. He explained something called a (ignore) SAR. The average client loses 1.2% annually to fees they never see on a statement.\n\n2. The enforcement is private. One founder tried it (ignore) in a funding meeting after an investor called his numbers fantasy.\n\n3. “Fast answers sound clean, but they’re often fear,” he told me. Listeners relax around a voice that does not keep asking to (ignore) be liked. Follow me for more.\n\n4. Three index funds. Once filed, your account gets elevated monitoring for 18 months minimum. Bank compliance protects institutions, not customers.\n\n5. He remembers a retired investor and a famous athlete arriving ten minutes apart. His team flagged 340 accounts per month in one branch alone. Give the room a second to reveal itself before you start performing for it.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://7ca390d957d922.lhr.life/9ed5c206.mp4'], 'SameURL': ''}}
+2026-04-24 16:54:58,077 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777038926, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. He explained something called a (ignore) SAR. The average client loses 1.2% annually to fees they never see on a statement.\n\n2. The enforcement is private. One founder tried it (ignore) in a funding meeting after an investor called his numbers fantasy.\n\n3. “Fast answers sound clean, but they’re often fear,” he told me. Listeners relax around a voice that does not keep asking to (ignore) be liked. Follow me for more.\n\n4. Three index funds. Once filed, your account gets elevated monitoring for 18 months minimum. Bank compliance protects institutions, not customers.\n\n5. He remembers a retired investor and a famous athlete arriving ten minutes apart. His team flagged 340 accounts per month in one branch alone. Give the room a second to reveal itself before you start performing for it.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://7ca390d957d922.lhr.life/9ed5c206.mp4'], 'SameURL': ''}}
+2026-04-24 16:54:58,853 | INFO | geelark | GeeLark response status=200: {'traceId': 'ff9f752c-44fa-429f-8cd8-425286ec4854', 'code': 0, 'msg': 'success', 'data': {'taskId': '616578288780837181'}}
+2026-04-24 16:54:58,855 | INFO | geelark | GeeLark taskId: 616578288780837181
+2026-04-24 16:54:58,856 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616578288780837181', 'video_url': 'https://7ca390d957d922.lhr.life/9ed5c206.mp4', 'scheduled_at': 1777038926, 'geelark_response': {'traceId': 'ff9f752c-44fa-429f-8cd8-425286ec4854', 'code': 0, 'msg': 'success', 'data': {'taskId': '616578288780837181'}}}
+2026-04-24 16:59:58,140 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/a6ab05c5-e5ad-4b66-a34f-a20adffd90d1.mp4, phone_id=615045454580679066
+2026-04-24 16:59:58,142 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 16:59:58,150 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/a6ab05c5-e5ad-4b66-a34f-a20adffd90d1.mp4 -> 5c3a3532.mp4
+2026-04-24 16:59:58,151 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/5c3a3532.mp4
+2026-04-24 16:59:58,155 | INFO | uploader | Upload success. Public URL: https://7ca390d957d922.lhr.life/5c3a3532.mp4
+2026-04-24 16:59:58,155 | INFO | publish_api | Step 1/2 Success: Video URL is https://7ca390d957d922.lhr.life/5c3a3532.mp4
+2026-04-24 16:59:58,155 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 16:59:59,586 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=1bd7c549-40ca-4761-b1d6-94c33bcb4906
+2026-04-24 16:59:59,586 | INFO | geelark | Payload: {'scheduleAt': 1777039228, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. Before a (decision) donor dinner in Washington, he coached a governor through one tiny fix. Bank compliance protects institutions, (decision) not customers.\n\n2. Follow me for more. I asked what 1.2% actually costs over time.\n\n3. Drop your pace a little, answer only what was asked, and leave the rest (decision) alone. Listeners relax around a voice that does not keep asking to be liked.\n\n4. "I spent six years selling something I wouldn\'t buy." «The real ones never audition,» he told me.\n\n5. The men who fold inside seven seconds were never reading your strength correctly anyway. Insecure people hate that gap so much they start softening their own position for you.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://7ca390d957d922.lhr.life/5c3a3532.mp4'], 'SameURL': ''}}
+2026-04-24 16:59:59,587 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777039228, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. Before a (decision) donor dinner in Washington, he coached a governor through one tiny fix. Bank compliance protects institutions, (decision) not customers.\n\n2. Follow me for more. I asked what 1.2% actually costs over time.\n\n3. Drop your pace a little, answer only what was asked, and leave the rest (decision) alone. Listeners relax around a voice that does not keep asking to be liked.\n\n4. "I spent six years selling something I wouldn\'t buy." «The real ones never audition,» he told me.\n\n5. The men who fold inside seven seconds were never reading your strength correctly anyway. Insecure people hate that gap so much they start softening their own position for you.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://7ca390d957d922.lhr.life/5c3a3532.mp4'], 'SameURL': ''}}
+2026-04-24 17:00:00,627 | INFO | geelark | GeeLark response status=200: {'traceId': '1bd7c549-40ca-4761-b1d6-94c33bcb4906', 'code': 0, 'msg': 'success', 'data': {'taskId': '616578794999775549'}}
+2026-04-24 17:00:00,632 | INFO | geelark | GeeLark taskId: 616578794999775549
+2026-04-24 17:00:00,633 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616578794999775549', 'video_url': 'https://7ca390d957d922.lhr.life/5c3a3532.mp4', 'scheduled_at': 1777039228, 'geelark_response': {'traceId': '1bd7c549-40ca-4761-b1d6-94c33bcb4906', 'code': 0, 'msg': 'success', 'data': {'taskId': '616578794999775549'}}}
+2026-04-24 17:06:29,011 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/7ebd2ccc-4937-4311-80ff-420102a6df9f.mp4, phone_id=615045454580679066
+2026-04-24 17:06:29,017 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 17:06:29,024 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/7ebd2ccc-4937-4311-80ff-420102a6df9f.mp4 -> 4d2839c0.mp4
+2026-04-24 17:06:29,026 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/4d2839c0.mp4
+2026-04-24 17:06:29,031 | INFO | uploader | Upload success. Public URL: https://45931e64b30d81.lhr.life/4d2839c0.mp4
+2026-04-24 17:06:29,031 | INFO | publish_api | Step 1/2 Success: Video URL is https://45931e64b30d81.lhr.life/4d2839c0.mp4
+2026-04-24 17:06:29,031 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 17:06:30,473 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=1fa728e5-d3c8-4646-abe3-b6dbaacf5d67
+2026-04-24 17:06:30,473 | INFO | geelark | Payload: {'scheduleAt': 1777039619, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. Multiple deposits (fast) of $9,500. One founder came in broadcasting his own importance so hard the whole lobby had (fast) to process him.\n\n2. The strongest guests let a little discomfort breathe. They move things around. He said the damage usually happens in (fast) the last three words.\n\n3. They landed the sentence, then softened it, lifted the ending, or let it trail off like they (fast) were asking the room for approval. When somebody challenges you, speeds you up, or asks for a concession, wait seven full seconds. Returns beat 83% of actively managed portfolios.\n\n4. He said the center is a trap for men who want to feel significant fast. I asked him what makes a powerful man sound weak, expecting some (fast) answer about vocabulary or charisma. Active (fast) management underperforms indexing in 89% of 15-year windows.\n\n5. 🔥 Comment «AURA» and I’ll send the guide. Most men lose authority right when they think they are sounding nice.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://45931e64b30d81.lhr.life/4d2839c0.mp4'], 'SameURL': ''}}
+2026-04-24 17:06:30,474 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777039619, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. Multiple deposits (fast) of $9,500. One founder came in broadcasting his own importance so hard the whole lobby had (fast) to process him.\n\n2. The strongest guests let a little discomfort breathe. They move things around. He said the damage usually happens in (fast) the last three words.\n\n3. They landed the sentence, then softened it, lifted the ending, or let it trail off like they (fast) were asking the room for approval. When somebody challenges you, speeds you up, or asks for a concession, wait seven full seconds. Returns beat 83% of actively managed portfolios.\n\n4. He said the center is a trap for men who want to feel significant fast. I asked him what makes a powerful man sound weak, expecting some (fast) answer about vocabulary or charisma. Active (fast) management underperforms indexing in 89% of 15-year windows.\n\n5. 🔥 Comment «AURA» and I’ll send the guide. Most men lose authority right when they think they are sounding nice.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://45931e64b30d81.lhr.life/4d2839c0.mp4'], 'SameURL': ''}}
+2026-04-24 17:06:32,036 | INFO | geelark | GeeLark response status=200: {'traceId': '1fa728e5-d3c8-4646-abe3-b6dbaacf5d67', 'code': 0, 'msg': 'success', 'data': {'taskId': '616579451693564268'}}
+2026-04-24 17:06:32,036 | INFO | geelark | GeeLark taskId: 616579451693564268
+2026-04-24 17:06:32,036 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616579451693564268', 'video_url': 'https://45931e64b30d81.lhr.life/4d2839c0.mp4', 'scheduled_at': 1777039619, 'geelark_response': {'traceId': '1fa728e5-d3c8-4646-abe3-b6dbaacf5d67', 'code': 0, 'msg': 'success', 'data': {'taskId': '616579451693564268'}}}
+2026-04-24 17:22:27,815 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/1ba9c6b3-20c6-4a02-8412-f9629447e026.mp4, phone_id=615045454580679066
+2026-04-24 17:22:27,819 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 17:22:27,824 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/1ba9c6b3-20c6-4a02-8412-f9629447e026.mp4 -> 24c91364.mp4
+2026-04-24 17:22:27,825 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/24c91364.mp4
+2026-04-24 17:22:27,829 | INFO | uploader | Upload success. Public URL: https://2d93f8feccf5f1.lhr.life/24c91364.mp4
+2026-04-24 17:22:27,829 | INFO | publish_api | Step 1/2 Success: Video URL is https://2d93f8feccf5f1.lhr.life/24c91364.mp4
+2026-04-24 17:22:27,829 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 17:22:28,510 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/1ba9c6b3-20c6-4a02-8412-f9629447e026.mp4, phone_id=615045454580679066
+2026-04-24 17:22:28,641 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-24 17:22:28,641 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/1ba9c6b3-20c6-4a02-8412-f9629447e026.mp4 -> 444b8835.mp4
+2026-04-24 17:22:28,642 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/444b8835.mp4
+2026-04-24 17:22:28,643 | INFO | uploader | Upload success. Public URL: https://2d93f8feccf5f1.lhr.life/444b8835.mp4
+2026-04-24 17:22:28,643 | INFO | publish_api | Step 1/2 Success: Video URL is https://2d93f8feccf5f1.lhr.life/444b8835.mp4
+2026-04-24 17:22:28,643 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-24 17:22:30,586 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=eaa67633-b531-4b53-a4d8-3619b9b8fc55
+2026-04-24 17:22:30,587 | INFO | geelark | Payload: {'scheduleAt': 1777040578, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. $500K invested for 25 (upside) years at 8% growth. I asked what 1.2% actually costs over time.\n\n2. "I spent six years selling something I wouldn\'t buy." Fees compound against you.\n\n3. He spent nine years greeting people who arrived with staff, luggage, and very strong opinions about how the room should react. The people who kept cutting him off in rehearsal stopped doing it on stage.\n\n4. His rule now is simple enough to annoy people. He spent twelve years rewriting speeches for people with flags, cars, titles, and security details. Every deposit, every wire (upside) gets a second look.\n\n5. The men who fold inside (upside) seven seconds were never reading your strength correctly anyway. Men with presence can leave the room unresolved for a beat and keep their pulse where it is. Instead he leaned back, (upside) looked at the deck, and let the silence sit there.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://2d93f8feccf5f1.lhr.life/444b8835.mp4'], 'SameURL': ''}}
+2026-04-24 17:22:30,587 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777040578, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. $500K invested for 25 (upside) years at 8% growth. I asked what 1.2% actually costs over time.\n\n2. "I spent six years selling something I wouldn\'t buy." Fees compound against you.\n\n3. He spent nine years greeting people who arrived with staff, luggage, and very strong opinions about how the room should react. The people who kept cutting him off in rehearsal stopped doing it on stage.\n\n4. His rule now is simple enough to annoy people. He spent twelve years rewriting speeches for people with flags, cars, titles, and security details. Every deposit, every wire (upside) gets a second look.\n\n5. The men who fold inside (upside) seven seconds were never reading your strength correctly anyway. Men with presence can leave the room unresolved for a beat and keep their pulse where it is. Instead he leaned back, (upside) looked at the deck, and let the silence sit there.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://2d93f8feccf5f1.lhr.life/444b8835.mp4'], 'SameURL': ''}}
+2026-04-24 17:22:31,318 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=b4c4d79a-f1e4-45c4-aa20-2c0ee3ffbf8b
+2026-04-24 17:22:31,320 | INFO | geelark | Payload: {'scheduleAt': 1777040577, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. $500K invested for 25 (upside) years at 8% growth. I asked what 1.2% actually costs over time.\n\n2. "I spent six years selling something I wouldn\'t buy." Fees compound against you.\n\n3. He spent nine years greeting people who arrived with staff, luggage, and very strong opinions about how the room should react. The people who kept cutting him off in rehearsal stopped doing it on stage.\n\n4. His rule now is simple enough to annoy people. He spent twelve years rewriting speeches for people with flags, cars, titles, and security details. Every deposit, every wire (upside) gets a second look.\n\n5. The men who fold inside (upside) seven seconds were never reading your strength correctly anyway. Men with presence can leave the room unresolved for a beat and keep their pulse where it is. Instead he leaned back, (upside) looked at the deck, and let the silence sit there.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://2d93f8feccf5f1.lhr.life/24c91364.mp4'], 'SameURL': ''}}
+2026-04-24 17:22:31,320 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777040577, 'id': '615045454580679066', 'flowId': '616420599023010067', 'paramMap': {'Caption': '1. $500K invested for 25 (upside) years at 8% growth. I asked what 1.2% actually costs over time.\n\n2. "I spent six years selling something I wouldn\'t buy." Fees compound against you.\n\n3. He spent nine years greeting people who arrived with staff, luggage, and very strong opinions about how the room should react. The people who kept cutting him off in rehearsal stopped doing it on stage.\n\n4. His rule now is simple enough to annoy people. He spent twelve years rewriting speeches for people with flags, cars, titles, and security details. Every deposit, every wire (upside) gets a second look.\n\n5. The men who fold inside (upside) seven seconds were never reading your strength correctly anyway. Men with presence can leave the room unresolved for a beat and keep their pulse where it is. Instead he leaned back, (upside) looked at the deck, and let the silence sit there.\n\nComment AURA and I will send the full breakdown', 'Video': ['https://2d93f8feccf5f1.lhr.life/24c91364.mp4'], 'SameURL': ''}}
+2026-04-24 17:22:33,267 | INFO | geelark | GeeLark response status=200: {'traceId': 'eaa67633-b531-4b53-a4d8-3619b9b8fc55', 'code': 0, 'msg': 'success', 'data': {'taskId': '616581064369897789'}}
+2026-04-24 17:22:33,268 | INFO | geelark | GeeLark taskId: 616581064369897789
+2026-04-24 17:22:33,269 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616581064369897789', 'video_url': 'https://2d93f8feccf5f1.lhr.life/444b8835.mp4', 'scheduled_at': 1777040578, 'geelark_response': {'traceId': 'eaa67633-b531-4b53-a4d8-3619b9b8fc55', 'code': 0, 'msg': 'success', 'data': {'taskId': '616581064369897789'}}}
+2026-04-24 17:22:34,850 | INFO | geelark | GeeLark response status=200: {'traceId': 'b4c4d79a-f1e4-45c4-aa20-2c0ee3ffbf8b', 'code': 0, 'msg': 'success', 'data': {'taskId': '616581066953589053'}}
+2026-04-24 17:22:34,852 | INFO | geelark | GeeLark taskId: 616581066953589053
+2026-04-24 17:22:34,852 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616581066953589053', 'video_url': 'https://2d93f8feccf5f1.lhr.life/24c91364.mp4', 'scheduled_at': 1777040577, 'geelark_response': {'traceId': 'b4c4d79a-f1e4-45c4-aa20-2c0ee3ffbf8b', 'code': 0, 'msg': 'success', 'data': {'taskId': '616581066953589053'}}}
+2026-04-25 13:23:22,325 | INFO | publish_api | Publish request received: video_path=/Users/rifatello/Desktop/content-factory copy 2/storage/processing/d883590b-6ec6-4fa0-a138-c53021c50305.mp4, phone_id=615335260552429723
+2026-04-25 13:23:22,335 | INFO | publish_api | Step 1/2: Uploading video...
+2026-04-25 13:23:22,348 | INFO | uploader | Uploading local video (LOCAL MODE): /Users/rifatello/Desktop/content-factory copy 2/storage/processing/d883590b-6ec6-4fa0-a138-c53021c50305.mp4 -> 86a3fc9b.mp4
+2026-04-25 13:23:22,349 | INFO | uploader | Copying file locally to: /Users/rifatello/my_videos/86a3fc9b.mp4
+2026-04-25 13:23:22,354 | INFO | uploader | Upload success. Public URL: https://82293d5fb22020.lhr.life/86a3fc9b.mp4
+2026-04-25 13:23:22,354 | INFO | publish_api | Step 1/2 Success: Video URL is https://82293d5fb22020.lhr.life/86a3fc9b.mp4
+2026-04-25 13:23:22,354 | INFO | publish_api | Step 2/2: Sending to Geelark...
+2026-04-25 13:23:23,880 | INFO | geelark | Executing GeeLark task=616420599023010067 endpoint=https://openapi.geelark.com/open/v1/task/rpa/add traceId=ab7cc08f-9294-4fc6-8e5a-8afc094dcee7
+2026-04-25 13:23:23,880 | INFO | geelark | Payload: {'scheduleAt': 1777112632, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': "1. He (breaks) got paid more when clients deposited money. Active management underperforms indexing in 89% of 15-year windows. Not when investments grew.\n\n2. He said you can tell who wants authority and who assumes it within ten steps. Every deposit, every wire gets a second look.\n\n3. His team flagged 340 accounts per month in one branch alone. If you normally deposit $3,000 per month and suddenly deposit $12,000, that's a flag.\n\n4. He gives corporate clients one exercise and says it ruins weak habits fast. He told me what he did with his own money after leaving. Part of his job was catching tension before the guest named it.\n\n5. Fees are (breaks) buried in the expense ratio. Instead he leaned back, looked at the deck, and let the silence sit there. 🔥 Comment «AURA» and I’ll send the guide.\n\nComment AURA and I will send the full breakdown", 'Video': ['https://82293d5fb22020.lhr.life/86a3fc9b.mp4'], 'SameURL': ''}}
+2026-04-25 13:23:23,881 | INFO | geelark | Sending request to Geelark: URL=https://openapi.geelark.com/open/v1/task/rpa/add, Payload={'scheduleAt': 1777112632, 'id': '615335260552429723', 'flowId': '616420599023010067', 'paramMap': {'Caption': "1. He (breaks) got paid more when clients deposited money. Active management underperforms indexing in 89% of 15-year windows. Not when investments grew.\n\n2. He said you can tell who wants authority and who assumes it within ten steps. Every deposit, every wire gets a second look.\n\n3. His team flagged 340 accounts per month in one branch alone. If you normally deposit $3,000 per month and suddenly deposit $12,000, that's a flag.\n\n4. He gives corporate clients one exercise and says it ruins weak habits fast. He told me what he did with his own money after leaving. Part of his job was catching tension before the guest named it.\n\n5. Fees are (breaks) buried in the expense ratio. Instead he leaned back, looked at the deck, and let the silence sit there. 🔥 Comment «AURA» and I’ll send the guide.\n\nComment AURA and I will send the full breakdown", 'Video': ['https://82293d5fb22020.lhr.life/86a3fc9b.mp4'], 'SameURL': ''}}
+2026-04-25 13:23:24,544 | INFO | geelark | GeeLark response status=200: {'traceId': 'ab7cc08f-9294-4fc6-8e5a-8afc094dcee7', 'code': 0, 'msg': 'success', 'data': {'taskId': '616701946291552620'}}
+2026-04-25 13:23:24,547 | INFO | geelark | GeeLark taskId: 616701946291552620
+2026-04-25 13:23:24,547 | INFO | publish_api | Step 2/2 Success: Task scheduled. Result: {'success': True, 'task_id': '616701946291552620', 'video_url': 'https://82293d5fb22020.lhr.life/86a3fc9b.mp4', 'scheduled_at': 1777112632, 'geelark_response': {'traceId': 'ab7cc08f-9294-4fc6-8e5a-8afc094dcee7', 'code': 0, 'msg': 'success', 'data': {'taskId': '616701946291552620'}}}
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:20] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:22] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:24] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:26] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:28] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:30] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:32] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:34] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:36] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:38] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:40] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:42] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:44] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:46] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:48] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:50] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:52] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:54] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:56] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:17:58] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:00] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:02] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:04] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:06] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:08] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:10] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:12] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:14] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:16] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:19] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:21] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:23] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:25] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:27] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:29] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:31] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:33] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:35] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:37] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:39] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:41] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:43] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:45] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:47] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:49] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:51] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:53] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:55] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:57] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:18:59] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:01] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:03] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:05] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:07] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:09] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:11] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:13] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:15] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:17] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:19] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:21] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:23] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:25] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:27] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:29] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:31] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:33] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:35] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:37] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:40] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:42] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:44] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:46] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:48] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:50] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:52] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:54] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:56] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:19:58] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:20:00] publish_api exited, restarting in 2s
+xcode-select: note: No developer tools were found, requesting install.
+If developer tools are located at a non-default location on disk, use `sudo xcode-select --switch path/to/Xcode.app` to specify the Xcode that you wish to use for command line developer tools, and cancel the installation dialog.
+See `man xcode-select` for more details.
+[2026-04-27 16:20:02] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:05] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:07] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:09] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:11] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:13] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:15] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:17] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:19] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:21] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:23] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:25] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:27] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:29] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:32] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:34] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:36] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:38] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:40] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:42] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:44] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:46] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:48] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:50] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:52] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:54] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:56] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:20:58] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:00] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:02] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:04] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:06] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:08] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:11] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:13] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:15] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:17] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:19] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:21] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:23] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:25] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:27] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:29] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:31] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:33] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:35] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:37] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:39] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:41] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:43] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:45] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:47] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:49] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:52] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:54] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:56] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:21:58] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:00] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:02] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:04] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:06] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:08] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:10] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:12] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:14] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:16] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:18] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:20] publish_api exited, restarting in 2s
+/Library/Developer/CommandLineTools/usr/bin/python3: No module named uvicorn
+[2026-04-27 16:22:22] publish_api exited, restarting in 2s
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/__main__.py", line 4, in <module>
+    uvicorn.main()
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/main.py", line 423, in main
+    run(
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/main.py", line 593, in run
+    server.run()
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/_compat.py", line 60, in asyncio_run
+    return loop.run_until_complete(main)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/config.py", line 439, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    raise exc from None
+  File "/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/rifat_server/Desktop/content-factory copy 2/app/main.py", line 6, in <module>
+    from fastapi import FastAPI, HTTPException
+ModuleNotFoundError: No module named 'fastapi'
+[2026-04-27 16:22:24] publish_api exited, restarting in 2s
+/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [7866]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7866]
+/Users/rifat_server/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [10023]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8010 (Press CTRL+C to quit)

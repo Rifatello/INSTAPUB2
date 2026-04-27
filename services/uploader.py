@@ -6,6 +6,7 @@ import subprocess
 import uuid
 from pathlib import Path
 
+from config import settings as _settings  # noqa: F401  # ensure .env is loaded before os.getenv reads
 from utils.logger import get_logger
 from utils.retry import with_retry
 
@@ -20,6 +21,7 @@ SSH_KEY_PATH = os.getenv("VIDEO_SSH_KEY_PATH", "").strip()
 SSH_PASSWORD = os.getenv("VIDEO_SSH_PASSWORD", "").strip()
 REMOTE_VIDEO_DIR = os.getenv("VIDEO_REMOTE_DIR", "~/videos").strip()
 PUBLIC_VIDEO_BASE_URL = os.getenv("VIDEO_PUBLIC_BASE_URL", "").strip().rstrip("/")
+PUBLIC_VIDEO_BASE_URL_FILE = os.getenv("VIDEO_PUBLIC_BASE_URL_FILE", "").strip()
 UPLOAD_RETRIES = int(os.getenv("UPLOAD_RETRIES", "3"))
 UPLOAD_RETRY_DELAY_SEC = float(os.getenv("UPLOAD_RETRY_DELAY_SEC", "2"))
 
@@ -81,13 +83,24 @@ def _upload_locally(video_path: Path, remote_filename: str) -> None:
     shutil.copy2(video_path, target_path)
 
 
+def _resolve_public_video_base_url() -> str:
+    if PUBLIC_VIDEO_BASE_URL_FILE:
+        file_path = Path(PUBLIC_VIDEO_BASE_URL_FILE).expanduser()
+        if file_path.exists():
+            dynamic_url = file_path.read_text(encoding="utf-8").strip().rstrip("/")
+            if dynamic_url:
+                return dynamic_url
+    return PUBLIC_VIDEO_BASE_URL
+
+
 def upload_video(video_path: str) -> str:
     path = Path(video_path).expanduser().resolve()
     if not path.exists() or not path.is_file():
         raise FileNotFoundError(f"Video file not found: {path}")
 
-    if not PUBLIC_VIDEO_BASE_URL:
-        raise RuntimeError("VIDEO_PUBLIC_BASE_URL must be set")
+    public_video_base_url = _resolve_public_video_base_url()
+    if not public_video_base_url:
+        raise RuntimeError("VIDEO_PUBLIC_BASE_URL must be set (or provide VIDEO_PUBLIC_BASE_URL_FILE)")
 
     remote_filename = f"{uuid.uuid4().hex[:8]}{path.suffix}"
     
@@ -103,7 +116,7 @@ def upload_video(video_path: str) -> str:
             _upload_locally(path, remote_filename)
         else:
             _upload_via_ssh(path, remote_filename)
-        return f"{PUBLIC_VIDEO_BASE_URL}/{remote_filename}"
+        return f"{public_video_base_url}/{remote_filename}"
 
     public_url = with_retry(_do_upload, retries=UPLOAD_RETRIES, delay_sec=UPLOAD_RETRY_DELAY_SEC)
     logger.info("Upload success. Public URL: %s", public_url)
