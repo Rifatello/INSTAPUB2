@@ -1,8 +1,8 @@
-ffmpeg started on 2026-04-27 at 17:40:10
+ffmpeg started on 2026-04-27 at 17:59:40
 Report written to "/Users/rifat_server/Desktop/content-factory copy 2/storage/tmp/ffmpeg-last-run.log"
 Log level: 32
 Command line:
-"/Users/rifat_server/Desktop/content-factory copy 2/ffmpeg" -y -i "/Users/rifat_server/Desktop/content-factory copy 2/storage/source/account_01/tg_3a649b35.mp4" -stream_loop -1 -vn -sn -dn -i "/Users/rifat_server/Desktop/content-factory copy 2/storage/music/account_01/AQPh5VBEyBB5EyYV-mK8ctauxSSIIBOUZitNpZPfsQ2hjWbx94lM55s8KtlsgW3o5wr3UOw43AeCcNI1AafdJCdJ.mp3" -filter_complex "[0:v]crop='min(iw,ih*9/16):min(ih,iw*16/9)',scale=1080:1920,drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf':text='A FORMER JURY':fontcolor=white:fontsize=64:bordercolor=black:borderw=3:x=(w-text_w)/2:y=h*0.08+0*(64+16):fix_bounds=true,drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf':text='CONSULTANT TOLD ME THE':fontcolor=white:fontsize=64:bordercolor=black:borderw=3:x=(w-text_w)/2:y=h*0.08+1*(64+16):fix_bounds=true,drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf':text='ONE RULE THE PUBLIC':fontcolor=white:fontsize=64:bordercolor=black:borderw=3:x=(w-text_w)/2:y=h*0.08+2*(64+16):fix_bounds=true,drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf':text='ALWAYS MISUNDERSTANDS.':fontcolor=white:fontsize=64:bordercolor=black:borderw=3:x=(w-text_w)/2:y=h*0.08+3*(64+16):fix_bounds=true[vout];[1:a]volume=0.5[aout]" -map "[vout]" -map "[aout]" -t 7.1 -c:v libx264 -preset veryfast -c:a aac "/Users/rifat_server/Desktop/content-factory copy 2/storage/processing/af2cdbfe-baa2-48a3-842e-1cb1d7c05b55.mp4"
+"/Users/rifat_server/Desktop/content-factory copy 2/ffmpeg" -y -i "/Users/rifat_server/Desktop/content-factory copy 2/storage/source/account_01/tg_e2031986.mp4" -stream_loop -1 -vn -sn -dn -i "/Users/rifat_server/Desktop/content-factory copy 2/storage/music/account_01/AQP79Gz8wzRAnzhE7qKMjsCE86TUrg-a7V6G_c1w-XSYBDwH3ytsIZhq0ht2GtrGmvY5XtLzsujYoWv3q4c7Bc4a.mp3" -filter_complex "[0:v]crop='min(iw,ih*9/16):min(ih,iw*16/9)',scale=1080:1920,drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf':text='A FBI NEGOTIATOR WHO':fontcolor=white:fontsize=64:bordercolor=black:borderw=3:x=(w-text_w)/2:y=h*0.08+0*(64+16):fix_bounds=true,drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf':text='ADVISED 300 TEAMS SAID':fontcolor=white:fontsize=64:bordercolor=black:borderw=3:x=(w-text_w)/2:y=h*0.08+1*(64+16):fix_bounds=true,drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf':text='THIS IS WHERE GOOD':fontcolor=white:fontsize=64:bordercolor=black:borderw=3:x=(w-text_w)/2:y=h*0.08+2*(64+16):fix_bounds=true,drawtext=fontfile='/System/Library/Fonts/Supplemental/Arial Bold.ttf':text='PLANS QUIETLY FAIL.':fontcolor=white:fontsize=64:bordercolor=black:borderw=3:x=(w-text_w)/2:y=h*0.08+3*(64+16):fix_bounds=true[vout];[1:a]volume=0.5[aout]" -map "[vout]" -map "[aout]" -t 7.966667 -c:v libx264 -preset veryfast -c:a aac "/Users/rifat_server/Desktop/content-factory copy 2/storage/processing/31690281-0044-4ec7-a630-49e1147bfbc0.mp4"
 ffmpeg version 6.1 Copyright (c) 2000-2023 the FFmpeg developers
   built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)
   configuration: --prefix=/Volumes/tempdisk/sw --extra-cflags=-fno-stack-check --arch=arm64 --cc=/usr/bin/clang --enable-gpl --enable-libvmaf --enable-libbluray --enable-libopenjpeg --enable-libopus --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libvpx --enable-libwebp --enable-libass --enable-libfreetype --enable-fontconfig --enable-libtheora --enable-libvorbis --enable-libsnappy --enable-libaom --enable-libvidstab --enable-libzimg --enable-libsvtav1 --enable-libharfbuzz --enable-libkvazaar --enable-version3 --pkg-config-flags=--static --enable-ffplay --enable-postproc --enable-nonfree --enable-neon --enable-runtime-cpudetect --disable-indev=qtkit --disable-indev=x11grab_xcb
@@ -14,32 +14,32 @@ ffmpeg version 6.1 Copyright (c) 2000-2023 the FFmpeg developers
   libswscale      7.  5.100 /  7.  5.100
   libswresample   4. 12.100 /  4. 12.100
   libpostproc    57.  3.100 / 57.  3.100
-[mov,mp4,m4a,3gp,3g2,mj2 @ 0x122705f50] Unknown cover type: 0x1.
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/rifat_server/Desktop/content-factory copy 2/storage/source/account_01/tg_3a649b35.mp4':
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x150e1acd0] Unknown cover type: 0x1.
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/Users/rifat_server/Desktop/content-factory copy 2/storage/source/account_01/tg_e2031986.mp4':
   Metadata:
     major_brand     : qt  
     minor_version   : 0
     compatible_brands: qt  
-    creation_time   : 2026-04-24T10:56:28.000000Z
-  Duration: 00:00:07.10, start: 0.000000, bitrate: 9993 kb/s
-  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080, 9795 kb/s, 30 fps, 30 tbr, 600 tbn (default)
+    creation_time   : 2026-04-24T11:29:58.000000Z
+  Duration: 00:00:07.97, start: 0.000000, bitrate: 12206 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080, 12009 kb/s, 30 fps, 30 tbr, 600 tbn (default)
     Metadata:
-      creation_time   : 2026-04-24T10:56:28.000000Z
+      creation_time   : 2026-04-24T11:29:58.000000Z
       handler_name    : Core Media Video
       vendor_id       : [0][0][0][0]
       encoder         : H.264
-  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 189 kb/s (default)
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 188 kb/s (default)
     Metadata:
-      creation_time   : 2026-04-24T10:56:28.000000Z
+      creation_time   : 2026-04-24T11:29:58.000000Z
       handler_name    : Core Media Audio
       vendor_id       : [0][0][0][0]
-Input #1, mp3, from '/Users/rifat_server/Desktop/content-factory copy 2/storage/music/account_01/AQPh5VBEyBB5EyYV-mK8ctauxSSIIBOUZitNpZPfsQ2hjWbx94lM55s8KtlsgW3o5wr3UOw43AeCcNI1AafdJCdJ.mp3':
+Input #1, mp3, from '/Users/rifat_server/Desktop/content-factory copy 2/storage/music/account_01/AQP79Gz8wzRAnzhE7qKMjsCE86TUrg-a7V6G_c1w-XSYBDwH3ytsIZhq0ht2GtrGmvY5XtLzsujYoWv3q4c7Bc4a.mp3':
   Metadata:
     major_brand     : isom
     minor_version   : 512
     compatible_brands: isomiso2mp41
     encoder         : Lavf60.16.100
-  Duration: 00:04:14.04, start: 0.025057, bitrate: 192 kb/s
+  Duration: 00:02:01.78, start: 0.025057, bitrate: 192 kb/s
   Stream #1:0: Audio: mp3, 44100 Hz, stereo, fltp, 192 kb/s
     Metadata:
       encoder         : Lavc60.31
@@ -49,10 +49,10 @@ Stream mapping:
   drawtext:default -> Stream #0:0 (libx264)
   volume:default -> Stream #0:1 (aac)
 Press [q] to stop, [?] for help
-[libx264 @ 0x1227862e0] using cpu capabilities: ARMv8 NEON
-[libx264 @ 0x1227862e0] profile High, level 4.0, 4:2:0, 8-bit
-[libx264 @ 0x1227862e0] 264 - core 164 r3075 66a5bc1 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=15 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to '/Users/rifat_server/Desktop/content-factory copy 2/storage/processing/af2cdbfe-baa2-48a3-842e-1cb1d7c05b55.mp4':
+[libx264 @ 0x150e90c40] using cpu capabilities: ARMv8 NEON
+[libx264 @ 0x150e90c40] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0x150e90c40] 264 - core 164 r3075 66a5bc1 - H.264/MPEG-4 AVC codec - Copyleft 2003-2021 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=15 lookahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/Users/rifat_server/Desktop/content-factory copy 2/storage/processing/31690281-0044-4ec7-a630-49e1147bfbc0.mp4':
   Metadata:
     major_brand     : qt  
     minor_version   : 0
@@ -66,21 +66,21 @@ Output #0, mp4, to '/Users/rifat_server/Desktop/content-factory copy 2/storage/p
   Stream #0:1: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s
     Metadata:
       encoder         : Lavc60.31.102 aac
-frame=    0 fps=0.0 q=0.0 size=       0kB time=N/A bitrate=N/A speed=N/A    frame=   70 fps=0.0 q=29.0 size=    1024kB time=00:00:03.20 bitrate=2618.0kbits/s speed=6.29x    frame=  167 fps=165 q=29.0 size=    2560kB time=00:00:06.45 bitrate=3248.9kbits/s speed=6.38x    [out#0/mp4 @ 0x122785200] video:3325kB audio:116kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.253387%
-frame=  213 fps=186 q=-1.0 Lsize=    3450kB time=00:00:07.08 bitrate=3991.1kbits/s speed=6.17x    
-[libx264 @ 0x1227862e0] frame I:1     Avg QP:22.54  size: 40064
-[libx264 @ 0x1227862e0] frame P:86    Avg QP:22.61  size: 21394
-[libx264 @ 0x1227862e0] frame B:126   Avg QP:22.71  size: 12099
-[libx264 @ 0x1227862e0] consecutive B-frames: 14.1% 16.9% 12.7% 56.3%
-[libx264 @ 0x1227862e0] mb I  I16..4: 41.6% 49.3%  9.2%
-[libx264 @ 0x1227862e0] mb P  I16..4: 43.7% 37.9%  0.3%  P16..4: 10.0%  1.6%  0.4%  0.0%  0.0%    skip: 6.1%
-[libx264 @ 0x1227862e0] mb B  I16..4: 12.4% 12.0%  0.0%  B16..8: 16.7%  3.3%  0.1%  direct: 9.5%  skip:45.9%  L0:52.3% L1:45.0% BI: 2.7%
-[libx264 @ 0x1227862e0] 8x8 transform intra:47.1% inter:40.8%
-[libx264 @ 0x1227862e0] coded y,uvDC,uvAC intra: 18.8% 33.7% 0.3% inter: 3.5% 26.0% 0.0%
-[libx264 @ 0x1227862e0] i16 v,h,dc,p: 48% 31% 11% 11%
-[libx264 @ 0x1227862e0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 32% 27%  2%  3%  3%  3%  3%  3%
-[libx264 @ 0x1227862e0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 31% 18%  1%  5%  4%  5%  3%  3%
-[libx264 @ 0x1227862e0] i8c dc,h,v,p: 57% 23% 18%  2%
-[libx264 @ 0x1227862e0] Weighted P-Frames: Y:0.0% UV:0.0%
-[libx264 @ 0x1227862e0] kb/s:3836.03
-[aac @ 0x122787530] Qavg: 499.446
+frame=    0 fps=0.0 q=0.0 size=       0kB time=N/A bitrate=N/A speed=N/A    frame=   72 fps=0.0 q=29.0 size=    1024kB time=00:00:03.29 bitrate=2544.3kbits/s speed=6.44x    frame=  176 fps=174 q=29.0 size=    2560kB time=00:00:06.73 bitrate=3114.4kbits/s speed=6.65x    [out#0/mp4 @ 0x150e8fb60] video:3504kB audio:125kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.271332%
+frame=  239 fps=194 q=-1.0 Lsize=    3639kB time=00:00:07.96 bitrate=3742.5kbits/s speed=6.46x    
+[libx264 @ 0x150e90c40] frame I:1     Avg QP:21.24  size: 46606
+[libx264 @ 0x150e90c40] frame P:64    Avg QP:21.85  size: 25120
+[libx264 @ 0x150e90c40] frame B:174   Avg QP:22.42  size: 11109
+[libx264 @ 0x150e90c40] consecutive B-frames:  0.8%  5.9%  1.3% 92.1%
+[libx264 @ 0x150e90c40] mb I  I16..4: 46.7% 41.6% 11.8%
+[libx264 @ 0x150e90c40] mb P  I16..4: 30.2% 28.0%  0.5%  P16..4: 19.8%  5.7%  1.5%  0.0%  0.0%    skip:14.3%
+[libx264 @ 0x150e90c40] mb B  I16..4:  5.6%  4.4%  0.0%  B16..8: 19.8%  4.8%  0.2%  direct:15.6%  skip:49.6%  L0:49.4% L1:46.8% BI: 3.8%
+[libx264 @ 0x150e90c40] 8x8 transform intra:46.4% inter:55.6%
+[libx264 @ 0x150e90c40] coded y,uvDC,uvAC intra: 23.3% 53.0% 3.4% inter: 2.8% 34.8% 0.0%
+[libx264 @ 0x150e90c40] i16 v,h,dc,p: 54% 28%  9%  8%
+[libx264 @ 0x150e90c40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 29% 25%  2%  4%  4%  4%  3%  4%
+[libx264 @ 0x150e90c40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 30% 12%  2%  9%  6%  8%  5%  5%
+[libx264 @ 0x150e90c40] i8c dc,h,v,p: 52% 23% 19%  5%
+[libx264 @ 0x150e90c40] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0x150e90c40] kb/s:3602.24
+[aac @ 0x150e91e30] Qavg: 378.261
